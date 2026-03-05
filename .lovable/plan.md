@@ -1,43 +1,50 @@
 
 
-## PM Product Portfolio
+## Update Portfolio with Real Data from Notion
 
-A personal portfolio site with a "chaotic aesthetic" inspired by PowerApply — mixing bold serif/display fonts, hand-drawn decorative elements, warm tones, and playful scattered visuals.
+I successfully accessed your Notion page and extracted all the relevant information. Here's what I found and what I plan to update:
 
-### Pages
+### Data Extracted from Notion
 
-#### 1. Home / Hero
-- Bold serif headline introducing you as a PM
-- Subtitle with a short personal pitch
-- Decorative scattered elements (flowers, arrows, stickers-style illustrations using emojis/SVGs)
-- Navigation to Products and AI Use Cases pages
-- Warm color palette (cream/off-white background, earthy accent colors)
+**About You:**
+- **Name**: Tania Maldonado
+- **Current Role**: Product Manager @ BMW Group
+- **Previous**: Tech Senior Consultant @ Deloitte
+- **7+ years** of experience in product development and digital strategy
+- Fluent in Portuguese, English, and Spanish
+- Expertise in B2B and B2C solutions, market research, cross-functional teamwork
 
-#### 2. Products Page
-- Grid/masonry layout of product cards
-- Each card shows: screenshot/image, product name, your role & description, and external link
-- Hover effects with playful micro-interactions
-- Products are hardcoded initially (you can add/edit them later)
+**Experience (2 roles):**
+1. **BMW Group** — Product Manager (April 2022 - Present) — OEM Automotive
+2. **Deloitte** — Tech Senior Consultant (August 2018 - April 2022) — Consulting
 
-#### 3. AI Use Cases Page
-- Content rendered from a markdown file
-- Clean reading experience with good typography
-- Sections, headings, lists, and any formatting from your .md file rendered beautifully
+**Projects (4 featured):**
+1. **ONE Sales Workplace** — Automotive, Germany, Web, B2B — "Web-based platform for retail partners worldwide to support end-to-end sales and business processes for new and used vehicles, as well as Financial Services, across all BMW Group brands."
+2. **Unitel** — Telecommunications, Angola, Web & Mobile, B2C — "Self-service app for clients to manage their mobile services."
+3. **NOS Self-Service App** — Telecommunications, Portugal, Mobile, B2C — "Self-service app for clients to manage their mobile services." (Features: check mobile consumption, pay invoices, purchase data packages, access promotions)
+4. **HR Tool** — Human Resources, Portugal, Web, B2B — "Internal HR Tool where team members could share projects, fill timesheets, upload certifications."
 
-#### 4. Admin Panel (accessible via `/admin` route)
-- Simple upload area where you can drop/upload a `.md` file
-- File is parsed client-side and the AI Use Cases page updates immediately
-- Content is saved to localStorage so it persists across sessions
-- Preview of the rendered markdown before confirming
+**Skills database** has categories: Software, Language, Expertise (couldn't retrieve individual items, but I have the structure)
 
-### Design Details
-- **Fonts**: Serif display font (e.g., Playfair Display) for headings + clean sans-serif (e.g., Inter) for body — similar to PowerApply's pairing
-- **Colors**: Off-white/cream background, warm orange/coral accents, dark text
-- **Decorative elements**: Emoji-based or SVG stickers scattered around sections (flowers, arrows, stars) for that "chaotic" collage feel
-- **Responsive**: Works on mobile and desktop
+### Plan
 
-### Technical Notes
-- No backend needed — markdown parsing happens client-side using a markdown renderer
-- Product data stored as a simple JSON array in code (easy to update)
-- Admin panel uses file upload + localStorage for markdown persistence
+#### 1. Update Home/Hero page with Tania's real info
+- Change headline and subtitle to reflect Tania's actual role and pitch
+- Update the eyebrow tag to "Product Manager @ BMW Group"
+- Adjust the bio text with her real background
+
+#### 2. Update Products page with real project data
+- Replace the 4 placeholder products in `src/data/products.ts` with the 4 featured projects from Notion
+- Update the `Product` interface to include new fields: `sector`, `country`, `platform`, `type` (B2B/B2C)
+- Display sector, country, and platform as badges/tags on each product card
+- Use relevant stock images for each sector (automotive, telecommunications, HR) since Notion image URLs are temporary signed URLs
+
+#### 3. Update Navbar with Tania's name
+- Add her name or initials to the navbar for personalization
+
+### Technical Details
+- Product data remains hardcoded in `src/data/products.ts` (easy to update later)
+- New fields added to the Product interface: `sector`, `country`, `platform`, `type`
+- Product cards will show tags for sector, country, platform, and B2B/B2C type
+- Stock images from Unsplash will be used since Notion S3 URLs expire
 
