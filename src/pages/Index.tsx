@@ -15,21 +15,21 @@ const Index = () => {
       <div className="max-w-3xl text-center space-y-8">
         {/* Eyebrow */}
         <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-sm font-medium text-muted-foreground tracking-wide">
-          Product Manager & Builder
+          Product Manager @ BMW Group
         </span>
 
         {/* Hero headline */}
         <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl font-bold leading-[0.95] tracking-tight text-foreground">
-          I build products
+          Hi, I'm Tânia
           <br />
-          <span className="italic text-primary">people love</span>
+          <span className="italic text-primary">I build products</span>
           <span className="inline-block ml-2 text-4xl sm:text-5xl animate-float">✦</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-          Product manager passionate about turning complex problems into simple, 
-          delightful experiences. Currently exploring how AI reshapes the way we work.
+          7+ years shaping digital products across automotive, telecom & consulting. 
+          Passionate about turning complex problems into simple, delightful experiences.
         </p>
 
         {/* CTAs */}
