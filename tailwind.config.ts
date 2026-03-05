@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ["Lora", "serif"],
+        serif: ["Times New Roman MT Condensed", "Times New Roman", "Times", "serif"],
         sans: ["Inter", "sans-serif"],
       },
       colors: {
