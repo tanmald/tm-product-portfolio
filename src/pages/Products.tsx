@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { products } from "@/data/products";
+import { Badge } from "@/components/ui/badge";
 
 const Products = () => {
   return (
@@ -12,7 +13,7 @@ const Products = () => {
             Things I've <span className="italic">built</span> ✦
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            A collection of products I've shaped from zero-to-one or scaled to millions. 
+            A collection of products I've shaped across automotive, telecom, and consulting. 
             Each one taught me something new about users, teams, and craft.
           </p>
         </div>
@@ -50,6 +51,12 @@ const Products = () => {
                   <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
                 </div>
                 <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  <Badge variant="secondary">{product.sector}</Badge>
+                  <Badge variant="secondary">{product.country}</Badge>
+                  <Badge variant="secondary">{product.platform}</Badge>
+                  <Badge variant="outline">{product.type}</Badge>
+                </div>
               </div>
             </a>
           ))}
