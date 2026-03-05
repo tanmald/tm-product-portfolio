@@ -28,7 +28,7 @@ const Index = () => {
 
         {/* Subtitle */}
         <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-          7+ years shaping digital products across automotive, telecom & consulting. 
+          7+ years of experience in product development and digital strategy. 
           Passionate about turning complex problems into simple, delightful experiences.
         </p>
 
