@@ -73,9 +73,9 @@ export const useCases: UseCase[] = [
     subtitle: "From Meeting Transcripts to Autonomous QA",
     emoji: "🤖",
     challenge:
-      "QA process relied on 22 informal jourfix meetings over 4 months with no standardized agenda, no automated follow-up, and misreported test results — the agent initially reported 100% test failure as 'all tests passed'.",
+      "QA process had no standardized agenda, no automated follow-up, and misreported test results — the agent initially reported 100% test failure as 'all tests passed'.",
     actions: [
-      "Compiled 22 meeting transcripts (312KB), QA practice docs, and formal role expectations into Copilot to extract implicit process patterns and perform gap analysis",
+      "Compiled meeting transcripts, QA practice docs, and formal role expectations into Copilot to extract implicit process patterns and perform gap analysis",
       "Designed modular agent with 12 specialized QA skills (test planning, defect management, go-live readiness, jourfix facilitation, etc.)",
       "Discovered and fixed critical bug: agent checking Jira ticket status instead of actual Xray test results (customfield_10923)",
       "Built automatic T-7/T-1 day go-live checklists with release date detection from Jira fix versions",
@@ -89,7 +89,7 @@ export const useCases: UseCase[] = [
     ],
     keyMetric: { label: "Prevented false-positive releases", value: "Critical fix" },
     learnings: [
-      "Meeting transcripts are untapped gold — 22 unstructured meetings contained an entire process framework no one had documented",
+      "Meeting transcripts are untapped gold — unstructured meetings contained an entire process framework no one had documented",
       "Validate the validation — the most dangerous bug was reporting success when tests failed. Jira status ≠ test execution result",
       "Iterative agent development works — 5+ sessions allowed progressive refinement based on real usage feedback",
       "Codifying tribal knowledge into 12 discrete skills makes it transferable, trainable, and improvable",
