@@ -73,12 +73,13 @@ export const useCases: UseCase[] = [
     subtitle: "From Meeting Transcripts to Autonomous QA",
     emoji: "🤖",
     challenge:
-      "QA process relied on 22 informal meetings with no standardized agenda, no automated follow-up, and misreported test results (100% failure shown as success).",
+      "QA process relied on 22 informal jourfix meetings over 4 months with no standardized agenda, no automated follow-up, and misreported test results — the agent initially reported 100% test failure as 'all tests passed'.",
     actions: [
-      "Fed 22 meeting transcripts (312KB) to Copilot to extract implicit process patterns",
-      "Designed modular agent with 12 specialized QA skills",
-      "Fixed critical bug: agent checking Jira status instead of actual Xray test results",
-      "Built automatic T-7/T-1 day go-live checklists",
+      "Compiled 22 meeting transcripts (312KB), QA practice docs, and formal role expectations into Copilot to extract implicit process patterns and perform gap analysis",
+      "Designed modular agent with 12 specialized QA skills (test planning, defect management, go-live readiness, jourfix facilitation, etc.)",
+      "Discovered and fixed critical bug: agent checking Jira ticket status instead of actual Xray test results (customfield_10923)",
+      "Built automatic T-7/T-1 day go-live checklists with release date detection from Jira fix versions",
+      "Iterative development across 5+ Copilot sessions, progressively refining based on real usage",
     ],
     results: [
       { label: "Prep time", value: "30min → auto" },
@@ -88,9 +89,11 @@ export const useCases: UseCase[] = [
     ],
     keyMetric: { label: "Prevented false-positive releases", value: "Critical fix" },
     learnings: [
-      "Meeting transcripts are untapped gold — 22 meetings contained an entire undocumented process",
-      "Always verify what data field your automation checks — Jira status ≠ test result",
-      "Codifying tribal knowledge into discrete skills makes it transferable",
+      "Meeting transcripts are untapped gold — 22 unstructured meetings contained an entire process framework no one had documented",
+      "Validate the validation — the most dangerous bug was reporting success when tests failed. Jira status ≠ test execution result",
+      "Iterative agent development works — 5+ sessions allowed progressive refinement based on real usage feedback",
+      "Codifying tribal knowledge into 12 discrete skills makes it transferable, trainable, and improvable",
+      "Go-live checklists need automation — manual tracking always misses items under deadline pressure",
     ],
     tags: ["AI Agent", "QA Automation", "Process Design"],
     status: "complete",
