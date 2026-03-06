@@ -8,7 +8,6 @@ const AiUseCases = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const selectedCase = useCases.find((uc) => uc.id === selectedId);
 
-  // Bento size pattern: first 2 large, rest alternate
   const getCardSize = (index: number) => {
     if (index === 0) return "md:col-span-2 md:row-span-2";
     if (index === 1) return "md:col-span-1 md:row-span-2";
@@ -20,11 +19,10 @@ const AiUseCases = () => {
   return (
     <div className="min-h-screen pt-28 pb-20 px-6 relative z-10">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="mb-16 max-w-2xl">
           <span className="text-primary font-medium text-sm tracking-wide">Case Studies</span>
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold mt-2 mb-4 text-foreground">
-            AI in my <span className="italic">workflow</span> 🤖
+          <h1 className="text-4xl sm:text-6xl font-bold mt-2 mb-4 text-foreground">
+            AI in my <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">workflow</span>
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Real product management initiatives demonstrating data-driven decisions,
@@ -32,7 +30,6 @@ const AiUseCases = () => {
           </p>
         </div>
 
-        {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[220px]">
           {useCases.map((uc, i) => {
             const size = getCardSize(i);
@@ -43,16 +40,15 @@ const AiUseCases = () => {
                 key={uc.id}
                 onClick={() => setSelectedId(uc.id)}
                 className={cn(
-                  "group relative rounded-2xl border border-border bg-card overflow-hidden text-left transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 p-6 flex flex-col justify-between",
+                  "group relative rounded-2xl border border-border/50 bg-card overflow-hidden text-left transition-all duration-300 shadow-soft hover:shadow-soft-lg hover:-translate-y-0.5 p-6 flex flex-col justify-between",
                   size
                 )}
               >
-                {/* Status indicator */}
                 <div className="absolute top-4 right-4">
                   {uc.status === "in-progress" ? (
                     <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
                   ) : (
-                    <span className="inline-block w-2 h-2 rounded-full bg-sage" />
+                    <span className="inline-block w-2 h-2 rounded-full bg-soft-teal" />
                   )}
                 </div>
 
@@ -64,7 +60,7 @@ const AiUseCases = () => {
                     </span>
                     <h2
                       className={cn(
-                        "font-serif font-bold text-foreground group-hover:text-primary transition-colors leading-tight",
+                        "font-bold text-foreground group-hover:text-primary transition-colors leading-tight",
                         isLarge ? "text-2xl sm:text-3xl" : "text-lg sm:text-xl"
                       )}
                     >
@@ -79,7 +75,6 @@ const AiUseCases = () => {
                 </div>
 
                 <div className="space-y-3">
-                  {/* Key metric pill */}
                   <div className="inline-flex items-center gap-2 bg-secondary rounded-full px-3 py-1.5">
                     <TrendingUp className="w-3 h-3 text-primary shrink-0" />
                     <span className="text-xs font-medium text-foreground truncate">
@@ -87,7 +82,6 @@ const AiUseCases = () => {
                     </span>
                   </div>
 
-                  {/* Tags — show on large cards */}
                   {(isLarge || i === 1) && (
                     <div className="flex flex-wrap gap-1.5">
                       {uc.tags.slice(0, 3).map((tag) => (
@@ -104,26 +98,23 @@ const AiUseCases = () => {
         </div>
       </div>
 
-      {/* Detail Modal Overlay */}
       {selectedCase && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/40 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/30 backdrop-blur-sm"
           onClick={() => setSelectedId(null)}
         >
           <div
-            className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl bg-card border border-border shadow-2xl"
+            className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl bg-card border border-border/50 shadow-soft-lg"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
             <button
               onClick={() => setSelectedId(null)}
-              className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-muted transition-colors"
+              className="absolute top-4 right-4 z-10 w-8 h-8 rounded-lg bg-secondary flex items-center justify-center hover:bg-muted transition-colors"
             >
               <X className="w-4 h-4 text-muted-foreground" />
             </button>
 
             <div className="p-8 sm:p-10 space-y-8">
-              {/* Header */}
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-4xl">{selectedCase.emoji}</span>
@@ -138,33 +129,30 @@ const AiUseCases = () => {
                     )}
                   </div>
                 </div>
-                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground">
+                <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
                   {selectedCase.title}
                 </h2>
                 <p className="text-muted-foreground mt-1">{selectedCase.subtitle}</p>
               </div>
 
-              {/* Key metric */}
               <div className="inline-flex items-center gap-2 bg-secondary rounded-full px-4 py-2">
                 <TrendingUp className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-foreground">{selectedCase.keyMetric.value}</span>
                 <span className="text-sm text-muted-foreground">— {selectedCase.keyMetric.label}</span>
               </div>
 
-              {/* Challenge */}
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <Sparkles className="w-4 h-4 text-primary" />
-                  <h3 className="font-serif text-lg font-bold text-foreground">Challenge</h3>
+                  <h3 className="text-lg font-bold text-foreground">Challenge</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">{selectedCase.challenge}</p>
               </div>
 
-              {/* Actions */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
-                  <h3 className="font-serif text-lg font-bold text-foreground">What I Did</h3>
+                  <h3 className="text-lg font-bold text-foreground">What I Did</h3>
                 </div>
                 <ul className="space-y-2">
                   {selectedCase.actions.map((action, i) => (
@@ -178,16 +166,15 @@ const AiUseCases = () => {
                 </ul>
               </div>
 
-              {/* Results grid */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <TrendingUp className="w-4 h-4 text-primary" />
-                  <h3 className="font-serif text-lg font-bold text-foreground">Results</h3>
+                  <h3 className="text-lg font-bold text-foreground">Results</h3>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {selectedCase.results.map((r, i) => (
                     <div key={i} className="bg-secondary/60 rounded-xl p-4 text-center">
-                      <div className="text-xl sm:text-2xl font-bold text-foreground font-serif">
+                      <div className="text-xl sm:text-2xl font-bold text-foreground">
                         {r.value}
                       </div>
                       <div className="text-xs text-muted-foreground mt-1">{r.label}</div>
@@ -196,11 +183,10 @@ const AiUseCases = () => {
                 </div>
               </div>
 
-              {/* Learnings */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Lightbulb className="w-4 h-4 text-primary" />
-                  <h3 className="font-serif text-lg font-bold text-foreground">Key Takeaways</h3>
+                  <h3 className="text-lg font-bold text-foreground">Key Takeaways</h3>
                 </div>
                 <div className="space-y-2">
                   {selectedCase.learnings.map((learning, i) => (
@@ -215,7 +201,6 @@ const AiUseCases = () => {
                 </div>
               </div>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2 pt-2">
                 {selectedCase.tags.map((tag) => (
                   <Badge key={tag} variant="outline" className="text-xs">

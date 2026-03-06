@@ -1,46 +1,50 @@
 
 
-## Visual Revamp: Soft & Modern Theme
+## Update Portfolio with Real Data from Notion
 
-The current design uses a warm coral/terracotta palette with serif headings, floating emoji decorations, and a cream background — a "chaotic aesthetic" style. We'll replace it with a clean, soft, modern look inspired by Notion/Stripe/Apple.
+I successfully accessed your Notion page and extracted all the relevant information. Here's what I found and what I plan to update:
 
-### Design Direction
+### Data Extracted from Notion
 
-- **Palette**: Cool-toned with soft lavender/indigo primary, light gray background, subtle blue-gray accents
-- **Typography**: Clean sans-serif throughout (Inter for everything, drop the serif headings)
-- **Decorations**: Replace emoji stickers with subtle gradient blobs or soft geometric shapes
-- **Cards**: Soft shadows, generous padding, gentle hover states with subtle scale
-- **Navbar**: Frosted glass with softer rounding
+**About You:**
+- **Name**: Tania Maldonado
+- **Current Role**: Product Manager @ BMW Group
+- **Previous**: Tech Senior Consultant @ Deloitte
+- **7+ years** of experience in product development and digital strategy
+- Fluent in Portuguese, English, and Spanish
+- Expertise in B2B and B2C solutions, market research, cross-functional teamwork
 
-### Files to Change
+**Experience (2 roles):**
+1. **BMW Group** — Product Manager (April 2022 - Present) — OEM Automotive
+2. **Deloitte** — Tech Senior Consultant (August 2018 - April 2022) — Consulting
 
-**1. `src/index.css`** — New color system:
-- Background: near-white `#FAFBFC`
-- Primary: soft indigo `~230 70% 55%`
-- Accents: lavender, soft teal
-- Remove coral/terracotta/sage custom vars
-- Remove serif font override on headings
+**Projects (4 featured):**
+1. **ONE Sales Workplace** — Automotive, Germany, Web, B2B — "Web-based platform for retail partners worldwide to support end-to-end sales and business processes for new and used vehicles, as well as Financial Services, across all BMW Group brands."
+2. **Unitel** — Telecommunications, Angola, Web & Mobile, B2C — "Self-service app for clients to manage their mobile services."
+3. **NOS Self-Service App** — Telecommunications, Portugal, Mobile, B2C — "Self-service app for clients to manage their mobile services." (Features: check mobile consumption, pay invoices, purchase data packages, access promotions)
+4. **HR Tool** — Human Resources, Portugal, Web, B2B — "Internal HR Tool where team members could share projects, fill timesheets, upload certifications."
 
-**2. `tailwind.config.ts`** — Update custom colors and remove serif font family. Add soft shadow utilities. Update animations to be gentler (slower, smaller movement).
+**Skills database** has categories: Software, Language, Expertise (couldn't retrieve individual items, but I have the structure)
 
-**3. `src/components/DecorativeElements.tsx`** — Replace emoji-based decorations with soft gradient blobs (CSS-only circles with blur and low opacity). Fewer elements, more ambient.
+### Plan
 
-**4. `src/pages/Index.tsx`** — Remove inline emoji stickers. Cleaner hero with gradient text accent. Softer CTA buttons with rounded-xl and subtle shadows.
+#### 1. Update Home/Hero page with Tania's real info
+- Change headline and subtitle to reflect Tania's actual role and pitch
+- Update the eyebrow tag to "Product Manager @ BMW Group"
+- Adjust the bio text with her real background
 
-**5. `src/components/Navbar.tsx`** — Lighter backdrop blur, pill-shaped active indicator with softer colors. Remove the "✦" from the logo text.
+#### 2. Update Products page with real project data
+- Replace the 4 placeholder products in `src/data/products.ts` with the 4 featured projects from Notion
+- Update the `Product` interface to include new fields: `sector`, `country`, `platform`, `type` (B2B/B2C)
+- Display sector, country, and platform as badges/tags on each product card
+- Use relevant stock images for each sector (automotive, telecommunications, HR) since Notion image URLs are temporary signed URLs
 
-**6. `src/pages/Products.tsx`** — Softer card styling with `shadow-sm hover:shadow-md`, lighter borders.
+#### 3. Update Navbar with Tania's name
+- Add her name or initials to the navbar for personalization
 
-**7. `src/pages/AiUseCases.tsx`** — Update bento grid cards to use the new palette. Softer status indicators. Modal updated with new accent colors.
-
-### Summary of Visual Changes
-
-| Element | Current | New |
-|---------|---------|-----|
-| Background | Warm cream | Cool near-white |
-| Primary | Coral/orange | Soft indigo |
-| Headings | Serif (Times) | Sans-serif (Inter) |
-| Decorations | Floating emojis | Gradient blobs |
-| Cards | Warm borders | Soft shadows |
-| Overall feel | Chaotic/playful | Clean/professional |
+### Technical Details
+- Product data remains hardcoded in `src/data/products.ts` (easy to update later)
+- New fields added to the Product interface: `sector`, `country`, `platform`, `type`
+- Product cards will show tags for sector, country, platform, and B2B/B2C type
+- Stock images from Unsplash will be used since Notion S3 URLs expire
 

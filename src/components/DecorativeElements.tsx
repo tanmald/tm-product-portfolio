@@ -1,32 +1,28 @@
-const elements = [
-  { emoji: "🌸", top: "10%", left: "5%", size: "text-3xl", animation: "animate-float", rotate: "-12deg" },
-  { emoji: "✦", top: "15%", right: "8%", size: "text-4xl", animation: "animate-float-slow", rotate: "15deg", color: "text-primary" },
-  { emoji: "🌿", top: "60%", left: "3%", size: "text-2xl", animation: "animate-float-slow", rotate: "25deg" },
-  { emoji: "→", top: "40%", right: "5%", size: "text-5xl", animation: "animate-float", rotate: "-8deg", color: "text-warm-orange" },
-  { emoji: "⭐", bottom: "20%", left: "8%", size: "text-2xl", animation: "animate-float", rotate: "20deg" },
-  { emoji: "🌺", bottom: "15%", right: "10%", size: "text-3xl", animation: "animate-float-slow", rotate: "-15deg" },
-  { emoji: "◆", top: "75%", left: "92%", size: "text-2xl", animation: "animate-float", rotate: "45deg", color: "text-terracotta" },
-  { emoji: "~", top: "30%", left: "12%", size: "text-4xl", animation: "animate-float-slow", rotate: "0deg", color: "text-sage" },
+const blobs = [
+  { top: "8%", left: "5%", size: 200, color: "bg-primary/8", animation: "animate-drift" },
+  { top: "20%", right: "8%", size: 300, color: "bg-accent/6", animation: "animate-drift-slow" },
+  { top: "55%", left: "2%", size: 180, color: "bg-soft-teal/8", animation: "animate-drift-slow" },
+  { bottom: "15%", right: "5%", size: 250, color: "bg-lavender/8", animation: "animate-drift" },
+  { top: "70%", left: "80%", size: 150, color: "bg-soft-rose/6", animation: "animate-drift-slow" },
 ];
 
 const DecorativeElements = () => {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {elements.map((el, i) => (
-        <span
+      {blobs.map((blob, i) => (
+        <div
           key={i}
-          className={`absolute ${el.size} ${el.animation} ${el.color || ""} opacity-40 select-none`}
+          className={`absolute rounded-full blur-3xl ${blob.color} ${blob.animation}`}
           style={{
-            top: el.top,
-            left: el.left,
-            right: el.right,
-            bottom: el.bottom,
-            transform: `rotate(${el.rotate})`,
-            animationDelay: `${i * 0.5}s`,
+            top: blob.top,
+            left: blob.left,
+            right: blob.right,
+            bottom: blob.bottom,
+            width: blob.size,
+            height: blob.size,
+            animationDelay: `${i * 1.5}s`,
           }}
-        >
-          {el.emoji}
-        </span>
+        />
       ))}
     </div>
   );

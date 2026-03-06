@@ -6,80 +6,78 @@
 
 @layer base {
   :root {
-    --background: 36 33% 96%;
-    --foreground: 20 10% 12%;
+    --background: 220 20% 97%;
+    --foreground: 220 20% 10%;
 
-    --card: 36 33% 98%;
-    --card-foreground: 20 10% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
 
-    --popover: 36 33% 98%;
-    --popover-foreground: 20 10% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
 
-    --primary: 16 80% 58%;
-    --primary-foreground: 36 33% 98%;
+    --primary: 230 70% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 36 30% 90%;
-    --secondary-foreground: 20 10% 12%;
+    --secondary: 220 20% 94%;
+    --secondary-foreground: 220 20% 10%;
 
-    --muted: 36 20% 92%;
-    --muted-foreground: 20 10% 40%;
+    --muted: 220 15% 93%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 350 65% 55%;
-    --accent-foreground: 36 33% 98%;
+    --accent: 260 60% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
-    --ring: 16 80% 58%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 230 70% 55%;
 
     --radius: 0.75rem;
 
-    --coral: 16 80% 58%;
-    --warm-orange: 28 90% 55%;
-    --cream: 36 33% 96%;
-    --sage: 140 15% 60%;
-    --terracotta: 12 60% 45%;
+    --lavender: 260 60% 70%;
+    --soft-teal: 175 40% 55%;
+    --soft-rose: 340 50% 70%;
 
-    --sidebar-background: 36 33% 94%;
-    --sidebar-foreground: 20 10% 12%;
-    --sidebar-primary: 16 80% 58%;
-    --sidebar-primary-foreground: 36 33% 98%;
-    --sidebar-accent: 36 30% 90%;
-    --sidebar-accent-foreground: 20 10% 12%;
-    --sidebar-border: 30 20% 85%;
-    --sidebar-ring: 16 80% 58%;
+    --sidebar-background: 220 20% 95%;
+    --sidebar-foreground: 220 20% 10%;
+    --sidebar-primary: 230 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 94%;
+    --sidebar-accent-foreground: 220 20% 10%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 230 70% 55%;
   }
 
   .dark {
-    --background: 20 10% 8%;
-    --foreground: 36 33% 96%;
-    --card: 20 10% 12%;
-    --card-foreground: 36 33% 96%;
-    --popover: 20 10% 12%;
-    --popover-foreground: 36 33% 96%;
-    --primary: 16 80% 58%;
-    --primary-foreground: 36 33% 98%;
-    --secondary: 20 15% 18%;
-    --secondary-foreground: 36 33% 96%;
-    --muted: 20 15% 18%;
-    --muted-foreground: 36 20% 60%;
-    --accent: 350 65% 55%;
-    --accent-foreground: 36 33% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 20 15% 20%;
-    --input: 20 15% 20%;
-    --ring: 16 80% 58%;
-    --sidebar-background: 20 10% 10%;
-    --sidebar-foreground: 36 33% 96%;
-    --sidebar-primary: 16 80% 58%;
-    --sidebar-primary-foreground: 36 33% 98%;
-    --sidebar-accent: 20 15% 18%;
-    --sidebar-accent-foreground: 36 33% 96%;
-    --sidebar-border: 20 15% 20%;
-    --sidebar-ring: 16 80% 58%;
+    --background: 220 20% 7%;
+    --foreground: 220 15% 93%;
+    --card: 220 20% 10%;
+    --card-foreground: 220 15% 93%;
+    --popover: 220 20% 10%;
+    --popover-foreground: 220 15% 93%;
+    --primary: 230 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 220 15% 93%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 260 60% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 230 70% 60%;
+    --sidebar-background: 220 20% 9%;
+    --sidebar-foreground: 220 15% 93%;
+    --sidebar-primary: 230 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 220 15% 93%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 230 70% 60%;
   }
 }
 
@@ -91,9 +89,5 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Times New Roman MT Condensed', 'Times New Roman', Times, serif;
   }
 }

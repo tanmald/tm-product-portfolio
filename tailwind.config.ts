@@ -14,7 +14,6 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ["Times New Roman MT Condensed", "Times New Roman", "Times", "serif"],
         sans: ["Inter", "sans-serif"],
       },
       colors: {
@@ -23,11 +22,9 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        coral: "hsl(var(--coral))",
-        "warm-orange": "hsl(var(--warm-orange))",
-        cream: "hsl(var(--cream))",
-        sage: "hsl(var(--sage))",
-        terracotta: "hsl(var(--terracotta))",
+        lavender: "hsl(var(--lavender))",
+        "soft-teal": "hsl(var(--soft-teal))",
+        "soft-rose": "hsl(var(--soft-rose))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -72,6 +69,10 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        soft: "0 2px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04)",
+        "soft-lg": "0 10px 40px -10px rgba(0, 0, 0, 0.08)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -81,20 +82,20 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "float": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-10px) rotate(3deg)" },
+        "drift": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(10px, -8px) scale(1.02)" },
         },
-        "float-slow": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-6px) rotate(-2deg)" },
+        "drift-slow": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(-8px, 6px) scale(0.98)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 4s ease-in-out infinite",
-        "float-slow": "float-slow 6s ease-in-out infinite",
+        "drift": "drift 8s ease-in-out infinite",
+        "drift-slow": "drift-slow 12s ease-in-out infinite",
       },
     },
   },
