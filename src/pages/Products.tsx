@@ -9,11 +9,11 @@ const Products = () => {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <span className="text-primary font-medium text-sm tracking-wide">Portfolio</span>
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold mt-2 mb-4 text-foreground">
-            Things I've <span className="italic">built</span> ✦
+          <h1 className="text-4xl sm:text-6xl font-bold mt-2 mb-4 text-foreground">
+            Things I've <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">built</span>
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            A collection of products I've shaped across automotive, telecom, and consulting. 
+            A collection of products I've shaped across automotive, telecom, and consulting.
             Each one taught me something new about users, teams, and craft.
           </p>
         </div>
@@ -26,10 +26,9 @@ const Products = () => {
               href={product.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl border border-border bg-card overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="group block rounded-2xl border border-border/50 bg-card overflow-hidden shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300"
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              {/* Image */}
               <div className="aspect-[3/2] overflow-hidden bg-secondary">
                 <img
                   src={product.image}
@@ -38,12 +37,10 @@ const Products = () => {
                   loading="lazy"
                 />
               </div>
-
-              {/* Content */}
               <div className="p-6 space-y-3">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <h3 className="font-serif text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {product.name}
                     </h3>
                     <span className="text-sm font-medium text-primary">{product.role}</span>
