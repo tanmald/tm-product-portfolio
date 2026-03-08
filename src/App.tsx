@@ -6,8 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import DecorativeElements from "@/components/DecorativeElements";
 import Index from "./pages/Index";
-import Products from "./pages/Products";
-import AiUseCases from "./pages/AiUseCases";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
@@ -23,8 +21,6 @@ const App = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/ai-use-cases" element={<AiUseCases />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
