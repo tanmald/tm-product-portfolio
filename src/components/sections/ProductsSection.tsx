@@ -81,6 +81,9 @@ const ProductDetailDialog = ({
 const ProductsSection = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
+  // Show first 4 products on the homepage
+  const featuredProducts = products.slice(0, 4);
+
   return (
     <section id="work" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
@@ -94,14 +97,14 @@ const ProductsSection = () => {
               </span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              A collection of products I've shaped across automotive, telecom, and consulting.
-              Each one taught me something new about users, teams, and craft.
+              From enterprise automotive platforms to national-scale public health systems —
+              products shaped across 6+ sectors and 5+ countries.
             </p>
           </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {products.map((product, i) => (
+          {featuredProducts.map((product, i) => (
             <ScrollReveal key={product.id} delay={i * 0.1} direction={i % 2 === 0 ? "left" : "right"}>
               <div
                 className="group block rounded-2xl border border-border/50 bg-card overflow-hidden shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full"
@@ -140,6 +143,18 @@ const ProductsSection = () => {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.3}>
+          <div className="mt-12 text-center">
+            <a
+              href="/products"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-secondary text-foreground font-medium text-sm hover:bg-muted transition-colors"
+            >
+              View all {products.length} projects
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
 
       <ProductDetailDialog
