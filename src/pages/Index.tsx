@@ -1,4 +1,5 @@
 import HeroSection from "@/components/sections/HeroSection";
+import MetricsStrip from "@/components/sections/MetricsStrip";
 import ProductsSection from "@/components/sections/ProductsSection";
 import AiSection from "@/components/sections/AiSection";
 import FooterSection from "@/components/sections/FooterSection";
@@ -7,6 +8,7 @@ const Index = () => {
   return (
     <div className="relative z-10">
       <HeroSection />
+      <MetricsStrip />
       <ProductsSection />
       <AiSection />
       <FooterSection />

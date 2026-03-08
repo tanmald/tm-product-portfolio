@@ -24,16 +24,26 @@ const HeroSection = () => {
             Hi, I'm Tânia
             <br />
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              I build products
+              I engineer outcomes
             </span>
           </h1>
         </ScrollReveal>
 
         <ScrollReveal delay={0.35}>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            7+ years of experience in product development and digital strategy.
-            Passionate about turning complex problems into simple, delightful experiences.
+            7+ years turning complexity into structure and shipping results — from
+            national-scale platforms to enterprise automotive products across 30+ markets.
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.45}>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground/70">
+            <span>🇵🇹 Portuguese</span>
+            <span className="hidden sm:inline text-border">·</span>
+            <span>🇬🇧 English</span>
+            <span className="hidden sm:inline text-border">·</span>
+            <span>🇪🇸 Spanish</span>
+          </div>
         </ScrollReveal>
       </div>
 
