@@ -42,7 +42,7 @@ const AiSection = () => {
             const isLarge = i === 0;
 
             return (
-              <ScrollReveal key={uc.id} delay={i * 0.05} className={size}>
+              <ScrollReveal key={uc.id} delay={i * 0.05} className={cn(size, "h-full")}>
                 <button
                   onClick={() => setSelectedId(uc.id)}
                   className={cn(
