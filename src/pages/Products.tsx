@@ -113,8 +113,9 @@ const Products = () => {
           {products.map((product, i) => (
             <div
               key={product.id}
-              className="group block rounded-2xl border border-border/50 bg-card overflow-hidden shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300"
+              className="group block rounded-2xl border border-border/50 bg-card overflow-hidden shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               style={{ animationDelay: `${i * 100}ms` }}
+              onClick={() => setSelectedProduct(product)}
             >
               <div className="aspect-[3/2] overflow-hidden bg-secondary">
                 <img
@@ -142,15 +143,10 @@ const Products = () => {
                   <Badge variant="secondary">{product.platform}</Badge>
                   <Badge variant="outline">{product.type}</Badge>
                 </div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="mt-2 text-primary hover:text-primary/80 px-0 gap-1.5"
-                  onClick={() => setSelectedProduct(product)}
-                >
+                <span className="inline-flex items-center gap-1.5 mt-2 text-sm text-primary font-medium">
                   See more
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
               </div>
             </div>
           ))}
