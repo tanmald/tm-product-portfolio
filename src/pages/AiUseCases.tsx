@@ -30,7 +30,7 @@ const AiUseCases = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[180px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
           {useCases.map((uc, i) => {
             const size = getCardSize(i);
             const isLarge = i === 0;
