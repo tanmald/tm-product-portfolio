@@ -30,17 +30,19 @@ const AiUseCases = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[220px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[180px]">
           {useCases.map((uc, i) => {
             const size = getCardSize(i);
             const isLarge = i === 0;
+            const isTall = i === 0 || i === 1;
 
             return (
               <button
                 key={uc.id}
                 onClick={() => setSelectedId(uc.id)}
                 className={cn(
-                  "group relative rounded-2xl border border-border/50 bg-card overflow-hidden text-left transition-all duration-300 shadow-soft hover:shadow-soft-lg hover:-translate-y-0.5 p-6 flex flex-col justify-between",
+                  "group relative rounded-2xl border border-border/50 bg-card overflow-hidden text-left transition-all duration-300 shadow-soft hover:shadow-soft-lg hover:-translate-y-0.5 flex flex-col justify-between",
+                  isLarge ? "p-6" : "p-5",
                   size
                 )}
               >
@@ -53,7 +55,7 @@ const AiUseCases = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <span className={cn("block", isLarge ? "text-5xl" : "text-3xl")}>{uc.emoji}</span>
+                  <span className={cn("block", isLarge ? "text-4xl" : "text-2xl")}>{uc.emoji}</span>
                   <div>
                     <span className="text-[10px] font-medium text-primary tracking-widest uppercase">
                       Case {uc.id}
@@ -61,36 +63,44 @@ const AiUseCases = () => {
                     <h2
                       className={cn(
                         "font-bold text-foreground group-hover:text-primary transition-colors leading-tight",
-                        isLarge ? "text-2xl sm:text-3xl" : "text-lg sm:text-xl"
+                        isLarge ? "text-2xl sm:text-3xl" : "text-base sm:text-lg"
                       )}
                     >
                       {uc.title}
                     </h2>
-                    {isLarge && (
+                    {isTall && (
                       <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
                         {uc.subtitle}
+                      </p>
+                    )}
+                    {isLarge && (
+                      <p className="text-xs text-muted-foreground/70 mt-2 line-clamp-2">
+                        {uc.challenge}
                       </p>
                     )}
                   </div>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <div className="inline-flex items-center gap-2 bg-secondary rounded-full px-3 py-1.5">
                     <TrendingUp className="w-3 h-3 text-primary shrink-0" />
                     <span className="text-xs font-medium text-foreground truncate">
                       {uc.keyMetric.value}
                     </span>
+                    {isTall && (
+                      <span className="text-[10px] text-muted-foreground truncate hidden sm:inline">
+                        — {uc.keyMetric.label}
+                      </span>
+                    )}
                   </div>
 
-                  {(isLarge || i === 1) && (
-                    <div className="flex flex-wrap gap-1.5">
-                      {uc.tags.slice(0, 3).map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-[10px] px-2 py-0">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex flex-wrap gap-1.5">
+                    {uc.tags.slice(0, isLarge ? 4 : 3).map((tag) => (
+                      <Badge key={tag} variant="outline" className="text-[10px] px-2 py-0">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
               </button>
             );
