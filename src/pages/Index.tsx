@@ -3,6 +3,7 @@ import MetricsStrip from "@/components/sections/MetricsStrip";
 import ProductsSection from "@/components/sections/ProductsSection";
 import GitHubSection from "@/components/sections/GitHubSection";
 import AiSection from "@/components/sections/AiSection";
+import SkillsSection from "@/components/sections/SkillsSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const Index = () => {
