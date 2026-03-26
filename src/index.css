@@ -90,4 +90,8 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
+
+  h1, h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
 }
