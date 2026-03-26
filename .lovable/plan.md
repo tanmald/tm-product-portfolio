@@ -1,57 +1,75 @@
 
 
-## Rewrite Portfolio Content: High-Level, Outcome-Focused, AI-Leveraged
+## Skills Inventory: Bento Grid — Reframed for AI-Native PM
 
-### Problem
-The current content reads like detailed process documentation — step-by-step actions, internal tool names, sprint points, section counts. A hiring manager skims for 10 seconds. They want: **what was the problem, what was the outcome, how big was the impact, and what makes you different (AI leverage).**
+### The Problem with Current Sizing
+The previous plan carried over the tier structure from the original document, which gave equal weight to operational/PO skills (Agile & Delivery, Sprint velocity) and strategic PM skills. For an AI-native PM portfolio, the hierarchy should reflect what hiring managers value in a **strategic Product Manager**: vision, data-driven decision-making, AI leverage, and stakeholder influence — not sprint ceremonies or backlog grooming.
 
-### Approach
-Rewrite all content in both data files with this lens:
-- **Descriptions**: 1-2 sentences, outcome-first, no internal jargon
-- **Highlights**: 3 max, framed as high-level capabilities demonstrated (not tasks performed)
-- **Impact**: Lead with the biggest number, keep it punchy
-- **Challenge**: 2 sentences max — the tension, not the backstory
-- **Actions**: Reframe as strategic moves, not task lists
-- **Learnings**: Cut to 2-3 max, make them transferable PM principles
-- **AI angle**: Where AI/Copilot was used, call it out explicitly as a differentiator
+### New Skill Hierarchy (by PM importance, not original tiers)
 
-### Files to change
+**Large cards** (hero-level, these define you):
+1. **AI-Augmented Product Work** — This is THE differentiator. An AI-native PM who builds tools, automates analysis, and uses AI as a force multiplier. Biggest card.
+2. **Strategic Analysis & Due Diligence** — Core PM: taking ownership of ambiguous products, building capacity models, uncovering hidden risks with data.
 
-#### 1. `src/data/products.ts` — Rewrite all 8 products
-For each product, rewrite:
-- `description` — outcome-first, 1 sentence, biggest number upfront
-- `detailedDescription` — 2-3 sentences, strategic narrative
-- `highlights` — 3 items max, capability-framed ("Led X across Y" not "Created document with Z sections")
-- `impact` — 3 items max, numbers first, no filler
+**Medium cards** (strong PM signals):
+3. **Stakeholder Management** — PM, not PO. Influencing execs across geographies, managing politics, aligning business and tech.
+4. **Crisis Product Leadership** — Stepping into chaos, stabilizing, exiting cleanly. Shows senior PM judgment.
+5. **Quantitative Rigor** — Data-driven decisions, not vibes. Every PM job description asks for this.
+6. **AI Product Strategy** — Forward-looking: where you're growing into (AI strategy, not just AI tooling).
 
-Examples of the shift:
-- **Before (TNPS)**: "Created a 14-section due diligence document from scratch across 6 iterations (v1–v1.6)"
-- **After**: "Took ownership of a new product, built a realistic capacity model, and uncovered a hidden 25 SP/quarter defect tax that was inflating every roadmap commitment"
-- **Before (Retailer Hub)**: "Authored Deep Dive with 9 sections covering architecture, capacity, risks..."
-- **After**: "Owned a politically sensitive product transition across 2 continents — quantified a 25-60% capacity gap and delivered 3 transition scenarios to de-risk the decision"
+**Small cards** (supporting, not leading):
+7. **Cross-Cultural Delivery** — 5+ countries, 3 languages. Important context but not a primary PM skill.
+8. **Technical Fluency** — Enables credibility with engineers, but a PM isn't hired for knowing AWS.
+9. **Entrepreneurial Building** — Side projects show initiative but are secondary.
 
-#### 2. `src/data/useCases.ts` — Rewrite all 12 case studies
-For each case:
-- `challenge` — 1-2 sentences, the tension/stakes
-- `actions` — 3 items max, strategic framing, call out AI/Copilot usage where applicable
-- `results` — keep 4 metrics but make them punchier
-- `learnings` — cut to 2-3 max, make them PM principles a hiring manager would nod at
-- `keyMetric` — ensure the value is immediately impressive
+**Removed / merged**:
+- **"Agile & Delivery Excellence"** — This is PO territory (sprint velocity, Scrum ceremonies). Merge the relevant bits into other skills or drop it. A PM doesn't lead with "I run good sprints."
+- **"Mentoring & Team Building"** — Fold into Crisis Product Leadership evidence (mentored replacement PO).
+- **"Content & Personal Brand"** — Drop from skills section. It's not a PM skill a hiring manager cares about. Could live elsewhere (footer, about section).
 
-Key rewrites:
-- Remove internal BMW jargon (DEACH SAGAs, FSM_STARTING_PHASE_POPUP, WP3 format, FG-861)
-- Replace "Analyzed X items" with "Found Y insight that led to Z outcome"
-- Where Copilot/AI was used as a tool, add it: "Used AI to analyze 22 meeting transcripts" instead of just "Analyzed 22 meeting transcripts"
+### Files to Change
 
-#### 3. `src/components/sections/AiSection.tsx` — Update section header
-- Change subtitle from "Real product management initiatives demonstrating data-driven decisions..." to something snappier like "How I use data, AI, and structured thinking to drive product outcomes."
+#### 1. `src/data/skills.ts`
+- Flatten the tier structure into a single array of skills
+- New interface: `Skill` with `name`, `evidence`, `size`, `metric?`, `relatedProductIds?`, `relatedCaseIds?`, `tier` (kept as badge label only)
+- 9 skills total, sized as above
+- Rewrite evidence to be outcome-first and concise (1 sentence)
+- Add `metric` for the large/medium cards (e.g. "2 weeks → 2 hours", "25K users across 30+ markets")
+- Map `relatedProductIds` and `relatedCaseIds` to connect to portfolio items
 
-#### 4. `src/components/sections/ProductsSection.tsx` — Update section header
-- Tighten the description copy to match the new tone
+#### 2. `src/components/sections/SkillsSection.tsx`
+- Bento grid layout (4-column on desktop, 1-column mobile)
+- Large: `col-span-2 row-span-2`, Medium: `col-span-1 row-span-2` or `col-span-2 row-span-1`, Small: `col-span-1 row-span-1`
+- Each card: skill name, tier badge, metric (large text), evidence (small), linked project/case chips
+- Clicking a chip scrolls to the relevant section
+- Gradient border by tier, hover lift effect
+- Keep ScrollReveal
+
+#### Layout sketch
+```text
+┌──────────────────────┬────────────┐
+│  AI-Augmented        │ Stakeholder│
+│  Product Work        │ Management │
+│  "2wks → 2hrs"       │ (medium)   │
+│  (LARGE)             │            │
+│  [Case 12] [TNPS]   ├────────────┤
+│                      │ Quant.     │
+│                      │ Rigor (med)│
+├───────────┬──────────┼────────────┤
+│ Strategic │ Crisis   │ AI Product │
+│ Analysis  │ Product  │ Strategy   │
+│ (LARGE)   │ Leader.  │ (medium)   │
+│ "103 epic"│ (medium) ├────────────┤
+│ [TNPS]    │ [eSign]  │Cross-Cult. │
+│ [Case 5]  │         │ (small)    │
+├───────────┴──────────┼────────────┤
+│ Tech Fluency (small) │ Entrepren. │
+│                      │ (small)    │
+└──────────────────────┴────────────┘
+```
 
 ### What stays the same
-- All component structure, layout, modals, scroll behavior
-- The `Product` and `UseCase` interfaces
-- The editorial text-first design
-- The TNPS ↔ Case 5 link
+- Section position and `id="skills"`
+- ScrollReveal animations
+- Overall design language
 
