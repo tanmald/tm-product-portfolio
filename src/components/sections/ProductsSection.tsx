@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, CheckCircle2, TrendingUp } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, TrendingUp } from "lucide-react";
 import { products, Product } from "@/data/products";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -81,16 +81,15 @@ const ProductDetailDialog = ({
 const ProductsSection = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-  // Show first 4 products on the homepage
   const featuredProducts = products.slice(0, 4);
 
   return (
     <section id="work" className="py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <div className="mb-20 max-w-2xl">
-            <span className="text-primary font-medium text-sm tracking-wide">Portfolio</span>
-            <h2 className="text-4xl sm:text-6xl font-bold mt-2 mb-4 text-foreground">
+          <div className="mb-16 max-w-2xl">
+            <span className="text-primary font-medium text-sm tracking-wide uppercase">Portfolio</span>
+            <h2 className="text-4xl sm:text-5xl font-bold mt-3 mb-5 text-foreground leading-tight">
               Things I've{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 built
@@ -103,52 +102,50 @@ const ProductsSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-0">
           {featuredProducts.map((product, i) => (
-            <ScrollReveal key={product.id} delay={i * 0.1} direction={i % 2 === 0 ? "left" : "right"}>
+            <ScrollReveal key={product.id} delay={i * 0.08}>
               <div
-                className="group block rounded-2xl border border-border/50 bg-card overflow-hidden shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full"
+                className="group py-8 border-t border-border/60 cursor-pointer transition-colors hover:bg-muted/30 -mx-6 px-6 rounded-lg"
                 onClick={() => setSelectedProduct(product)}
               >
-                <div className="aspect-[3/2] overflow-hidden bg-secondary">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6 space-y-3">
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                      {product.name}
-                    </h3>
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3 mb-1">
+                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                        {product.name}
+                      </h3>
+                      <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                    </div>
                     <span className="text-sm font-medium text-primary">{product.role}</span>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed line-clamp-3">
-                    {product.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 pt-1">
-                    <Badge variant="secondary">{product.sector}</Badge>
-                    <Badge variant="secondary">{product.country}</Badge>
-                    <Badge variant="secondary">{product.platform}</Badge>
-                    <Badge variant="outline">{product.type}</Badge>
+                  <div className="flex items-center gap-2 shrink-0 mt-1">
+                    <Badge variant="secondary" className="text-xs">{product.sector}</Badge>
+                    <Badge variant="outline" className="text-xs">{product.type}</Badge>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 mt-2 text-sm text-primary font-medium">
-                    See more
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
                 </div>
+
+                <p className="text-muted-foreground leading-relaxed text-[15px] max-w-3xl">
+                  {product.description}
+                </p>
+
+                {/* Key impact — one-liner */}
+                {product.impact[0] && (
+                  <p className="mt-3 text-sm font-medium text-foreground/80">
+                    ↗ {product.impact[0]}
+                  </p>
+                )}
               </div>
             </ScrollReveal>
           ))}
+          <div className="border-t border-border/60" />
         </div>
 
         <ScrollReveal delay={0.3}>
-          <div className="mt-12 text-center">
+          <div className="mt-10">
             <a
               href="/products"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-secondary text-foreground font-medium text-sm hover:bg-muted transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:underline underline-offset-4 transition-colors"
             >
               View all {products.length} projects
               <ArrowRight className="w-4 h-4" />
