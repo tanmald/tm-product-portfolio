@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import DecorativeElements from "@/components/DecorativeElements";
 import Index from "./pages/Index";
 import Admin from "./pages/Admin";
+import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
