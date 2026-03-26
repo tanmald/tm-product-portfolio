@@ -37,6 +37,7 @@ export const githubProjects: GitHubProject[] = [
     longDescription:
       "Transforms static nutrition plans into actionable guidance. Uses OCR + NLP to parse plans from PDFs/images, then analyzes meal photos with GPT-4 Vision to provide instant 0-100 adherence scores with explainable feedback. Features confidence-aware AI results and daily/weekly progress tracking.",
     url: "https://github.com/tanmald/plate-check",
+    liveUrl: "https://platecheck.vercel.app/",
     tech: ["React 18", "TypeScript", "Supabase", "GPT-4 Vision", "Tailwind CSS", "Recharts"],
     highlights: [
       "Photo-based meal logging with AI vision analysis",
