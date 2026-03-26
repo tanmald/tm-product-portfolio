@@ -20,7 +20,7 @@ const HeroSection = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold leading-[0.95] tracking-tight text-foreground font-serif">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-normal leading-[0.95] tracking-tight text-foreground font-serif">
             Hi, I'm Tânia
             <br />
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
