@@ -5,6 +5,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { Sparkles, Target, TrendingUp, Globe, Cpu, Rocket, Users, ShieldCheck, Brain } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const skillIcons: Record<string, React.ElementType> = {
   "AI-Augmented Product Work": Sparkles,
@@ -18,25 +19,9 @@ const skillIcons: Record<string, React.ElementType> = {
   "Entrepreneurial Building": Rocket,
 };
 
-const sizeClasses: Record<string, string> = {
-  large: "col-span-1 sm:col-span-2 row-span-1 sm:row-span-2",
-  medium: "col-span-1 row-span-1 sm:row-span-2",
-  small: "col-span-1 row-span-1",
-};
-
-const tierGradients: Record<string, string> = {
-  Differentiating: "from-primary/20 to-accent/10",
-  Strong: "from-accent/15 to-secondary/10",
-  Growth: "from-secondary/20 to-muted/10",
-};
-
-const tierBorderColors: Record<string, string> = {
-  Differentiating: "border-primary/30 hover:border-primary/50",
-  Strong: "border-accent/20 hover:border-accent/40",
-  Growth: "border-secondary/30 hover:border-secondary/50",
-};
-
 const SkillsSection = () => {
+  const isMobile = useIsMobile();
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -61,7 +46,14 @@ const SkillsSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div
+          className="grid gap-4"
+          style={
+            isMobile
+              ? { gridTemplateColumns: "1fr" }
+              : { gridTemplateColumns: "repeat(3, 1fr)" }
+          }
+        >
           {skills.map((skill, i) => {
             const Icon = skillIcons[skill.name] || Sparkles;
             const relatedProducts = (skill.relatedProductIds || [])
@@ -75,15 +67,22 @@ const SkillsSection = () => {
               <ScrollReveal
                 key={skill.name}
                 delay={i * 0.06}
-                className={sizeClasses[skill.size]}
+                style={
+                  isMobile
+                    ? undefined
+                    : {
+                        gridRow: skill.gridPosition.row,
+                        gridColumn: skill.gridPosition.col,
+                      }
+                }
               >
                 <motion.div
                   whileHover={{ y: -4, scale: 1.01 }}
                   transition={{ duration: 0.2 }}
-                  className={`h-full rounded-2xl border bg-gradient-to-br ${tierGradients[skill.tier]} ${tierBorderColors[skill.tier]} p-5 sm:p-6 flex flex-col transition-shadow hover:shadow-lg`}
+                  className="h-full rounded-2xl border border-border bg-card p-5 sm:p-6 flex flex-col transition-shadow hover:shadow-lg"
                 >
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-background/80 border border-border/50 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-muted/50 border border-border/50 flex items-center justify-center shrink-0">
                       <Icon className="w-5 h-5 text-primary" />
                     </div>
                     <Badge

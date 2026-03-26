@@ -8,6 +8,7 @@ interface ScrollRevealProps {
   direction?: "up" | "down" | "left" | "right" | "none";
   duration?: number;
   once?: boolean;
+  style?: React.CSSProperties;
 }
 
 const directionMap = {
@@ -25,6 +26,7 @@ const ScrollReveal = ({
   direction = "up",
   duration = 0.8,
   once = true,
+  style,
 }: ScrollRevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once, margin: "-80px" });
@@ -34,6 +36,7 @@ const ScrollReveal = ({
     <motion.div
       ref={ref}
       className={className}
+      style={style}
       initial={{ opacity: 0, x, y }}
       animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x, y }}
       transition={{
