@@ -36,9 +36,7 @@ const SkillsSection = () => {
             </span>
             <h2 className="text-3xl sm:text-4xl font-normal text-foreground mt-2 mb-3 font-serif">
               Skills{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Inventory
-              </span>
+              <span className="text-primary">Inventory</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl">
               Evidence-backed capabilities — sized by strategic PM relevance, linked to real projects.
@@ -56,6 +54,7 @@ const SkillsSection = () => {
         >
           {skills.map((skill, i) => {
             const Icon = skillIcons[skill.name] || Sparkles;
+            const isDifferentiating = skill.tier === "Differentiating";
             const relatedProducts = (skill.relatedProductIds || [])
               .map((pid) => products.find((p) => p.id === pid))
               .filter(Boolean);
@@ -79,15 +78,21 @@ const SkillsSection = () => {
                 <motion.div
                   whileHover={{ y: -4, scale: 1.01 }}
                   transition={{ duration: 0.2 }}
-                  className="h-full rounded-2xl border border-border bg-card p-5 sm:p-6 flex flex-col transition-shadow hover:shadow-lg"
+                  className={`h-full rounded-2xl border p-5 sm:p-6 flex flex-col transition-shadow hover:shadow-soft-lg ${
+                    isDifferentiating
+                      ? "border-primary/30 border-l-2 border-l-primary bg-primary/[0.03]"
+                      : "border-border bg-secondary/60"
+                  }`}
                 >
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-muted/50 border border-border/50 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
                       <Icon className="w-5 h-5 text-primary" />
                     </div>
                     <Badge
                       variant="outline"
-                      className="text-[10px] uppercase tracking-wider shrink-0"
+                      className={`text-[10px] uppercase tracking-wider shrink-0 ${
+                        isDifferentiating ? "border-primary/30 text-primary" : ""
+                      }`}
                     >
                       {skill.tier}
                     </Badge>
@@ -98,7 +103,7 @@ const SkillsSection = () => {
                   </h3>
 
                   {skill.metric && (
-                    <p className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-3">
+                    <p className="text-xl sm:text-2xl font-bold text-primary mb-3">
                       {skill.metric}
                     </p>
                   )}
@@ -122,7 +127,7 @@ const SkillsSection = () => {
                         <button
                           key={uc!.id}
                           onClick={() => scrollTo("ai")}
-                          className="text-[11px] px-2.5 py-1 rounded-full bg-accent/10 text-accent-foreground hover:bg-accent/20 transition-colors font-medium"
+                          className="text-[11px] px-2.5 py-1 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium"
                         >
                           Case {uc!.id}
                         </button>

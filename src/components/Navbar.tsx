@@ -44,14 +44,14 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/70 backdrop-blur-xl border-b border-border/50"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/40"
           : "bg-transparent"
       )}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <button
           onClick={() => scrollTo("home")}
-          className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
+          className="text-lg font-semibold text-foreground hover:text-primary transition-colors tracking-tight"
         >
           Tânia Maldonado
         </button>

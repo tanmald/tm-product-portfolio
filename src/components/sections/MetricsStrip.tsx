@@ -10,16 +10,16 @@ const metrics = [
 
 const MetricsStrip = () => {
   return (
-    <section className="py-16 px-6 border-y border-border/30">
+    <section className="py-20 px-6 bg-foreground">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:divide-x md:divide-background/10">
           {metrics.map((m, i) => (
             <ScrollReveal key={i} delay={i * 0.08}>
-              <div className="text-center space-y-1">
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <div className="text-center space-y-2 md:px-4">
+                <div className="text-3xl sm:text-4xl font-bold text-primary">
                   {m.value}
                 </div>
-                <div className="text-xs text-muted-foreground tracking-wide">
+                <div className="text-xs text-background/55 tracking-wide leading-snug">
                   {m.label}
                 </div>
               </div>

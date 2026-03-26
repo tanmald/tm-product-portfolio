@@ -115,9 +115,7 @@ const ProductsSection = () => {
             <span className="text-primary font-medium text-sm tracking-wide uppercase">Portfolio</span>
             <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-5 text-foreground leading-tight font-serif">
               Things I've{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                built
-              </span>
+              <span className="text-primary">built</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Products shaped across automotive, telecom, public health, and more — 7+ years, 5+ countries, always outcome-driven.
@@ -129,35 +127,46 @@ const ProductsSection = () => {
           {featuredProducts.map((product, i) => (
             <ScrollReveal key={product.id} delay={i * 0.08}>
               <div
-                className="group py-8 border-t border-border/60 cursor-pointer transition-colors hover:bg-muted/30 -mx-6 px-6 rounded-lg"
+                className="group relative py-8 border-t border-border/60 cursor-pointer hover:bg-primary/[0.03] -mx-6 px-6 transition-colors"
                 onClick={() => setSelectedProduct(product)}
               >
-                <div className="flex items-start justify-between gap-4 mb-3">
+                {/* Left accent bar — fades in on hover */}
+                <span className="absolute left-0 top-0 bottom-0 w-[3px] bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-r" />
+
+                <div className="flex items-start gap-5">
+                  {/* Editorial number */}
+                  <span className="hidden sm:block font-serif text-5xl font-normal text-primary/15 group-hover:text-primary/45 transition-colors leading-none pt-1 w-12 shrink-0 select-none tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-3 mb-1">
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                        {product.name}
-                      </h3>
-                      <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                    <div className="flex items-start justify-between gap-4 mb-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-3 mb-1">
+                          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                            {product.name}
+                          </h3>
+                          <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                        </div>
+                        <span className="text-sm font-medium text-primary/70">{product.role}</span>
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0 mt-1">
+                        <Badge variant="secondary" className="text-xs">{product.sector}</Badge>
+                        <Badge variant="outline" className="text-xs">{product.type}</Badge>
+                      </div>
                     </div>
-                    <span className="text-sm font-medium text-primary">{product.role}</span>
-                  </div>
-                  <div className="flex items-center gap-2 shrink-0 mt-1">
-                    <Badge variant="secondary" className="text-xs">{product.sector}</Badge>
-                    <Badge variant="outline" className="text-xs">{product.type}</Badge>
+
+                    <p className="text-muted-foreground leading-relaxed text-[15px] max-w-3xl">
+                      {product.description}
+                    </p>
+
+                    {product.impact[0] && (
+                      <p className="mt-3 text-sm font-medium text-foreground/70">
+                        ↗ {product.impact[0]}
+                      </p>
+                    )}
                   </div>
                 </div>
-
-                <p className="text-muted-foreground leading-relaxed text-[15px] max-w-3xl">
-                  {product.description}
-                </p>
-
-                {/* Key impact — one-liner */}
-                {product.impact[0] && (
-                  <p className="mt-3 text-sm font-medium text-foreground/80">
-                    ↗ {product.impact[0]}
-                  </p>
-                )}
               </div>
             </ScrollReveal>
           ))}

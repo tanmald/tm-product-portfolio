@@ -1,9 +1,9 @@
 const blobs = [
   { top: "8%", left: "5%", size: 200, color: "bg-primary/8", animation: "animate-drift" },
-  { top: "20%", right: "8%", size: 300, color: "bg-accent/6", animation: "animate-drift-slow" },
-  { top: "55%", left: "2%", size: 180, color: "bg-soft-teal/8", animation: "animate-drift-slow" },
-  { bottom: "15%", right: "5%", size: 250, color: "bg-lavender/8", animation: "animate-drift" },
-  { top: "70%", left: "80%", size: 150, color: "bg-soft-rose/6", animation: "animate-drift-slow" },
+  { top: "20%", right: "8%", size: 300, color: "bg-primary/5", animation: "animate-drift-slow" },
+  { top: "55%", left: "2%", size: 180, color: "bg-warm-sand/10", animation: "animate-drift-slow" },
+  { bottom: "15%", right: "5%", size: 250, color: "bg-warm-peach/8", animation: "animate-drift" },
+  { top: "70%", left: "80%", size: 150, color: "bg-primary/6", animation: "animate-drift-slow" },
 ];
 
 const DecorativeElements = () => {

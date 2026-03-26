@@ -23,9 +23,9 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        lavender: "hsl(var(--lavender))",
-        "soft-teal": "hsl(var(--soft-teal))",
-        "soft-rose": "hsl(var(--soft-rose))",
+        "warm-blush": "hsl(var(--warm-blush))",
+        "warm-peach": "hsl(var(--warm-peach))",
+        "warm-sand": "hsl(var(--warm-sand))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -71,8 +71,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        soft: "0 2px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04)",
-        "soft-lg": "0 10px 40px -10px rgba(0, 0, 0, 0.08)",
+        soft: "0 2px 15px -3px rgba(28, 25, 23, 0.08), 0 4px 6px -4px rgba(28, 25, 23, 0.05)",
+        "soft-lg": "0 10px 40px -10px rgba(28, 25, 23, 0.12)",
       },
       keyframes: {
         "accordion-down": {
