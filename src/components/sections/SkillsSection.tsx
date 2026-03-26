@@ -22,7 +22,7 @@ const SkillsSection = () => {
     <section id="skills" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2 font-serif">
             Skills Inventory
           </h2>
           <p className="text-muted-foreground mb-12 max-w-2xl">
