@@ -1,29 +1,20 @@
 import { useState } from "react";
 import { useCases } from "@/data/useCases";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, TrendingUp, CheckCircle2, Lightbulb, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowUpRight, Sparkles, TrendingUp, CheckCircle2, Lightbulb, X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const AiSection = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const selectedCase = useCases.find((uc) => uc.id === selectedId);
 
-  const getCardSize = (index: number) => {
-    if (index === 0) return "md:col-span-2 md:row-span-2";
-    if (index === 1) return "md:col-span-1 md:row-span-2";
-    if (index === 2) return "md:col-span-1 md:row-span-1";
-    if (index === 3) return "md:col-span-2 md:row-span-1";
-    return "md:col-span-1 md:row-span-1";
-  };
-
   return (
     <section id="ai" className="py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <div className="mb-20 max-w-2xl">
-            <span className="text-primary font-medium text-sm tracking-wide">Case Studies</span>
-            <h2 className="text-4xl sm:text-6xl font-normal mt-2 mb-4 text-foreground font-serif">
+          <div className="mb-16 max-w-2xl">
+            <span className="text-primary font-medium text-sm tracking-wide uppercase">Case Studies</span>
+            <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-5 text-foreground leading-tight font-serif">
               AI in my{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 workflow
@@ -36,81 +27,45 @@ const AiSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
-          {useCases.map((uc, i) => {
-            const size = getCardSize(i);
-            const isLarge = i === 0;
-            const isTall = i === 0 || i === 1;
-
-            return (
-              <ScrollReveal key={uc.id} delay={i * 0.05} className={cn(size, "h-full")}>
-                <button
-                  onClick={() => setSelectedId(uc.id)}
-                  className={cn(
-                    "group relative w-full h-full rounded-2xl border border-border/50 bg-card overflow-hidden text-left transition-all duration-300 shadow-soft hover:shadow-soft-lg hover:-translate-y-0.5 flex flex-col justify-between",
-                    isLarge ? "p-6" : "p-5"
-                  )}
-                >
-                  <div className="absolute top-4 right-4">
-                    {uc.status === "in-progress" ? (
-                      <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    ) : (
-                      <span className="inline-block w-2 h-2 rounded-full bg-soft-teal" />
-                    )}
-                  </div>
-
-                  <div className="space-y-2">
-                    <span className={cn("block", isLarge ? "text-4xl" : "text-2xl")}>{uc.emoji}</span>
-                    <div>
-                      <span className="text-[10px] font-medium text-primary tracking-widest uppercase">
-                        Case {uc.id}
-                      </span>
-                      <h3
-                        className={cn(
-                          "font-bold text-foreground group-hover:text-primary transition-colors leading-tight",
-                          isLarge ? "text-2xl sm:text-3xl" : "text-base sm:text-lg"
-                        )}
-                      >
+        <div className="space-y-0">
+          {useCases.map((uc, i) => (
+            <ScrollReveal key={uc.id} delay={i * 0.06}>
+              <button
+                onClick={() => setSelectedId(uc.id)}
+                className="group w-full text-left py-7 border-t border-border/60 cursor-pointer transition-colors hover:bg-muted/30 -mx-6 px-6 rounded-lg"
+              >
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3 mb-1">
+                      <span className="text-lg">{uc.emoji}</span>
+                      <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                         {uc.title}
                       </h3>
-                      {isTall && (
-                        <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
-                          {uc.subtitle}
-                        </p>
-                      )}
-                      {isLarge && (
-                        <p className="text-xs text-muted-foreground/70 mt-2 line-clamp-2">
-                          {uc.challenge}
-                        </p>
-                      )}
+                      <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
                     </div>
+                    <span className="text-sm font-medium text-primary">{uc.subtitle}</span>
                   </div>
-
-                  <div className="space-y-2">
-                    <div className="inline-flex items-center gap-2 bg-secondary rounded-full px-3 py-1.5">
-                      <TrendingUp className="w-3 h-3 text-primary shrink-0" />
-                      <span className="text-xs font-medium text-foreground truncate">
-                        {uc.keyMetric.value}
-                      </span>
-                      {isTall && (
-                        <span className="text-[10px] text-muted-foreground truncate hidden sm:inline">
-                          — {uc.keyMetric.label}
-                        </span>
-                      )}
-                    </div>
-
-                    <div className="flex flex-wrap gap-1.5">
-                      {uc.tags.slice(0, isLarge ? 4 : 3).map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-[10px] px-2 py-0">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
+                  <div className="flex items-center gap-2 shrink-0 mt-1">
+                    {uc.status === "in-progress" && (
+                      <Badge variant="outline" className="text-xs bg-primary/10 text-primary border-primary/20">
+                        In Progress
+                      </Badge>
+                    )}
+                    <Badge variant="secondary" className="text-xs">{uc.tags[0]}</Badge>
                   </div>
-                </button>
-              </ScrollReveal>
-            );
-          })}
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed text-[15px] max-w-3xl line-clamp-2">
+                  {uc.challenge}
+                </p>
+
+                <p className="mt-3 text-sm font-medium text-foreground/80">
+                  ↗ {uc.keyMetric.value}
+                </p>
+              </button>
+            </ScrollReveal>
+          ))}
+          <div className="border-t border-border/60" />
         </div>
       </div>
 
@@ -146,7 +101,7 @@ const AiSection = () => {
                     )}
                   </div>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+                <h2 className="text-3xl sm:text-4xl font-normal text-foreground">
                   {selectedCase.title}
                 </h2>
                 <p className="text-muted-foreground mt-1">{selectedCase.subtitle}</p>
