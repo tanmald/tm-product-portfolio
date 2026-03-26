@@ -47,7 +47,7 @@ export const githubProjects: GitHubProject[] = [
       "Three-tier scoring system with colour-coded results",
     ],
     language: "TypeScript",
-    status: "Active",
+    status: "In Progress",
   },
   {
     name: "PlantSis",
