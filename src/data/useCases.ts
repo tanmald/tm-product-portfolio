@@ -339,4 +339,33 @@ export const useCases: UseCase[] = [
     tags: ["Architecture", "Platform Strategy", "Decoupling"],
     status: "complete",
   },
+  {
+    id: 12,
+    title: "Test Manager Agent",
+    subtitle: "From Meeting Transcripts to Autonomous QA Workflow",
+    emoji: "🤖",
+    challenge:
+      "ONE Sales Workplace had a well-functioning but entirely manual QA process dependent on weekly jourfix meetings. 22 meetings over 4 months with no structured format, inconsistent follow-up, and no automated tracking. Test results were being misreported — the agent initially reported 'all tests passed' when 100% had actually failed.",
+    actions: [
+      "Analyzed all 22 meeting transcripts (312KB, 2,735 lines) to extract interaction patterns, recurring topics, and decision-making flows",
+      "Built a full Test Manager agent with 12 specialized skills: test planning, defect management, jourfix facilitation, release readiness, and more",
+      "Discovered and fixed critical bug: agent reported test results based on Jira ticket status ('Closed') instead of actual Xray results — 100% failure rate was being reported as success",
+      "Enhanced with automatic release date detection, T-7 day checklist activation, T-1 day go/no-go decision framework, and mandatory Xray workflow enforcement",
+    ],
+    results: [
+      { label: "Prep time", value: "30min → auto" },
+      { label: "Test case creation", value: "15min → 3min" },
+      { label: "Reusable skills", value: "12" },
+      { label: "Quality gate", value: "Strengthened" },
+    ],
+    keyMetric: { label: "Prevented false-positive releases", value: "Critical fix" },
+    learnings: [
+      "The best knowledge source is the existing process itself — using the team's own history as the blueprint made the agent feel native, not imposed",
+      "Automation exposes hidden assumptions — translating manual process into formal logic surfaced risks that human review tends to paper over",
+      "Tribal knowledge has an expiry date — everything in people's heads became a liability the moment someone changed roles. Codifying it turned a dependency into an asset",
+      "Iterative build > big-bang delivery — 5+ sessions with real usage feedback meant each iteration improved in ways a single-pass design never would have caught",
+    ],
+    tags: ["AI Agent", "QA Automation", "Process Design"],
+    status: "complete",
+  },
 ];
