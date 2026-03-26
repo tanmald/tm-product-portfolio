@@ -23,7 +23,7 @@ const AiSection = () => {
         <ScrollReveal>
           <div className="mb-20 max-w-2xl">
             <span className="text-primary font-medium text-sm tracking-wide">Case Studies</span>
-            <h2 className="text-4xl sm:text-6xl font-bold mt-2 mb-4 text-foreground">
+            <h2 className="text-4xl sm:text-6xl font-bold mt-2 mb-4 text-foreground font-serif">
               AI in my{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 workflow
