@@ -26,6 +26,7 @@ const ScrollReveal = ({
   direction = "up",
   duration = 0.8,
   once = true,
+  style,
 }: ScrollRevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once, margin: "-80px" });
