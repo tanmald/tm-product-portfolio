@@ -125,7 +125,7 @@ const Products = () => {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <span className="text-primary font-medium text-sm tracking-wide uppercase">Portfolio</span>
-          <h1 className="text-4xl sm:text-5xl font-bold mt-3 mb-5 text-foreground leading-tight font-serif">
+          <h1 className="text-4xl sm:text-5xl font-normal mt-3 mb-5 text-foreground leading-tight font-serif">
             Things I've{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               built
