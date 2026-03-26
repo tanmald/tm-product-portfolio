@@ -1,50 +1,57 @@
 
 
-## Update Portfolio with Real Data from Notion
+## Rewrite Portfolio Content: High-Level, Outcome-Focused, AI-Leveraged
 
-I successfully accessed your Notion page and extracted all the relevant information. Here's what I found and what I plan to update:
+### Problem
+The current content reads like detailed process documentation — step-by-step actions, internal tool names, sprint points, section counts. A hiring manager skims for 10 seconds. They want: **what was the problem, what was the outcome, how big was the impact, and what makes you different (AI leverage).**
 
-### Data Extracted from Notion
+### Approach
+Rewrite all content in both data files with this lens:
+- **Descriptions**: 1-2 sentences, outcome-first, no internal jargon
+- **Highlights**: 3 max, framed as high-level capabilities demonstrated (not tasks performed)
+- **Impact**: Lead with the biggest number, keep it punchy
+- **Challenge**: 2 sentences max — the tension, not the backstory
+- **Actions**: Reframe as strategic moves, not task lists
+- **Learnings**: Cut to 2-3 max, make them transferable PM principles
+- **AI angle**: Where AI/Copilot was used, call it out explicitly as a differentiator
 
-**About You:**
-- **Name**: Tania Maldonado
-- **Current Role**: Product Manager @ BMW Group
-- **Previous**: Tech Senior Consultant @ Deloitte
-- **7+ years** of experience in product development and digital strategy
-- Fluent in Portuguese, English, and Spanish
-- Expertise in B2B and B2C solutions, market research, cross-functional teamwork
+### Files to change
 
-**Experience (2 roles):**
-1. **BMW Group** — Product Manager (April 2022 - Present) — OEM Automotive
-2. **Deloitte** — Tech Senior Consultant (August 2018 - April 2022) — Consulting
+#### 1. `src/data/products.ts` — Rewrite all 8 products
+For each product, rewrite:
+- `description` — outcome-first, 1 sentence, biggest number upfront
+- `detailedDescription` — 2-3 sentences, strategic narrative
+- `highlights` — 3 items max, capability-framed ("Led X across Y" not "Created document with Z sections")
+- `impact` — 3 items max, numbers first, no filler
 
-**Projects (4 featured):**
-1. **ONE Sales Workplace** — Automotive, Germany, Web, B2B — "Web-based platform for retail partners worldwide to support end-to-end sales and business processes for new and used vehicles, as well as Financial Services, across all BMW Group brands."
-2. **Unitel** — Telecommunications, Angola, Web & Mobile, B2C — "Self-service app for clients to manage their mobile services."
-3. **NOS Self-Service App** — Telecommunications, Portugal, Mobile, B2C — "Self-service app for clients to manage their mobile services." (Features: check mobile consumption, pay invoices, purchase data packages, access promotions)
-4. **HR Tool** — Human Resources, Portugal, Web, B2B — "Internal HR Tool where team members could share projects, fill timesheets, upload certifications."
+Examples of the shift:
+- **Before (TNPS)**: "Created a 14-section due diligence document from scratch across 6 iterations (v1–v1.6)"
+- **After**: "Took ownership of a new product, built a realistic capacity model, and uncovered a hidden 25 SP/quarter defect tax that was inflating every roadmap commitment"
+- **Before (Retailer Hub)**: "Authored Deep Dive with 9 sections covering architecture, capacity, risks..."
+- **After**: "Owned a politically sensitive product transition across 2 continents — quantified a 25-60% capacity gap and delivered 3 transition scenarios to de-risk the decision"
 
-**Skills database** has categories: Software, Language, Expertise (couldn't retrieve individual items, but I have the structure)
+#### 2. `src/data/useCases.ts` — Rewrite all 12 case studies
+For each case:
+- `challenge` — 1-2 sentences, the tension/stakes
+- `actions` — 3 items max, strategic framing, call out AI/Copilot usage where applicable
+- `results` — keep 4 metrics but make them punchier
+- `learnings` — cut to 2-3 max, make them PM principles a hiring manager would nod at
+- `keyMetric` — ensure the value is immediately impressive
 
-### Plan
+Key rewrites:
+- Remove internal BMW jargon (DEACH SAGAs, FSM_STARTING_PHASE_POPUP, WP3 format, FG-861)
+- Replace "Analyzed X items" with "Found Y insight that led to Z outcome"
+- Where Copilot/AI was used as a tool, add it: "Used AI to analyze 22 meeting transcripts" instead of just "Analyzed 22 meeting transcripts"
 
-#### 1. Update Home/Hero page with Tania's real info
-- Change headline and subtitle to reflect Tania's actual role and pitch
-- Update the eyebrow tag to "Product Manager @ BMW Group"
-- Adjust the bio text with her real background
+#### 3. `src/components/sections/AiSection.tsx` — Update section header
+- Change subtitle from "Real product management initiatives demonstrating data-driven decisions..." to something snappier like "How I use data, AI, and structured thinking to drive product outcomes."
 
-#### 2. Update Products page with real project data
-- Replace the 4 placeholder products in `src/data/products.ts` with the 4 featured projects from Notion
-- Update the `Product` interface to include new fields: `sector`, `country`, `platform`, `type` (B2B/B2C)
-- Display sector, country, and platform as badges/tags on each product card
-- Use relevant stock images for each sector (automotive, telecommunications, HR) since Notion image URLs are temporary signed URLs
+#### 4. `src/components/sections/ProductsSection.tsx` — Update section header
+- Tighten the description copy to match the new tone
 
-#### 3. Update Navbar with Tania's name
-- Add her name or initials to the navbar for personalization
-
-### Technical Details
-- Product data remains hardcoded in `src/data/products.ts` (easy to update later)
-- New fields added to the Product interface: `sector`, `country`, `platform`, `type`
-- Product cards will show tags for sector, country, platform, and B2B/B2C type
-- Stock images from Unsplash will be used since Notion S3 URLs expire
+### What stays the same
+- All component structure, layout, modals, scroll behavior
+- The `Product` and `UseCase` interfaces
+- The editorial text-first design
+- The TNPS ↔ Case 5 link
 
