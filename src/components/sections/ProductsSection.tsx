@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ArrowRight, ArrowUpRight, CheckCircle2, TrendingUp } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, TrendingUp, BookOpen } from "lucide-react";
 import { products, Product } from "@/data/products";
+import { useCases } from "@/data/useCases";
 import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
@@ -72,6 +73,29 @@ const ProductDetailDialog = ({
               ))}
             </div>
           </div>
+
+          {product.relatedCaseId && (() => {
+            const relatedCase = useCases.find(uc => uc.id === product.relatedCaseId);
+            if (!relatedCase) return null;
+            return (
+              <button
+                onClick={() => {
+                  onOpenChange(false);
+                  setTimeout(() => {
+                    document.getElementById("ai")?.scrollIntoView({ behavior: "smooth" });
+                  }, 300);
+                }}
+                className="w-full flex items-center gap-3 rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-left hover:bg-primary/10 transition-colors group/link"
+              >
+                <BookOpen className="w-4 h-4 text-primary shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <span className="text-xs font-medium text-primary uppercase tracking-wide">Related Case Study</span>
+                  <p className="text-sm text-foreground font-medium">{relatedCase.title} — {relatedCase.subtitle}</p>
+                </div>
+                <ArrowRight className="w-4 h-4 text-primary opacity-0 group-hover/link:opacity-100 transition-opacity shrink-0" />
+              </button>
+            );
+          })()}
         </div>
       </DialogContent>
     </Dialog>
