@@ -1,96 +1,136 @@
-import { useState } from "react";
-import { skillTiers } from "@/data/skills";
+import { skills } from "@/data/skills";
+import { products } from "@/data/products";
+import { useCases } from "@/data/useCases";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Badge } from "@/components/ui/badge";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Star, Shield, Rocket } from "lucide-react";
+import { motion } from "framer-motion";
+import { Sparkles, Target, TrendingUp, Globe, Cpu, Rocket, Users, ShieldCheck, Brain } from "lucide-react";
 
-const tierIcons = [Star, Shield, Rocket];
-const tierColors = [
-  "from-primary to-accent",
-  "from-emerald-500 to-teal-500",
-  "from-violet-500 to-purple-500",
-];
+const skillIcons: Record<string, React.ElementType> = {
+  "AI-Augmented Product Work": Sparkles,
+  "Strategic Analysis & Due Diligence": Target,
+  "Stakeholder Management": Users,
+  "Crisis Product Leadership": ShieldCheck,
+  "Quantitative Rigor": TrendingUp,
+  "AI Product Strategy": Brain,
+  "Cross-Cultural Delivery": Globe,
+  "Technical Fluency": Cpu,
+  "Entrepreneurial Building": Rocket,
+};
+
+const sizeClasses: Record<string, string> = {
+  large: "col-span-1 sm:col-span-2 row-span-1 sm:row-span-2",
+  medium: "col-span-1 row-span-1 sm:row-span-2",
+  small: "col-span-1 row-span-1",
+};
+
+const tierGradients: Record<string, string> = {
+  Differentiating: "from-primary/20 to-accent/10",
+  Strong: "from-accent/15 to-secondary/10",
+  Growth: "from-secondary/20 to-muted/10",
+};
+
+const tierBorderColors: Record<string, string> = {
+  Differentiating: "border-primary/30 hover:border-primary/50",
+  Strong: "border-accent/20 hover:border-accent/40",
+  Growth: "border-secondary/30 hover:border-secondary/50",
+};
 
 const SkillsSection = () => {
-  const [expandedSkill, setExpandedSkill] = useState<string | null>(null);
-
-  const toggle = (name: string) =>
-    setExpandedSkill((prev) => (prev === name ? null : name));
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section id="skills" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-normal text-foreground mb-2 font-serif">
-            Skills Inventory
-          </h2>
-          <p className="text-muted-foreground mb-12 max-w-2xl">
-            Evidence-backed competencies across three tiers — from differentiating strengths to active growth areas.
-          </p>
+          <div className="mb-12">
+            <span className="text-primary font-medium text-sm tracking-wide uppercase">
+              Competencies
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-normal text-foreground mt-2 mb-3 font-serif">
+              Skills{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Inventory
+              </span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl">
+              Evidence-backed capabilities — sized by strategic PM relevance, linked to real projects.
+            </p>
+          </div>
         </ScrollReveal>
 
-        <div className="space-y-10">
-          {skillTiers.map((tier, tierIdx) => {
-            const Icon = tierIcons[tierIdx];
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {skills.map((skill, i) => {
+            const Icon = skillIcons[skill.name] || Sparkles;
+            const relatedProducts = (skill.relatedProductIds || [])
+              .map((pid) => products.find((p) => p.id === pid))
+              .filter(Boolean);
+            const relatedCases = (skill.relatedCaseIds || [])
+              .map((cid) => useCases.find((uc) => uc.id === cid))
+              .filter(Boolean);
+
             return (
-              <ScrollReveal key={tier.label} delay={tierIdx * 0.1}>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div
-                      className={`w-9 h-9 rounded-lg bg-gradient-to-br ${tierColors[tierIdx]} flex items-center justify-center`}
+              <ScrollReveal
+                key={skill.name}
+                delay={i * 0.06}
+                className={sizeClasses[skill.size]}
+              >
+                <motion.div
+                  whileHover={{ y: -4, scale: 1.01 }}
+                  transition={{ duration: 0.2 }}
+                  className={`h-full rounded-2xl border bg-gradient-to-br ${tierGradients[skill.tier]} ${tierBorderColors[skill.tier]} p-5 sm:p-6 flex flex-col transition-shadow hover:shadow-lg`}
+                >
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-background/80 border border-border/50 flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <Badge
+                      variant="outline"
+                      className="text-[10px] uppercase tracking-wider shrink-0"
                     >
-                      <Icon className="w-4.5 h-4.5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground leading-tight">
-                        Tier {tier.tier}: {tier.label}
-                      </h3>
-                    </div>
-                    <Badge variant="secondary" className="ml-auto text-xs">
-                      {tier.skills.length} skills
+                      {skill.tier}
                     </Badge>
                   </div>
 
-                  <div className="grid gap-2">
-                    {tier.skills.map((skill) => {
-                      const isOpen = expandedSkill === skill.name;
-                      return (
+                  <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 leading-snug">
+                    {skill.name}
+                  </h3>
+
+                  {skill.metric && (
+                    <p className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-3">
+                      {skill.metric}
+                    </p>
+                  )}
+
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                    {skill.evidence}
+                  </p>
+
+                  {(relatedProducts.length > 0 || relatedCases.length > 0) && (
+                    <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-border/30">
+                      {relatedProducts.map((p) => (
                         <button
-                          key={skill.name}
-                          onClick={() => toggle(skill.name)}
-                          className="w-full text-left rounded-xl border bg-card p-4 transition-all hover:border-primary/30 hover:shadow-sm"
+                          key={p!.id}
+                          onClick={() => scrollTo("work")}
+                          className="text-[11px] px-2.5 py-1 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors font-medium"
                         >
-                          <div className="flex items-center justify-between gap-3">
-                            <span className="font-medium text-foreground text-sm sm:text-base">
-                              {skill.name}
-                            </span>
-                            <ChevronDown
-                              className={`w-4 h-4 text-muted-foreground shrink-0 transition-transform duration-200 ${
-                                isOpen ? "rotate-180" : ""
-                              }`}
-                            />
-                          </div>
-                          <AnimatePresence>
-                            {isOpen && (
-                              <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="overflow-hidden"
-                              >
-                                <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                                  {skill.evidence}
-                                </p>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
+                          {p!.name}
                         </button>
-                      );
-                    })}
-                  </div>
-                </div>
+                      ))}
+                      {relatedCases.map((uc) => (
+                        <button
+                          key={uc!.id}
+                          onClick={() => scrollTo("ai")}
+                          className="text-[11px] px-2.5 py-1 rounded-full bg-accent/10 text-accent-foreground hover:bg-accent/20 transition-colors font-medium"
+                        >
+                          Case {uc!.id}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
               </ScrollReveal>
             );
           })}
