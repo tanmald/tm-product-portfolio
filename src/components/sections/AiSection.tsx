@@ -21,8 +21,7 @@ const AiSection = () => {
               </span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Real product management initiatives demonstrating data-driven decisions,
-              stakeholder communication, and measurable impact.
+              How I use data, AI, and structured thinking to drive product outcomes.
             </p>
           </div>
         </ScrollReveal>

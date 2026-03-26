@@ -120,8 +120,7 @@ const ProductsSection = () => {
               </span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              From enterprise automotive platforms to national-scale public health systems —
-              products shaped across 6+ sectors and 5+ countries.
+              Products shaped across automotive, telecom, public health, and more — 7+ years, 5+ countries, always outcome-driven.
             </p>
           </div>
         </ScrollReveal>
