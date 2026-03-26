@@ -12,6 +12,7 @@ export interface Product {
   highlights: string[];
   impact: string[];
   detailedDescription: string;
+  relatedCaseId?: number;
 }
 
 export const products: Product[] = [
@@ -104,9 +105,9 @@ export const products: Product[] = [
     name: "TNPS (The New Print Service)",
     role: "Product Manager — BMW Group",
     description:
-      "Rigorous analytical PM work — 103 epics analyzed, 68 SAGAs dependency-mapped, self-service initiative conceptualized from data across 6 due diligence iterations.",
+      "Created a 14-section due diligence from scratch — 103 epics analyzed, capacity gap quantified with ~25 SP/quarter defect tax, self-service initiative phased from Q2 to Q4 across 6 iterations.",
     detailedDescription:
-      "Some of the most rigorous analytical PM work documented. Six iterations of due diligence reports (v1–v1.6), sprint velocity analysis, 68 DEACH SAGAs dependency-mapped, and capacity gap quantified. Conceptualized the self-service initiative as a strategic recommendation born directly from the data.",
+      "Took ownership of a new product and immediately created a comprehensive due diligence document (6 iterations, v1–v1.6) covering repository analysis, team composition, sprint velocity, epic backlog, risk register, and roadmap. Identified a hidden ~20-25 SP/quarter defect tax that was inflating roadmap commitments, restructured the document so analysis feeds into decisions, and conceptualized a self-service initiative with concrete quarterly phasing.",
     image:
       "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop",
     link: "#",
@@ -115,17 +116,19 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Produced 6 iterations of due diligence reports (v1–v1.6)",
-      "Analyzed 103 open epics with sprint velocity analysis",
-      "Dependency-mapped 68 DEACH SAGAs across the portfolio",
-      "Conceptualized the self-service initiative as a strategic recommendation from data",
+      "Created a 14-section due diligence document from scratch across 6 iterations (v1–v1.6)",
+      "Analyzed 103 open epics with sprint velocity analysis and dependency-mapped 68 DEACH SAGAs",
+      "Discovered hidden ~20-25 SP/quarter defect capacity tax — adjusted roadmap commitments accordingly",
+      "Conceptualized self-service initiative with concrete phasing: Q2 Quick Wins, Q3/Q4 Phase 1",
+      "Integrated 2 new risks into the register and consolidated 3 scattered question sections into 1",
     ],
     impact: [
-      "103 epics analyzed in single due diligence",
-      "68 SAGAs dependency-mapped",
-      "Self-service initiative born from rigorous analysis",
-      "Capacity gap quantified across the portfolio",
+      "Realistic capacity model replacing overstated planning assumptions",
+      "103 epics analyzed and 68 SAGAs dependency-mapped in a single due diligence",
+      "Self-service initiative phased with concrete quarterly timelines",
+      "16 risks identified, integrated, and cross-referenced",
     ],
+    relatedCaseId: 5,
   },
   {
     id: "5",
