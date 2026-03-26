@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import DecorativeElements from "@/components/DecorativeElements";
 import Index from "./pages/Index";
 import Admin from "./pages/Admin";
+import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/products" element={<Products />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
