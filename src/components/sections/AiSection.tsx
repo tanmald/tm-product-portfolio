@@ -89,7 +89,6 @@ const AiSection = () => {
             <div className="p-8 sm:p-10 space-y-8">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-4xl">{selectedCase.emoji}</span>
                   <div>
                     <span className="text-xs font-medium text-primary tracking-widest uppercase">
                       Case {selectedCase.id}
