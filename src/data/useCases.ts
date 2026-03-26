@@ -136,8 +136,9 @@ export const useCases: UseCase[] = [
     subtitle: "Evaluation & Capacity Planning",
     emoji: "📋",
     challenge:
-      "Inherited a product with a 14-section due diligence doc that had a critical flaw: defect analysis and self-service initiative were appended at the end, disconnected from the capacity planning and risk sections they should inform.",
+      "Upon taking ownership of a new product, created a comprehensive 14-section due diligence document. After the initial version, identified a critical structural flaw: defect analysis and self-service initiative were appended at the end, disconnected from the capacity planning and risk sections they should inform.",
     actions: [
+      "Created comprehensive due diligence from scratch across 6 iterations (v1–v1.6) covering repository analysis, team composition, velocity, backlog, risks, and roadmap",
       "Restructured all 14 sections into logical analytical flow — moved defect analysis before capacity planning so data feeds into math",
       "Calculated defect capacity tax: ~20-25 SP/quarter consumed by defect handling, subtracted from available capacity",
       "Mapped self-service initiative against quarterly capacity: Q2 Quick Wins, Q3/Q4 Phase 1",
