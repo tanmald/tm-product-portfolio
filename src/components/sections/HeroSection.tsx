@@ -23,10 +23,8 @@ const HeroSection = () => {
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-normal leading-[0.95] tracking-tight text-foreground font-serif">
             I'm Tânia.
             <br />
-            I build clarity out of chaos
-            <br />
             <em className="not-italic text-primary">
-              and ship it.
+              I build clarity out of chaos.
             </em>
           </h1>
         </ScrollReveal>
