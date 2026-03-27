@@ -19,7 +19,7 @@ export const products: Product[] = [
   {
     id: "1",
     name: "ONE Sales Workplace",
-    role: "Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group",
     description:
       "BMW Group's unified retail platform — 25,000 users onboarded in 4 months across 30+ markets for BMW, MINI, Motorrad, and Rolls-Royce.",
     detailedDescription:
@@ -45,7 +45,7 @@ export const products: Product[] = [
   {
     id: "2",
     name: "Retailer Hub",
-    role: "Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group",
     description:
       "Global communications platform for BMW, MINI, and Rolls-Royce agents and dealerships — the central hub connecting retailers across all BMW Group brands.",
     detailedDescription:
@@ -97,7 +97,7 @@ export const products: Product[] = [
   {
     id: "4",
     name: "TNPS (The New Print Service)",
-    role: "Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group",
     description:
       "Stepped in to course-correct a product left in disarray — ran a full due diligence using an AI-powered skill built from prior analysis work, cutting weeks of effort down to days for the incoming PM.",
     detailedDescription:

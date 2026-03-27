@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="flex-1 flex flex-col items-center justify-center max-w-3xl w-full text-center space-y-8">
         <ScrollReveal delay={0.1}>
           <p className="text-xs font-medium text-muted-foreground tracking-[0.2em] uppercase">
-            Product Manager · BMW Group
+            Senior Product Manager · BMW Group
           </p>
         </ScrollReveal>
 
