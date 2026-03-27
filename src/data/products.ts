@@ -12,6 +12,7 @@ export interface Product {
   highlights: string[];
   impact: string[];
   detailedDescription: string;
+  relatedCaseId?: number;
 }
 
 export const products: Product[] = [
@@ -20,9 +21,9 @@ export const products: Product[] = [
     name: "ONE Sales Workplace",
     role: "Product Manager — BMW Group",
     description:
-      "BMW Group's unified retail platform — the single entry point for BMW, MINI, Motorrad, and Rolls-Royce sales across 30+ global markets.",
+      "BMW Group's unified retail platform — 25,000 users onboarded in 4 months across 30+ markets for BMW, MINI, Motorrad, and Rolls-Royce.",
     detailedDescription:
-      "ONE Sales Workplace gives retail partners a seamless experience through all business processes — new cars, used cars, and Financial Services — across all BMW Group brands. Led cross-functional coordination between Munich and CTW, integrating Module Federation architecture and scaling the agile working model across teams.",
+      "Unified platform replacing fragmented sales tools across all BMW Group brands. Led cross-functional coordination between Munich and South Africa — managing market readiness, go-live sequencing, user support, and feedback loops across 30+ markets.",
     image:
       "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&h=400&fit=crop",
     link: "#",
@@ -31,16 +32,14 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Led cross-functional coordination between business, development, and design teams across Munich and CTW",
-      "Integrated Module Federation architecture — understanding the technical layer, not just the roadmap",
-      "Implemented and scaled CTW's agile working model, streamlining communication and improving efficiency",
-      "Managed complex interpersonal dynamics to build a cohesive, collaborative team environment",
+      "Led cross-functional coordination across 2 geographies and all BMW Group brands",
+      "Coordinated go-live across 30+ markets — market readiness, user support, and feedback loops",
+      "Managed complex stakeholder dynamics to align business, design, and engineering",
     ],
     impact: [
-      "25,000 new users onboarded in 4 months",
+      "25,000 users onboarded in 4 months",
       "25% reduction in sales workflow time",
-      "20% user satisfaction improvement",
-      "Global platform serving 30+ markets across all BMW Group brands",
+      "Global platform serving 30+ markets",
     ],
   },
   {
@@ -48,9 +47,9 @@ export const products: Product[] = [
     name: "Retailer Hub",
     role: "Product Manager — BMW Group",
     description:
-      "End-to-end ownership of a complex, politically sensitive product transition — 49 epics mapped quarterly, 3 transition scenarios, capacity gap quantified.",
+      "Global communications platform for BMW, MINI, and Rolls-Royce agents and dealerships — the central hub connecting retailers across all BMW Group brands.",
     detailedDescription:
-      "Deep Dive covering 9 sections: system architecture, capacity analysis, risk register, stakeholder questions, epic mapping, MoSCoW prioritization, and transition planning. Authored 6 versions of the Transition Plan with Aggressive/Neutral/Conservative scenarios, managing risk across BMW AG and CTW stakeholders.",
+      "Taking full ownership of the platform used by agents and dealerships across BMW Group's brand portfolio. Accountable for the product roadmap, stakeholder alignment across Germany and South Africa, and ensuring delivery continuity through a complex transition from the previous team.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     link: "#",
@@ -59,16 +58,14 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Authored Deep Dive with 9 sections covering architecture, capacity, risks, epic mapping, and MoSCoW prioritization",
-      "Created 6 versions of the Transition Plan (v1.0–v1.5) with 3 scenarios",
-      "Quantified capacity gap at 25–60% shortfall and proposed phased roadmap",
-      "Managed stakeholder alignment across BMW AG and CTW across continents",
+      "Taking ownership of the platform roadmap serving BMW, MINI, Motorrad, and Rolls-Royce retailers",
+      "Quantified 25–60% capacity gap — built the analytical foundation for executive planning",
+      "Ensuring delivery continuity across 2 continents through a structured transition",
     ],
     impact: [
-      "49 epics mapped quarterly across the portfolio",
-      "10 risks identified and assessed in risk register",
-      "5-month phased roadmap delivered",
-      "25–60% capacity gap quantified and addressed",
+      "Full product ownership of BMW Group's global retailer communications platform",
+      "25–60% capacity gap quantified — preventing blind roadmap commitments",
+      "Stakeholder alignment maintained across Germany and South Africa through transition",
     ],
   },
   {
@@ -76,9 +73,9 @@ export const products: Product[] = [
     name: "eSign",
     role: "Interim Product Owner — BMW Group",
     description:
-      "A rescue story — stabilized a failing cross-country team as interim PO over 5 months, improved processes, and mentored own replacement.",
+      "Rescue mission — stabilized a failing cross-country team in 5 months as interim PO, restored delivery, and mentored own replacement.",
     detailedDescription:
-      "5-month interim PO assignment on a struggling cross-country team. Stabilized Agile processes, reduced tech debt, strengthened team relations, and mentored own replacement before handing off cleanly. A textbook example of crisis product leadership.",
+      "Stepped into a struggling team as interim PO, stabilized agile processes, reduced tech debt, and rebuilt cross-location collaboration. Mentored and onboarded own replacement before executing a clean handoff with zero delivery disruption.",
     image:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
     link: "#",
@@ -87,16 +84,14 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Took over a struggling cross-country team as interim PO",
-      "Stabilized Agile processes and reduced accumulated tech debt",
-      "Strengthened team relations and rebuilt collaboration across locations",
-      "Mentored own replacement and executed a clean handoff",
+      "Stabilized a struggling team and restored delivery within 5 months",
+      "Reduced tech debt while rebuilding cross-location collaboration",
+      "Mentored successor PO and executed a zero-disruption handoff",
     ],
     impact: [
-      "Team stabilized within 5 months",
-      "Agile processes restored and tech debt reduced",
-      "Successor PO mentored and onboarded",
-      "Clean exit with no disruption to delivery",
+      "Delivery restored within 5 months on a failing product",
+      "Business continuity ensured through structured handoff",
+      "Cross-country collaboration rebuilt between distributed teams",
     ],
   },
   {
@@ -104,9 +99,9 @@ export const products: Product[] = [
     name: "TNPS (The New Print Service)",
     role: "Product Manager — BMW Group",
     description:
-      "Rigorous analytical PM work — 103 epics analyzed, 68 SAGAs dependency-mapped, self-service initiative conceptualized from data across 6 due diligence iterations.",
+      "Stepped in to course-correct a product left in disarray — ran a full due diligence using an AI-powered skill built from prior analysis work, cutting weeks of effort down to days for the incoming PM.",
     detailedDescription:
-      "Some of the most rigorous analytical PM work documented. Six iterations of due diligence reports (v1–v1.6), sprint velocity analysis, 68 DEACH SAGAs dependency-mapped, and capacity gap quantified. Conceptualized the self-service initiative as a strategic recommendation born directly from the data.",
+      "The previous PM had left the product without a realistic capacity model or clear backlog health. Used an AI skill built during the Retailer Hub analysis to rapidly produce a comprehensive due diligence — 103 epics analyzed, true capacity modeled, and a phased self-service initiative designed — giving the incoming PM a solid foundation from day one.",
     image:
       "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop",
     link: "#",
@@ -115,26 +110,25 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Produced 6 iterations of due diligence reports (v1–v1.6)",
-      "Analyzed 103 open epics with sprint velocity analysis",
-      "Dependency-mapped 68 DEACH SAGAs across the portfolio",
-      "Conceptualized the self-service initiative as a strategic recommendation from data",
+      "Stepped in to stabilize a product left without a realistic plan by the previous PM",
+      "Used an AI skill built from prior Retailer Hub analysis — compressed weeks of work into days",
+      "Delivered full due diligence (103 epics, capacity model, 16 risks) to give the incoming PM a solid start",
     ],
     impact: [
-      "103 epics analyzed in single due diligence",
-      "68 SAGAs dependency-mapped",
-      "Self-service initiative born from rigorous analysis",
-      "Capacity gap quantified across the portfolio",
+      "Hidden ~25% overhead uncovered — gave the new PM a realistic baseline from day one",
+      "Weeks of ramp-up time compressed using AI-powered analysis tooling",
+      "Self-service initiative designed to reduce the recurring defect load going forward",
     ],
+    relatedCaseId: 5,
   },
   {
     id: "5",
     name: "OpenNL",
     role: "Tech Senior Consultant — Deloitte",
     description:
-      "National-scale COVID testing platform for the Netherlands — 9.4 million tests administered across 1,000+ locations, presented at OutSystems NextStep 2021.",
+      "National-scale COVID testing platform for the Netherlands — 9.4 million tests across 1,000+ locations, delivered under crisis conditions.",
     detailedDescription:
-      "Delivered a national-scale product under extreme time and political pressure. Managed a 10-person cross-border development team to build and scale a COVID testing platform for the Netherlands. The platform administered 9.4M tests across 1,000+ locations, and the work was presented at OutSystems NextStep 2021.",
+      "Led a 10-person cross-border team to build and scale a COVID testing platform under extreme time and political pressure. The platform became national infrastructure, and the work was presented at OutSystems NextStep 2021.",
     image:
       "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&h=400&fit=crop",
     link: "#",
@@ -143,16 +137,14 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2C",
     highlights: [
-      "Managed 10-person cross-border development team",
-      "Delivered under extreme time and political pressure",
-      "Presented results at OutSystems NextStep 2021",
-      "Scaled to support national-level testing infrastructure",
+      "Led 10-person cross-border team under crisis conditions",
+      "Scaled platform to national infrastructure level",
+      "Presented at OutSystems NextStep 2021",
     ],
     impact: [
       "9.4 million COVID tests administered",
       "1,000+ test locations managed",
       "National-scale delivery under crisis conditions",
-      "Presented at OutSystems NextStep 2021",
     ],
   },
   {
@@ -160,9 +152,9 @@ export const products: Product[] = [
     name: "Unitel",
     role: "Tech Senior Consultant — Deloitte",
     description:
-      "Self-service app for Angola's largest telecom — enabling millions of subscribers to manage mobile services across web and mobile.",
+      "Self-service app for Angola's largest telecom — serving millions of subscribers across web and mobile.",
     detailedDescription:
-      "Led the infrastructure migration and platform upgrade on OutSystems, covering both the SelfCare and Field Service Management (FSM) modules. Ensured continuity of service while modernizing the technical foundation for Angola's largest telecom provider.",
+      "Led infrastructure migration and platform upgrade for Angola's largest telecom provider. Ensured service continuity while modernizing the technical foundation across both self-care and field service management modules.",
     image:
       "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=600&h=400&fit=crop",
     link: "#",
@@ -171,15 +163,14 @@ export const products: Product[] = [
     platform: "Web & Mobile",
     type: "B2C",
     highlights: [
-      "Managed infrastructure migration and platform upgrade on OutSystems",
-      "Delivered SelfCare and Field Service Management (FSM) modules",
-      "Collaborated with stakeholders across geographies to align technical and business goals",
-      "Ensured service continuity during complex migration processes",
+      "Led infrastructure migration with zero service disruption",
+      "Unified self-care and field service into a single platform",
+      "Aligned stakeholders across geographies on technical and business goals",
     ],
     impact: [
-      "Serving millions of subscribers across Angola",
-      "Modernised technical foundation for the country's largest telecom",
-      "Unified SelfCare and FSM into a single platform experience",
+      "Zero-downtime infrastructure migration for Angola's largest telecom",
+      "Unified two separate products into one platform, reducing maintenance overhead",
+      "Serving millions of subscribers across web and mobile channels",
     ],
   },
   {
@@ -187,9 +178,9 @@ export const products: Product[] = [
     name: "NOS Self-Service App",
     role: "Tech Senior Consultant — Deloitte",
     description:
-      "Mobile-first self-service app for NOS Portugal — inception to go-live in 10 months for one of Portugal's top telecoms.",
+      "Mobile-first self-service app for NOS Portugal — inception to go-live in 10 months.",
     detailedDescription:
-      "Participated in the project from inception to initial go-live over 10 months. Structured and applied Agile methodologies and developed using the OutSystems platform. Coordinated with cross-functional teams to deliver on time and within scope.",
+      "Drove the project from inception to go-live in 10 months for one of Portugal's top telecoms. Structured agile methodologies across the team and coordinated cross-functional delivery on time and within scope.",
     image:
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
     link: "#",
@@ -198,15 +189,14 @@ export const products: Product[] = [
     platform: "Mobile",
     type: "B2C",
     highlights: [
-      "Drove the project from inception to initial go-live in 10 months",
-      "Structured and applied Agile methodologies across the team",
-      "Developed core features using the OutSystems platform",
-      "Coordinated with cross-functional teams to deliver on time and within scope",
+      "Inception to go-live in 10 months",
+      "Structured and applied agile methodologies across the team",
+      "Coordinated cross-functional delivery on time and within scope",
     ],
     impact: [
-      "Launched a new digital channel for one of Portugal's top telecoms",
-      "Enabled self-service for consumption, invoices, data packages, and promotions",
-      "Inception to go-live in 10 months",
+      "New self-service channel launched in 10 months, inception to go-live",
+      "Reduced call center dependency by enabling digital account management",
+      "On-time, on-scope delivery across cross-functional teams",
     ],
   },
   {
@@ -214,9 +204,9 @@ export const products: Product[] = [
     name: "HR Tool",
     role: "Tech Consultant — Deloitte",
     description:
-      "Internal HR platform to centralize project sharing, timesheets, and certification management — built from scratch as a first consulting project.",
+      "Internal HR platform built from scratch — centralized project sharing, timesheets, and certification management.",
     detailedDescription:
-      "Built an internal HR tool to centralize team management processes, enabling consultants to track their project history, manage timesheets, and maintain professional certifications in a single platform.",
+      "Designed and built an internal HR tool to centralize team management processes. Replaced manual workflows with a unified digital platform adopted across Deloitte Portugal teams.",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
     link: "#",
@@ -225,14 +215,14 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Designed and built the platform from scratch as a first consulting project",
-      "Centralized project sharing, timesheets, and certification management",
-      "Created a streamlined experience for consultants to manage professional development",
+      "Designed and built the platform from scratch",
+      "Replaced manual processes with a unified digital experience",
+      "Adopted internally across Deloitte Portugal teams",
     ],
     impact: [
-      "Replaced manual processes with a unified digital platform",
-      "Improved visibility into team capacity and project allocation",
-      "Adopted internally across Deloitte Portugal teams",
+      "Eliminated manual timesheet and certification tracking across Deloitte Portugal",
+      "Enabled real-time visibility into team capacity and project allocation",
+      "Adopted as standard tooling across multiple Deloitte Portugal teams",
     ],
   },
 ];

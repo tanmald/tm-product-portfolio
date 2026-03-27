@@ -1,50 +1,38 @@
 
 
-## Update Portfolio with Real Data from Notion
+## Simplify Skills Bento Grid — Clean Tiling, No Gradients
 
-I successfully accessed your Notion page and extracted all the relevant information. Here's what I found and what I plan to update:
+### Problem
+The current CSS grid auto-placement with mixed card sizes leaves gaps in the middle of the grid. The gradient backgrounds add visual noise.
 
-### Data Extracted from Notion
+### Solution
+Use **explicit grid placement** (grid-row/grid-column) so cards tile perfectly into a rectangle, with any empty space only at the bottom. Remove gradients; use flat, minimal card styling.
 
-**About You:**
-- **Name**: Tania Maldonado
-- **Current Role**: Product Manager @ BMW Group
-- **Previous**: Tech Senior Consultant @ Deloitte
-- **7+ years** of experience in product development and digital strategy
-- Fluent in Portuguese, English, and Spanish
-- Expertise in B2B and B2C solutions, market research, cross-functional teamwork
+### Layout (3-column grid, explicit placement)
 
-**Experience (2 roles):**
-1. **BMW Group** — Product Manager (April 2022 - Present) — OEM Automotive
-2. **Deloitte** — Tech Senior Consultant (August 2018 - April 2022) — Consulting
+```text
+Row 1-2: [AI-Augmented (2×2)     ] [Stakeholder (1×2)]
+Row 3-4: [Strategic (2×2)        ] [Crisis (1×2)     ]
+Row 5-6: [Quant (1×2)] [AI Str (1×2)] [Cross-Cult (1×1)]
+                                       [Tech Fluency(1×1)]
+Row 7:   [Entrepreneurial (1×1)] 
+```
 
-**Projects (4 featured):**
-1. **ONE Sales Workplace** — Automotive, Germany, Web, B2B — "Web-based platform for retail partners worldwide to support end-to-end sales and business processes for new and used vehicles, as well as Financial Services, across all BMW Group brands."
-2. **Unitel** — Telecommunications, Angola, Web & Mobile, B2C — "Self-service app for clients to manage their mobile services."
-3. **NOS Self-Service App** — Telecommunications, Portugal, Mobile, B2C — "Self-service app for clients to manage their mobile services." (Features: check mobile consumption, pay invoices, purchase data packages, access promotions)
-4. **HR Tool** — Human Resources, Portugal, Web, B2B — "Internal HR Tool where team members could share projects, fill timesheets, upload certifications."
+Top 6 rows tile perfectly. Only gap: bottom-right of row 7.
 
-**Skills database** has categories: Software, Language, Expertise (couldn't retrieve individual items, but I have the structure)
+### File changes
 
-### Plan
+#### `src/data/skills.ts`
+- Remove `color` field from interface and data
+- Keep `size` (still drives card dimensions)
+- Add a `gridPosition` object (`{ row, col }`) to each skill for explicit placement
 
-#### 1. Update Home/Hero page with Tania's real info
-- Change headline and subtitle to reflect Tania's actual role and pitch
-- Update the eyebrow tag to "Product Manager @ BMW Group"
-- Adjust the bio text with her real background
-
-#### 2. Update Products page with real project data
-- Replace the 4 placeholder products in `src/data/products.ts` with the 4 featured projects from Notion
-- Update the `Product` interface to include new fields: `sector`, `country`, `platform`, `type` (B2B/B2C)
-- Display sector, country, and platform as badges/tags on each product card
-- Use relevant stock images for each sector (automotive, telecommunications, HR) since Notion image URLs are temporary signed URLs
-
-#### 3. Update Navbar with Tania's name
-- Add her name or initials to the navbar for personalization
-
-### Technical Details
-- Product data remains hardcoded in `src/data/products.ts` (easy to update later)
-- New fields added to the Product interface: `sector`, `country`, `platform`, `type`
-- Product cards will show tags for sector, country, platform, and B2B/B2C type
-- Stock images from Unsplash will be used since Notion S3 URLs expire
+#### `src/components/sections/SkillsSection.tsx`
+- Use `grid-cols-3` with `grid-template-rows` set to enough rows
+- Place each card with explicit `gridRow` / `gridColumn` via style prop
+- **Remove all gradient backgrounds** — use flat `bg-card` with simple `border border-border`
+- **Remove tier-based color styling** on borders
+- Keep metric gradient text (subtle, looks good)
+- Keep: icons, badges, chips, ScrollReveal, hover lift
+- Mobile: single column, no explicit placement (all cards stack naturally)
 
