@@ -1,31 +1,30 @@
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { label: "Home", id: "home" },
   { label: "Work", id: "work" },
-  { label: "AI Cases", id: "ai" },
+  { label: "Case Studies", id: "ai" },
+  { label: "Skills", id: "skills" },
+  { label: "GitHub", id: "github" },
 ];
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+    const allSections = ["home", ...navItems.map((i) => i.id)];
 
-      const sections = navItems.map((item) => ({
-        id: item.id,
-        el: document.getElementById(item.id),
-      }));
+    const handleScroll = () => {
+      setVisible(window.scrollY > 120);
 
       const scrollPos = window.scrollY + window.innerHeight / 3;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section.el && section.el.offsetTop <= scrollPos) {
-          setActiveSection(section.id);
+      for (let i = allSections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(allSections[i]);
+        if (el && el.offsetTop <= scrollPos) {
+          setActiveSection(allSections[i]);
           break;
         }
       }
@@ -40,39 +39,44 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/40"
-          : "bg-transparent"
-      )}
-    >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button
-          onClick={() => scrollTo("home")}
-          className="text-lg font-semibold text-foreground hover:text-primary transition-colors tracking-tight"
+    <AnimatePresence>
+      {visible && (
+        <motion.nav
+          initial={{ y: 32, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 32, opacity: 0 }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50"
         >
-          Tânia Maldonado
-        </button>
-        <div className="flex gap-1">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollTo(item.id)}
-              className={cn(
-                "px-4 py-2 rounded-lg text-sm font-medium transition-all",
-                activeSection === item.id
-                  ? "bg-primary text-primary-foreground shadow-soft"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              )}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-      </div>
-    </nav>
+          <div className="flex items-center gap-1 px-2 py-2 rounded-2xl bg-background/80 backdrop-blur-xl border border-border/50 shadow-lg">
+            {navItems.map((item) => {
+              const isActive = activeSection === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => scrollTo(item.id)}
+                  className={cn(
+                    "relative px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-200",
+                    isActive
+                      ? "text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-pill"
+                      className="absolute inset-0 rounded-xl bg-primary"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10">{item.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </motion.nav>
+      )}
+    </AnimatePresence>
   );
 };
 

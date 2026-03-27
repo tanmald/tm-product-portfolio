@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { useCases } from "@/data/useCases";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight, Sparkles, TrendingUp, CheckCircle2, Lightbulb, X } from "lucide-react";
@@ -9,19 +10,19 @@ const AiSection = () => {
   const selectedCase = useCases.find((uc) => uc.id === selectedId);
 
   return (
-    <section id="ai" className="py-32 px-6">
+    <section id="ai" className="section-terracotta bg-background py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <div className="mb-16 max-w-2xl">
             <span className="text-primary font-medium text-sm tracking-wide uppercase">Case Studies</span>
             <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-5 text-foreground leading-tight font-serif">
-              AI in my{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                workflow
+              How <span className="text-muted-foreground/40 text-2xl sm:text-3xl align-baseline">(A)</span>I{" "}
+              <span className="text-primary">
+                work
               </span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              How I use data, AI, and structured thinking to drive product outcomes.
+              Data, analysis, and structured thinking applied to real product problems.
             </p>
           </div>
         </ScrollReveal>
@@ -68,10 +69,10 @@ const AiSection = () => {
         </div>
       </div>
 
-      {/* Modal */}
-      {selectedCase && (
+      {/* Modal — portaled to body to escape section CSS variable scope */}
+      {selectedCase && createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/30 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
           onClick={() => setSelectedId(null)}
         >
           <div
@@ -176,7 +177,7 @@ const AiSection = () => {
             </div>
           </div>
         </div>
-      )}
+      , document.body)}
     </section>
   );
 };

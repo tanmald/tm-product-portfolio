@@ -18,7 +18,7 @@ const GitHubSection = () => {
             <span className="text-primary font-medium text-sm tracking-wide">Open Source</span>
             <h2 className="text-4xl sm:text-6xl font-normal mt-2 mb-4 text-foreground font-serif">
               Side{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="text-primary">
                 projects
               </span>
             </h2>

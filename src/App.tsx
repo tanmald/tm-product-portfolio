@@ -19,11 +19,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <DecorativeElements />
-        <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/admin" element={<><Navbar /><Admin /></>} />
+          <Route path="/products" element={<><Navbar /><Products /></>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

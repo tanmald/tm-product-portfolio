@@ -50,6 +50,28 @@
     --sidebar-ring: 19 62% 47%;
   }
 
+  .section-terracotta {
+    --background: 19 62% 62%;
+    --foreground: 35 40% 97%;
+    --muted-foreground: 35 30% 88%;
+    --border: 19 50% 68%;
+    --muted: 19 55% 57%;
+    --secondary: 19 52% 55%;
+    --primary: 35 40% 97%;
+    --primary-foreground: 19 62% 62%;
+  }
+
+  .dark .section-terracotta {
+    --background: 19 55% 50%;
+    --foreground: 35 40% 97%;
+    --muted-foreground: 35 25% 85%;
+    --border: 19 45% 58%;
+    --muted: 19 50% 44%;
+    --secondary: 19 48% 42%;
+    --primary: 35 40% 97%;
+    --primary-foreground: 19 55% 50%;
+  }
+
   .dark {
     --background: 20 12% 8%;
     --foreground: 35 25% 90%;
