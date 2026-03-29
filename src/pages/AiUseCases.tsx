@@ -55,7 +55,6 @@ const AiUseCases = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <span className={cn("block", isLarge ? "text-4xl" : "text-2xl")}>{uc.emoji}</span>
                   <div>
                     <span className="text-[10px] font-medium text-primary tracking-widest uppercase">
                       Case {uc.id}
