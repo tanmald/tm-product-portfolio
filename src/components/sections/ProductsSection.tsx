@@ -114,11 +114,11 @@ const ProductsSection = () => {
           <div className="mb-16 max-w-2xl">
             <span className="text-primary font-medium text-sm tracking-wide uppercase">Portfolio</span>
             <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-5 text-foreground leading-tight font-serif">
-              Things I've{" "}
-              <span className="text-primary">built</span>
+              Products I've{" "}
+              <span className="text-primary">shipped</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Products shaped across automotive, telecom, public health, and more — 7+ years, 5+ countries, always outcome-driven.
+              Products shaped across automotive, telecom, and public health — from enterprise platforms to national-scale systems.
             </p>
           </div>
         </ScrollReveal>

@@ -140,7 +140,7 @@ const Products = () => {
         {/* BMW Group */}
         <div className="mb-16">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
-            BMW Group · Product Manager
+            BMW Group · Senior Product Manager
           </h2>
           <div className="space-y-0">
             {bmwProducts.map((product) => (

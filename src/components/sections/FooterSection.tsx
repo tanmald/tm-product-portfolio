@@ -10,12 +10,10 @@ const FooterSection = () => {
             <span className="text-primary">together</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-            I'm always open to discussing product strategy, new opportunities, or how AI can transform your workflow.
+            I'm always open to discussing product strategy and new opportunities.
           </p>
           <a
-            href="https://www.linkedin.com/in/tanmald/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:tanmald@hotmail.com"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-medium text-base shadow-soft hover:shadow-soft-lg hover:bg-primary/85 hover:scale-[1.02] transition-all"
           >
             Get in touch

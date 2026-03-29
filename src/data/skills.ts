@@ -1,103 +1,82 @@
 export interface Skill {
   name: string;
   evidence: string;
-  size: "large" | "medium" | "small";
   metric?: string;
-  tier: string;
-  relatedProductIds?: string[];
-  relatedCaseIds?: number[];
-  gridPosition: { row: string; col: string };
+  tier: "Differentiating" | "Strong" | "Growth";
 }
 
 export const skills: Skill[] = [
-  {
-    name: "AI-Augmented Product Work",
-    evidence:
-      "Built an MCP server and AI agents that turned 2-week manual analyses into 2-hour automated workflows — presented 6 real case studies to CTO-level leadership.",
-    size: "large",
-    metric: "2 weeks → 2 hours",
-    tier: "Differentiating",
-    relatedProductIds: ["1", "2"],
-    relatedCaseIds: [12, 8, 9],
-    gridPosition: { row: "1 / 3", col: "1 / 3" },
-  },
-  {
-    name: "Stakeholder Management",
-    evidence:
-      "Aligned BMW AG leadership, cross-country teams (DE/ZA/PT), and government clients across 5+ countries — navigating politics to unblock product decisions.",
-    size: "medium",
-    tier: "Strong",
-    relatedProductIds: ["1", "3"],
-    relatedCaseIds: [3, 11],
-    gridPosition: { row: "1 / 3", col: "3 / 4" },
-  },
+  // Differentiating Skills
   {
     name: "Strategic Analysis & Due Diligence",
     evidence:
-      "Created due diligence from scratch across 6 iterations, uncovering a hidden ~25 SP/quarter defect tax and building capacity models that reshaped roadmap commitments.",
-    size: "large",
-    metric: "103 epics analyzed",
+      "I get up to speed fast on new products — surfacing hidden costs, capacity gaps, and risks that weren't visible before. I turn ambiguity into structured scenarios that give executives what they need to decide.",
+    metric: "Hidden risks surfaced fast",
     tier: "Differentiating",
-    relatedProductIds: ["2", "3"],
-    relatedCaseIds: [5, 6, 7],
-    gridPosition: { row: "3 / 5", col: "1 / 3" },
+  },
+  {
+    name: "Complex Transition Management",
+    evidence:
+      "I take ownership of high-stakes, politically sensitive transitions where ambiguity is high and the cost of getting it wrong is real. I give executives the clarity they need to make confident decisions.",
+    tier: "Differentiating",
   },
   {
     name: "Crisis Product Leadership",
     evidence:
-      "Rescued a failing cross-country product in 5 months — stabilized delivery, mentored a replacement PO, and exited cleanly with the team self-sufficient.",
-    size: "medium",
-    tier: "Strong",
-    relatedProductIds: ["5"],
-    relatedCaseIds: [4],
-    gridPosition: { row: "3 / 5", col: "3 / 4" },
+      "I step into broken situations — dysfunctional teams, unclear ownership, stalled delivery — and leave them stable, with the right people in place and momentum restored.",
+    tier: "Differentiating",
+  },
+  {
+    name: "AI-Augmented Product Work",
+    evidence:
+      "I consistently find ways to do in hours what used to take weeks. I've influenced how product teams approach AI — from individual workflows to CTO-level conversations on real use cases.",
+    metric: "2 weeks → 2 hours",
+    tier: "Differentiating",
   },
   {
     name: "Quantitative Rigor",
+    evidence: "I never ship a decision without numbers behind it. I've repeatedly surfaced what others missed by insisting on measuring the right things — not just what's easy to count.",
+    tier: "Differentiating",
+  },
+
+  // Strong PM Fundamentals
+  {
+    name: "Stakeholder Management",
     evidence:
-      "Every product ships with metrics — 25K users, 9.4M tests, 103 epics mapped. Decisions backed by data, never vibes.",
-    size: "medium",
-    metric: "9.4M+ data points",
+      "I earn trust across very different contexts — corporate HQ, government clients, distributed engineering teams. I navigate organisational politics without losing momentum.",
     tier: "Strong",
-    relatedProductIds: ["1", "2"],
-    relatedCaseIds: [1, 2, 9],
-    gridPosition: { row: "5 / 7", col: "1 / 2" },
   },
   {
-    name: "AI Product Strategy",
+    name: "Agile & Delivery Excellence",
     evidence:
-      "Completed Anthropic AI Fluency certification, facilitated AI Community of Practice, and explored Figma MCP → backlog automation pipelines.",
-    size: "medium",
-    tier: "Growth",
-    relatedCaseIds: [12],
-    gridPosition: { row: "5 / 7", col: "2 / 3" },
-  },
-  {
-    name: "Cross-Cultural Delivery",
-    evidence:
-      "Delivered products across Portugal, Germany, Angola, Netherlands, UAE, and South Africa. Three languages.",
-    size: "small",
-    metric: "5+ countries",
+      "I keep delivery honest — I call out what won't fit, flag risks early, and hold teams to commitments that were actually made, not the ones that felt good in planning.",
     tier: "Strong",
-    relatedProductIds: ["1", "4", "6"],
-    gridPosition: { row: "5 / 6", col: "3 / 4" },
   },
   {
     name: "Technical Fluency",
     evidence:
-      "Module Federation, AWS (ECS Fargate, Lambda, Aurora), OutSystems, Apigee, Terraform — credibility with engineering teams.",
-    size: "small",
+      "I know the stack well enough to spot when a solution is overcomplicated, ask the right questions in architecture reviews, and write specs that engineers don't have to reinterpret.",
     tier: "Strong",
-    relatedProductIds: ["1", "5"],
-    relatedCaseIds: [3, 11],
-    gridPosition: { row: "6 / 7", col: "3 / 4" },
   },
   {
-    name: "Entrepreneurial Building",
+    name: "Mentoring & Team Building",
     evidence:
-      "PlateCheck product concept, BookVault AI reading tracker, nutritional planning app — from idea to prototype.",
-    size: "small",
+      "I make the people around me better — deliberately. I've coached consultants into stronger practitioners and left teams with more capability than I found.",
+    tier: "Strong",
+  },
+  {
+    name: "Cross-Cultural Delivery",
+    evidence:
+      "I've shipped real products across 6 countries without ever using cultural difference as an excuse for why something didn't work.",
+    metric: "6 countries",
+    tier: "Strong",
+  },
+
+  // Growth Edge
+  {
+    name: "AI Product Strategy",
+    evidence:
+      "I'm actively building the muscle to shape AI product strategy — not just use AI as a tool, but understand where it creates genuine product value vs. where it's noise.",
     tier: "Growth",
-    gridPosition: { row: "7 / 8", col: "1 / 2" },
   },
 ];

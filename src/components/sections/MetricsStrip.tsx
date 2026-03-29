@@ -4,7 +4,7 @@ const metrics = [
   { value: "30+", label: "Markets served globally" },
   { value: "25K", label: "Users onboarded in 4 months" },
   { value: "9.4M", label: "COVID tests administered" },
-  { value: "103", label: "Epics analyzed in one audit" },
+  { value: "€80K", label: "Saved via internal API discovery" },
   { value: "90%+", label: "Client satisfaction" },
 ];
 

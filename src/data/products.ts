@@ -19,11 +19,11 @@ export const products: Product[] = [
   {
     id: "1",
     name: "ONE Sales Workplace",
-    role: "Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group",
     description:
       "BMW Group's unified retail platform — 25,000 users onboarded in 4 months across 30+ markets for BMW, MINI, Motorrad, and Rolls-Royce.",
     detailedDescription:
-      "Unified platform replacing fragmented sales tools across all BMW Group brands. Led cross-functional coordination between Munich and South Africa, driving adoption at scale while managing complex stakeholder dynamics across geographies.",
+      "Unified platform replacing fragmented sales tools across all BMW Group brands. Led cross-functional coordination between Munich and South Africa — managing market readiness, go-live sequencing, user support, and feedback loops across 30+ markets.",
     image:
       "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&h=400&fit=crop",
     link: "#",
@@ -33,7 +33,7 @@ export const products: Product[] = [
     type: "B2B",
     highlights: [
       "Led cross-functional coordination across 2 geographies and all BMW Group brands",
-      "Drove adoption strategy that onboarded 25,000 users in 4 months",
+      "Coordinated go-live across 30+ markets — market readiness, user support, and feedback loops",
       "Managed complex stakeholder dynamics to align business, design, and engineering",
     ],
     impact: [
@@ -45,11 +45,11 @@ export const products: Product[] = [
   {
     id: "2",
     name: "Retailer Hub",
-    role: "Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group",
     description:
-      "Owned a politically sensitive product transition across 2 continents — quantified a 25–60% capacity gap and delivered 3 transition scenarios to de-risk the decision.",
+      "Global communications platform for BMW, MINI, and Rolls-Royce agents and dealerships — the central hub connecting retailers across all BMW Group brands.",
     detailedDescription:
-      "High-stakes product transition requiring alignment between BMW AG and CTW stakeholders across Germany and South Africa. Built the analytical foundation for executive decision-making through structured scenario planning and risk quantification.",
+      "Taking full ownership of the platform used by agents and dealerships across BMW Group's brand portfolio. Accountable for the product roadmap, stakeholder alignment across Germany and South Africa, and ensuring delivery continuity through a complex transition from the previous team.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     link: "#",
@@ -58,14 +58,14 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Delivered 3 transition scenarios (Aggressive/Neutral/Conservative) for executive decision-making",
-      "Quantified 25–60% capacity shortfall — turning ambiguity into actionable planning",
-      "Aligned stakeholders across 2 continents on a 5-month phased roadmap",
+      "Taking ownership of the platform roadmap serving BMW, MINI, Motorrad, and Rolls-Royce retailers",
+      "Quantified 25–60% capacity gap — built the analytical foundation for executive planning",
+      "Ensuring delivery continuity across 2 continents through a structured transition",
     ],
     impact: [
-      "49 epics mapped across the portfolio",
-      "25–60% capacity gap quantified and addressed",
-      "5-month phased roadmap delivered",
+      "Full product ownership of BMW Group's global retailer communications platform",
+      "25–60% capacity gap quantified — preventing blind roadmap commitments",
+      "Stakeholder alignment maintained across Germany and South Africa through transition",
     ],
   },
   {
@@ -89,19 +89,19 @@ export const products: Product[] = [
       "Mentored successor PO and executed a zero-disruption handoff",
     ],
     impact: [
-      "Team stabilized within 5 months",
-      "Successor PO mentored and onboarded",
-      "Clean exit with no disruption to delivery",
+      "Delivery restored within 5 months on a failing product",
+      "Business continuity ensured through structured handoff",
+      "Cross-country collaboration rebuilt between distributed teams",
     ],
   },
   {
     id: "4",
     name: "TNPS (The New Print Service)",
-    role: "Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group",
     description:
-      "Took ownership of a new product, built a realistic capacity model from scratch, and uncovered a hidden ~25 SP/quarter defect tax that was inflating every roadmap commitment.",
+      "Stepped in to course-correct a product left in disarray — ran a full due diligence using an AI-powered skill built from prior analysis work, cutting weeks of effort down to days for the incoming PM.",
     detailedDescription:
-      "Created a comprehensive due diligence from scratch across 6 iterations — analyzed 103 open epics, modeled true team capacity after accounting for defect overhead, and designed a phased self-service initiative with concrete quarterly milestones.",
+      "The previous PM had left the product without a realistic capacity model or clear backlog health. Used an AI skill built during the Retailer Hub analysis to rapidly produce a comprehensive due diligence — 103 epics analyzed, true capacity modeled, and a phased self-service initiative designed — giving the incoming PM a solid foundation from day one.",
     image:
       "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop",
     link: "#",
@@ -110,14 +110,14 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Built realistic capacity model revealing ~25 SP/quarter hidden defect tax",
-      "Analyzed 103 epics and designed phased self-service initiative (Q2–Q4)",
-      "Created due diligence from scratch across 6 iterations — earned credibility fast",
+      "Stepped in to stabilize a product left without a realistic plan by the previous PM",
+      "Used an AI skill built from prior Retailer Hub analysis — compressed weeks of work into days",
+      "Delivered full due diligence (103 epics, capacity model, 16 risks) to give the incoming PM a solid start",
     ],
     impact: [
-      "~25 SP/quarter defect tax uncovered — fixed inflated roadmap",
-      "103 epics analyzed in a single due diligence",
-      "Self-service initiative phased with quarterly milestones",
+      "Hidden ~25% overhead uncovered — gave the new PM a realistic baseline from day one",
+      "Weeks of ramp-up time compressed using AI-powered analysis tooling",
+      "Self-service initiative designed to reduce the recurring defect load going forward",
     ],
     relatedCaseId: 5,
   },
@@ -168,9 +168,9 @@ export const products: Product[] = [
       "Aligned stakeholders across geographies on technical and business goals",
     ],
     impact: [
-      "Serving millions of subscribers across Angola",
-      "Modernized technical foundation for the country's largest telecom",
-      "Unified platform experience across web and mobile",
+      "Zero-downtime infrastructure migration for Angola's largest telecom",
+      "Unified two separate products into one platform, reducing maintenance overhead",
+      "Serving millions of subscribers across web and mobile channels",
     ],
   },
   {
@@ -194,9 +194,9 @@ export const products: Product[] = [
       "Coordinated cross-functional delivery on time and within scope",
     ],
     impact: [
-      "New digital channel launched for a top Portuguese telecom",
-      "Self-service for consumption, invoices, data packages, and promotions",
-      "Inception to go-live in 10 months",
+      "New self-service channel launched in 10 months, inception to go-live",
+      "Reduced call center dependency by enabling digital account management",
+      "On-time, on-scope delivery across cross-functional teams",
     ],
   },
   {
@@ -220,9 +220,9 @@ export const products: Product[] = [
       "Adopted internally across Deloitte Portugal teams",
     ],
     impact: [
-      "Replaced manual processes with a unified platform",
-      "Improved visibility into team capacity and allocation",
-      "Adopted across Deloitte Portugal teams",
+      "Eliminated manual timesheet and certification tracking across Deloitte Portugal",
+      "Enabled real-time visibility into team capacity and project allocation",
+      "Adopted as standard tooling across multiple Deloitte Portugal teams",
     ],
   },
 ];

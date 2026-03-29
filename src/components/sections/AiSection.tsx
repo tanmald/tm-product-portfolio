@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { useCases } from "@/data/useCases";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight, Sparkles, TrendingUp, CheckCircle2, Lightbulb, X } from "lucide-react";
@@ -9,17 +10,17 @@ const AiSection = () => {
   const selectedCase = useCases.find((uc) => uc.id === selectedId);
 
   return (
-    <section id="ai" className="py-32 px-6 bg-primary">
+    <section id="ai" className="section-terracotta bg-background py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <div className="mb-16 max-w-2xl">
-            <span className="text-primary-foreground/60 font-medium text-sm tracking-wide uppercase">Case Studies</span>
-            <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-5 text-primary-foreground leading-tight font-serif">
-              AI in my{" "}
-              <span className="text-primary-foreground/70 italic">workflow</span>
+            <span className="text-primary font-medium text-sm tracking-wide uppercase">Case Studies</span>
+            <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-5 text-foreground leading-tight font-serif">
+              How <span className="text-muted-foreground/40 text-2xl sm:text-3xl align-baseline">(A)</span>I{" "}
+              <span className="text-primary">work</span>
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed">
-              How I use data, AI, and structured thinking to drive product outcomes.
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Data, analysis, and structured thinking applied to real product problems.
             </p>
           </div>
         </ScrollReveal>
@@ -29,46 +30,46 @@ const AiSection = () => {
             <ScrollReveal key={uc.id} delay={i * 0.06}>
               <button
                 onClick={() => setSelectedId(uc.id)}
-                className="group w-full text-left py-7 border-t border-primary-foreground/15 cursor-pointer transition-colors hover:bg-primary-foreground/8 rounded-lg"
+                className="group w-full text-left py-7 border-t border-border/30 cursor-pointer transition-colors hover:bg-secondary/40 rounded-lg"
               >
                 <div className="flex items-start justify-between gap-4 mb-2">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-1">
-                      <h3 className="text-lg font-bold text-primary-foreground group-hover:text-white transition-colors">
+                      <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                         {uc.title}
                       </h3>
-                      <ArrowUpRight className="w-4 h-4 text-primary-foreground/40 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                      <ArrowUpRight className="w-4 h-4 text-foreground/40 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
                     </div>
-                    <span className="text-sm font-medium text-primary-foreground/70">{uc.subtitle}</span>
+                    <span className="text-sm font-medium text-muted-foreground">{uc.subtitle}</span>
                   </div>
                   <div className="flex items-center gap-2 shrink-0 mt-1">
                     {uc.status === "in-progress" && (
-                      <Badge variant="outline" className="text-xs bg-primary-foreground/10 text-primary-foreground border-primary-foreground/20">
+                      <Badge variant="outline" className="text-xs bg-secondary/50 text-foreground border-border/30">
                         In Progress
                       </Badge>
                     )}
-                    <Badge variant="outline" className="text-xs text-primary-foreground/70 border-primary-foreground/20">{uc.tags[0]}</Badge>
+                    <Badge variant="outline" className="text-xs text-muted-foreground border-border/30">{uc.tags[0]}</Badge>
                   </div>
                 </div>
 
-                <p className="text-primary-foreground/65 leading-relaxed text-[15px] max-w-3xl line-clamp-2">
+                <p className="text-muted-foreground leading-relaxed text-[15px] max-w-3xl line-clamp-2">
                   {uc.challenge}
                 </p>
 
-                <p className="mt-3 text-sm font-medium text-primary-foreground/80">
+                <p className="mt-3 text-sm font-medium text-foreground/80">
                   ↗ {uc.keyMetric.value}
                 </p>
               </button>
             </ScrollReveal>
           ))}
-          <div className="border-t border-primary-foreground/15" />
+          <div className="border-t border-border/30" />
         </div>
       </div>
 
-      {/* Modal */}
-      {selectedCase && (
+      {/* Modal — portaled to body to escape section CSS variable scope */}
+      {selectedCase && createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/40 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
           onClick={() => setSelectedId(null)}
         >
           <div
@@ -173,7 +174,7 @@ const AiSection = () => {
             </div>
           </div>
         </div>
-      )}
+      , document.body)}
     </section>
   );
 };
