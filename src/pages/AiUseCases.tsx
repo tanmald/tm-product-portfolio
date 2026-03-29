@@ -22,7 +22,7 @@ const AiUseCases = () => {
         <div className="mb-16 max-w-2xl">
           <span className="text-primary font-medium text-sm tracking-wide">Case Studies</span>
           <h1 className="text-4xl sm:text-6xl font-bold mt-2 mb-4 text-foreground">
-            AI in my <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">workflow</span>
+            AI in my <span className="text-primary">workflow</span>
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Real product management initiatives demonstrating data-driven decisions,
@@ -50,7 +50,7 @@ const AiUseCases = () => {
                   {uc.status === "in-progress" ? (
                     <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
                   ) : (
-                    <span className="inline-block w-2 h-2 rounded-full bg-soft-teal" />
+                    <span className="inline-block w-2 h-2 rounded-full bg-primary/40" />
                   )}
                 </div>
 
