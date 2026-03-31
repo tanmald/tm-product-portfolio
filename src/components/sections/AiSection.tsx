@@ -30,8 +30,10 @@ const AiSection = () => {
             <ScrollReveal key={uc.id} delay={i * 0.06}>
               <button
                 onClick={() => setSelectedId(uc.id)}
-                className="group w-full text-left py-7 border-t border-border/30 cursor-pointer transition-colors hover:bg-secondary/40 rounded-lg"
+                className="group relative w-full text-left py-7 border-t border-border/30 cursor-pointer transition-colors hover:bg-primary/[0.03] -mx-6 px-6"
               >
+                {/* Left accent bar — fades in on hover */}
+                <span className="absolute left-0 top-0 bottom-0 w-[3px] bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-r" />
                 <div className="flex items-start justify-between gap-4 mb-2">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-1">
