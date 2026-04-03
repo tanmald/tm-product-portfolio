@@ -23,7 +23,7 @@ export const products: Product[] = [
     description:
       "BMW Group's unified retail platform — 25,000 users onboarded in 4 months across 30+ markets for BMW, MINI, Motorrad, and Rolls-Royce.",
     detailedDescription:
-      "Unified platform replacing fragmented sales tools across all BMW Group brands. Led cross-functional coordination between Munich and South Africa — managing market readiness, go-live sequencing, user support, and feedback loops across 30+ markets.",
+      "Unified platform replacing fragmented sales tools across all BMW Group brands. Coordinated go-live across 30+ markets from Lisbon. Navigated competing stakeholder agendas — from integration architecture debates to rollout decisions — by converting opinion-based escalations into criteria-driven workshops. Actively protected team capacity by rejecting requests that exceeded bandwidth.",
     image:
       "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&h=400&fit=crop",
     link: "#",
@@ -34,12 +34,38 @@ export const products: Product[] = [
     highlights: [
       "Led cross-functional coordination across 2 geographies and all BMW Group brands",
       "Coordinated go-live across 30+ markets — market readiness, user support, and feedback loops",
-      "Managed complex stakeholder dynamics to align business, design, and engineering",
+      "Resolved persistent Business vs. Engineering conflicts — from integration depth to portal strategy — by structuring decisions through evaluation criteria and workshops rather than opinion-based escalation",
     ],
     impact: [
       "25,000 users onboarded in 4 months",
       "25% reduction in sales workflow time",
       "Global platform serving 30+ markets",
+    ],
+  },
+  {
+    id: "5",
+    name: "OpenNL",
+    role: "Tech Senior Consultant — Deloitte",
+    description:
+      "Joined mid-flight on the Netherlands' national COVID testing platform — helped steer the roadmap, manage the team, and coordinate with government stakeholders as the platform scaled to 9.4 million tests across 1,000+ locations under crisis conditions.",
+    detailedDescription:
+      "Joined a cross-border team building national COVID testing infrastructure under extreme time and political pressure. Contributed to roadmap direction, team coordination, and government and client alignment as the platform scaled to become public health infrastructure across the Netherlands.",
+    image:
+      "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&h=400&fit=crop",
+    link: "#",
+    sector: "Public Health",
+    country: "Netherlands",
+    platform: "Web",
+    type: "B2C",
+    highlights: [
+      "Joined mid-project and helped stabilise roadmap direction and team coordination",
+      "Supported government and client alignment as the platform scaled to national infrastructure",
+      "Work later presented at OutSystems NextStep 2021 — recognised as a reference implementation",
+    ],
+    impact: [
+      "9.4 million COVID tests administered across the Netherlands",
+      "1,000+ test locations managed on a single platform",
+      "Delivered under crisis conditions as part of national public health response",
     ],
   },
   {
@@ -49,7 +75,7 @@ export const products: Product[] = [
     description:
       "Global communications platform for BMW, MINI, and Rolls-Royce agents and dealerships — the central hub connecting retailers across all BMW Group brands.",
     detailedDescription:
-      "Taking full ownership of the platform used by agents and dealerships across BMW Group's brand portfolio. Accountable for the product roadmap, stakeholder alignment across Germany and South Africa, and ensuring delivery continuity through a complex transition from the previous team.",
+      "Took full ownership of BMW Group's global retailer communications platform through a cross-continental transition from the South Africa team. With a departing Tech Lead, inherited backlogs, and a team simultaneously running another product, designed a 4-phase transition plan: knowledge transfer, handover, reverse shadowing, and formal close. Maintained uninterrupted delivery to markets by negotiating source team continuity during knowledge transfer and pairing on real tickets from week two.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     link: "#",
@@ -60,7 +86,7 @@ export const products: Product[] = [
     highlights: [
       "Taking ownership of the platform roadmap serving BMW, MINI, Motorrad, and Rolls-Royce retailers",
       "Quantified 25–60% capacity gap — built the analytical foundation for executive planning",
-      "Ensuring delivery continuity across 2 continents through a structured transition",
+      "Managed a high-risk transition — departing Tech Lead, compromised timelines, dual-product load — through a 4-phase plan with progressive capacity splits and negotiated source team continuity",
     ],
     impact: [
       "Full product ownership of BMW Group's global retailer communications platform",
@@ -120,32 +146,6 @@ export const products: Product[] = [
       "Self-service initiative designed to reduce the recurring defect load going forward",
     ],
     relatedCaseId: 5,
-  },
-  {
-    id: "5",
-    name: "OpenNL",
-    role: "Tech Senior Consultant — Deloitte",
-    description:
-      "National-scale COVID testing platform for the Netherlands — 9.4 million tests across 1,000+ locations, delivered under crisis conditions.",
-    detailedDescription:
-      "Led a 10-person cross-border team to build and scale a COVID testing platform under extreme time and political pressure. The platform became national infrastructure, and the work was presented at OutSystems NextStep 2021.",
-    image:
-      "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&h=400&fit=crop",
-    link: "#",
-    sector: "Public Health",
-    country: "Netherlands",
-    platform: "Web",
-    type: "B2C",
-    highlights: [
-      "Led 10-person cross-border team under crisis conditions",
-      "Scaled platform to national infrastructure level",
-      "Presented at OutSystems NextStep 2021",
-    ],
-    impact: [
-      "9.4 million COVID tests administered",
-      "1,000+ test locations managed",
-      "National-scale delivery under crisis conditions",
-    ],
   },
   {
     id: "6",

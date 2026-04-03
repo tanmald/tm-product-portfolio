@@ -71,9 +71,9 @@ export const useCases: UseCase[] = [
     subtitle: "Finding a Better Path Under Pressure",
     emoji: "🌐",
     challenge:
-      "Critical translation API being retired. The proposed replacement was blocked by infrastructure issues. Needed to find a viable alternative without new dependencies or €5K–€80K/year in costs.",
+      "Translators across 30+ markets had flagged a recurring pain: poorly contextualised strings, irrelevant content for specific markets, and governance gaps around who could change what. When the critical translation API was then announced for retirement and the proposed replacement hit infrastructure blockers, the migration became an opportunity to address both the technical constraint and the user pain — without adding new costs.",
     actions: [
-      "Assessed 3 candidate APIs against technical requirements — found 3 BMW teams already using a free internal LLM alternative in production",
+      "Assessed 3 candidate APIs against technical requirements — and against the user pain already documented in research. Found 3 BMW teams already using a free internal LLM alternative that resolved the infrastructure blocker and, on closer inspection, also addressed the governance and contextualisation gaps users had flagged.",
       "Recommended phased migration with feature flag for instant rollback",
       "Eliminated proof-of-concept risk by leveraging existing internal precedent",
     ],
@@ -87,8 +87,9 @@ export const useCases: UseCase[] = [
     learnings: [
       "Ask 'who else has done this?' before building — internal precedent eliminates months of POC work",
       "Blockers reveal opportunities — the forced exploration led to a better solution on every dimension",
+      "When technical constraints force exploration, bring user needs into the evaluation — what looks like a forced choice can turn into a better solution on every dimension",
     ],
-    tags: ["Technical Feasibility", "AI/LLM", "Cost Optimization"],
+    tags: ["Technical Feasibility", "AI/LLM", "Cost Optimization", "User Research"],
     status: "complete",
   },
   {
@@ -123,11 +124,12 @@ export const useCases: UseCase[] = [
     subtitle: "Debunking a Vanity Metric",
     emoji: "🔔",
     challenge:
-      "Stakeholders reported a 91% notification read rate. Deeper analysis of 73 notifications revealed the real number: 18.5 actual readers per notification across 1,500+ active users.",
+      "Dealership agents across markets reported they weren't receiving notifications from the platform. Initial analysis surfaced a 91% read rate — a number that didn't survive scrutiny. Deeper investigation of 73 notifications over 6 months revealed the real picture: 18.5 actual readers per notification across 1,500+ active users, while agents had quietly moved to informal channels outside the platform.",
     actions: [
-      "Audited 73 notifications over 6 months — surfaced 5 root causes including missing targeting and same-day expiry",
+      "User interviews confirmed the pattern before the data did — agents had moved to informal channels outside the platform to stay informed. Triangulated these findings with 6 months of notification data and surfaced 5 root causes including missing targeting and same-day expiry.",
       "Quantified that 42% of underperformance was fixable with process changes alone",
       "Designed a 4-pillar improvement strategy projecting +116% reach improvement",
+      "Recognised the root cause persisted beyond process fixes — currently designing Dealer Connect, a community layer for the platform that would also generate real conversation data to train the Retailer Companion, an agentic AI assistant for dealership agents.",
     ],
     results: [
       { label: "Actual avg readers", value: "18.5" },
@@ -139,9 +141,10 @@ export const useCases: UseCase[] = [
     learnings: [
       "Always dig into the denominator — vanity metrics hide reality",
       "Process fixes often outperform technical fixes — 42% of issues needed zero engineering",
+      "When users build workarounds, the data understates the problem — informal channels replacing official ones is a signal no dashboard will show you",
     ],
     tags: ["Root Cause Analysis", "Engagement", "Strategy"],
-    status: "complete",
+    status: "in-progress",
   },
   {
     id: 10,
@@ -324,5 +327,61 @@ export const useCases: UseCase[] = [
     ],
     tags: ["Estimation", "Capacity Planning", "Data Analysis"],
     status: "complete",
+  },
+  {
+    id: 13,
+    title: "Customer Context",
+    subtitle: "Navigating Cross-Product Adoption in a Complex Platform",
+    emoji: "👤",
+    challenge:
+      "A survey of 700+ dealership agents across Italy, Poland, and Sweden surfaced a consistent pattern: users were struggling to reuse customer data from the CRM across the sales journey, forcing repeated lookups and manual re-entry at every step. The pain was real — but solving it required coordinating adoption across multiple independent product teams, each with their own roadmaps and priorities.",
+    actions: [
+      "Triangulated survey data with UX research and business stakeholder input to define the problem precisely — customer data needed to be selected once in ONE and flow to all integrated products automatically.",
+      "Analysed 4 architectural options (dashboard widget, header, cross-app floater, context propagation via the Retailer Companion (agentic AI layer)) with a structured trade-off matrix covering UX impact, technical complexity, adoption risk, and delivery speed.",
+      "Secured management buy-in for the dashboard widget as MVP — the option with the lowest adoption friction and fastest path to value.",
+      "Hit the organisational constraint: other products cited full roadmaps and couldn't commit. Currently pivoting to a back-end-first approach — secure the API and RetailCRM data exposure first, so product adoption in phase 1 requires no UI work at all.",
+    ],
+    results: [
+      { label: "Survey responses", value: "700+" },
+      { label: "Markets researched", value: "3" },
+      { label: "Options analysed", value: "4" },
+      { label: "Management buy-in", value: "Secured" },
+    ],
+    keyMetric: { label: "Survey scale that surfaced CRM re-entry as a consistent pain pattern", value: "3 markets · 700+ responses" },
+    learnings: [
+      "Organisational capacity is a product constraint as real as any technical blocker — map adoption dependencies before committing to an approach",
+      "Back-end first reduces adoption friction — if you provide the data layer for free, the conversation shifts from 'can you build this?' to 'do you want this data?'",
+      "Multi-source validation (survey + UX + business) builds a stronger case than any single input — it becomes harder to dismiss",
+    ],
+    tags: ["Discovery", "Cross-Product Strategy", "Stakeholder Alignment", "Platform"],
+    status: "in-progress",
+  },
+  {
+    id: 14,
+    title: "No Deadline",
+    subtitle: "Fixing the Diagnosis Before Prescribing the Solution",
+    emoji: "🛑",
+    challenge:
+      "An email notification feature had been built and disabled twice in production — after mass email blasts and silent failures. A key business stakeholder escalated, framing low survey participation as a notification delivery problem and demanding email be re-enabled. The real question was different: was delivery actually the bottleneck — or was the problem upstream?",
+    actions: [
+      "Corrected the record with evidence — the formal requirement was raised in March 2025, not 2023. Documented 6 critical technical risks: 1,000 sequential API calls per send, no retry or dead-letter queue, silent failure mode, multi-market duplication, fragile filtering logic, zero load tests.",
+      "Ran the actual numbers on survey notification performance: 0 automated reminders used in 6 months, the only reminder sent had incorrect targeting, morning sends showed dramatically higher engagement than bulk afternoon sends. The data pointed to targeting and timing as the real levers — not the delivery channel.",
+      "Proposed 4 concrete fixes the team could implement today without waiting for email: correcting role assignments in underperforming markets, activating reminders with proper targeting, optimising send windows, shortening survey visibility to create urgency.",
+      "Held the position on email enablement: a feature that loses emails silently with no retry and no load testing would be worse for users than no email at all. Currently running a new joint testing round to validate whether the risks have been sufficiently addressed before any production decision.",
+    ],
+    results: [
+      { label: "Technical risks documented", value: "6" },
+      { label: "Reminders used in 6 months", value: "0" },
+      { label: "Immediate fixes identified", value: "4" },
+      { label: "Failed prod deployments", value: "2" },
+    ],
+    keyMetric: { label: "The participation gap wasn't a delivery problem — it was targeting and timing", value: "0 reminders in 6 months" },
+    learnings: [
+      "Diagnose before you prescribe — a stakeholder asking for feature X may be solving for problem Y",
+      "Protecting users from a broken feature is a product decision, not a failure to deliver",
+      "Bringing actual data to a heated conversation shifts it from opinion to evidence",
+    ],
+    tags: ["Product Judgment", "Stakeholder Management", "Risk Management", "Data-Driven Decision"],
+    status: "in-progress",
   },
 ];

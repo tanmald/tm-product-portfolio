@@ -15,13 +15,13 @@ const GitHubSection = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <div className="mb-20 max-w-2xl">
-            <span className="text-primary font-medium text-sm tracking-wide">Open Source</span>
+            <span className="text-primary font-medium text-sm tracking-wide">GitHub</span>
             <h2 className="text-4xl sm:text-6xl font-normal mt-2 mb-4 text-foreground font-serif">
               Side{" "}
               <span className="text-primary">projects</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Personal apps I've designed, built, and shipped — from AI-powered libraries to nutrition trackers.
+              I build to learn. Personal projects where I explore new technologies hands-on — AI vision APIs, real-time databases, PWA architecture. Not polished products, but proof that curiosity doesn't stop at the day job.
             </p>
           </div>
         </ScrollReveal>

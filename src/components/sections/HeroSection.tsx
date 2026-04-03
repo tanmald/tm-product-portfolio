@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="flex-1 flex flex-col items-center justify-center max-w-3xl w-full text-center space-y-8">
         <ScrollReveal delay={0.1}>
           <p className="text-xs font-medium text-muted-foreground tracking-[0.2em] uppercase">
-            Senior Product Manager · BMW Group
+            Senior Product Manager
           </p>
         </ScrollReveal>
 
@@ -24,7 +24,7 @@ const HeroSection = () => {
             I'm Tânia.
             <br />
             <em className="not-italic text-primary">
-              I build clarity out of chaos.
+              I chase the why. Then I build for it.
             </em>
           </h1>
         </ScrollReveal>
@@ -37,8 +37,11 @@ const HeroSection = () => {
 
         <ScrollReveal delay={0.38}>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Turning complexity into structure and shipping results — from
-            national-scale platforms to enterprise automotive products across 30+ markets.
+            Biologist by training, PM by path — but never lost the scientist's
+            instinct to question before building. I work best when I own the
+            full loop: discovery, decision, delivery, and impact. From national
+            health infrastructure to enterprise platforms across 30+ markets, I
+            bring scientific rigour to every product I touch.
           </p>
         </ScrollReveal>
       </div>

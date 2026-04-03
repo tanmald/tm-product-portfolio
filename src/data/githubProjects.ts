@@ -68,20 +68,4 @@ export const githubProjects: GitHubProject[] = [
     language: "TypeScript",
     status: "In Progress",
   },
-  {
-    name: "MeSH_ifier",
-    description:
-      "ML classification system trained on MeSH controlled vocabulary for biomedical literature categorisation.",
-    longDescription:
-      "A machine learning system that creates classification models trained on the Medical Subject Headings (MeSH) controlled vocabulary. Designed to be applied across a variety of biomedical literature for automated categorisation and tagging.",
-    url: "https://github.com/tanmald/MeSH_ifier",
-    tech: ["Python", "Machine Learning", "NLP", "MeSH"],
-    highlights: [
-      "ML model trained on MeSH controlled vocabulary",
-      "Applicable to diverse biomedical literature",
-      "Automated categorisation and tagging pipeline",
-    ],
-    language: "Python",
-    status: "Archived",
-  },
 ];
