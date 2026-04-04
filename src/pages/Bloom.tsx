@@ -50,6 +50,14 @@ const relevantCases = [
     signal: "Accountability builds authority",
     icon: ShieldCheck,
   },
+  {
+    title: "A Prototype in 10 Minutes, a Strategy in One Conversation",
+    context: "Retailer Hub — BMW Group · 2025",
+    summary:
+      "Noticed 300+ dealership agents coordinating in unofficial WhatsApp groups — sharing product knowledge with nowhere official to go, and no way to capture it. Without waiting for a brief, built a functional prototype on Lovable in 10 minutes to make the idea tangible. Pitched it to management with a dual-value frame: community channel for agents now, structured data to train internal AI later. Validated as a direct competitor to TechConnect — a benchmark platform in US, UK, and France markets. The initiative is now entering a formal hackathon sprint.",
+    signal: "Initiative before permission",
+    icon: TrendingUp,
+  },
 ];
 
 const leadershipItems = [
@@ -297,24 +305,9 @@ const Bloom = () => {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4}>
-              <div className="border-l-2 border-primary/40 pl-6 py-1">
-                <h3 className="text-foreground font-semibold mb-2">
-                  Outcome-based roadmap prioritisation
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Bloom's pricing model — 50% at activation, 50% at clinical
-                  outcome — creates a direct line between product decisions and
-                  whether an outcome is reached. That means prioritisation isn't
-                  just about engagement metrics; it's about clinical efficacy. I'd
-                  build that line explicitly into how the team debates and decides
-                  on the roadmap.
-                </p>
-              </div>
-            </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={0.45}>
+          <ScrollReveal delay={0.4}>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Sword Health has the clinical credibility, the AI infrastructure,
               and the outcome data to make this defensible at scale. The
@@ -473,73 +466,6 @@ const Bloom = () => {
                 </div>
               </ScrollReveal>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/*  HONEST GAPS                                                 */}
-      {/* ============================================================ */}
-      <section className="py-32 px-6 bg-secondary">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <span className="text-primary font-medium text-sm tracking-wide uppercase">
-              Honest gaps
-            </span>
-            <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-10 text-foreground font-serif">
-              What I'm{" "}
-              <span className="text-primary">not</span> — and why I'd still
-              bet on me
-            </h2>
-          </ScrollReveal>
-
-          <div className="space-y-8">
-            <ScrollReveal delay={0.1}>
-              <div className="border-l-2 border-muted pl-6 py-1">
-                <h3 className="text-foreground font-semibold mb-2">
-                  I haven't worked in US healthcare
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  My experience is European. But I've scaled a platform across
-                  73 countries, navigated market-by-market regulatory constraints
-                  in automotive, and built for employer/payer dynamics in a B2B2C
-                  model. Platform scaling is platform scaling. Clinical domain
-                  knowledge doesn't change at the Atlantic.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="border-l-2 border-muted pl-6 py-1">
-                <h3 className="text-foreground font-semibold mb-2">
-                  My B2C work is earlier in my career
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  At Deloitte, I shipped a B2C mobile self-service app for NOS
-                  (inception to go-live in 10 months) and led infrastructure for
-                  Unitel, Angola's largest telecom, serving millions of
-                  subscribers. My recent years have been B2B2C at BMW. The
-                  consumer instincts are there — and I've been deliberately
-                  building them back through BookVault and PlateCheck.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <div className="border-l-2 border-muted pl-6 py-1">
-                <h3 className="text-foreground font-semibold mb-2">
-                  Regulated industry, different domain
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Automotive is heavily regulated — safety standards, data
-                  privacy, cross-market compliance. I haven't navigated HIPAA or
-                  FDA directly, but I understand what it means to ship in an
-                  environment where getting it wrong has real consequences, where
-                  legal and compliance are active stakeholders, and where you
-                  build defensibility into the product from the start.
-                </p>
-              </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>
