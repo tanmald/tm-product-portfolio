@@ -131,10 +131,30 @@
 
 ## 9. O que ainda falta decidir
 
-- [ ] **Pergunta 11 pendente:** Há algo a remover do portfolio? (produtos fracos, AI cases, GitHub projects)
+- [x] ~~**Pergunta 11 pendente:** Há algo a remover do portfolio?~~ — Removidos: eSign, HR Tool, Estimation Calibration (id:8), Test Manager Agent (id:12), PlantSis (GitHub)
 - [ ] **Liderança no portfolio generalista:** A secção de leadership do Bloom não tem equivalente no portfolio principal — a SkillsSection menciona "Mentoring & Team Building" mas não tem os detalhes do Product Talks / Beatriz.
-- [ ] **Datas eSign e TNPS:** Inferidas (2022–23 e 2023–24) — confirmar com Tânia se necessário.
-- [ ] **GitHub projects:** PlateCheck e PlantSis "In Progress" — manter, reformular ou remover?
+- [ ] **GitHub projects:** PlateCheck "In Progress" — manter ou reformular.
+
+---
+
+## 10. Documentação de Referência
+
+Ficheiros criados para apoiar a candidatura à Bloom e preparação de entrevista:
+
+- **[bloom-devils-advocate-v2.md](./bloom-devils-advocate-v2.md)** — Devil's advocate review v2 da página `/bloom`, cruzado com o produto Bloom actual (5 life stages, AI clinical system, outcome-based pricing) e o JD real. Avaliação: 🔴 High Risk. Identifica 5 questões críticas e 7 blind spots completos.
+- **[bloom-hop-interview-prep.md](./bloom-hop-interview-prep.md)** — Referência completa para preparação de entrevista: perfil Sword Health ($4B, liderança, cultura, produtos), deep dive no Bloom (5 life stages, pricing, métricas), análise do JD, definição do role HoP, competências health tech (HIPAA, FDA, B2B2C), gap analysis com estratégias de mitigação, e 20+ perguntas de entrevista com frameworks de resposta.
+
+### Próximos passos prioritários (do bloom-devils-advocate-v2.md)
+
+**P0 — Antes de submeter candidatura:**
+1. Reescrever visão de produto na página Bloom (partir do Bloom actual, não do que ele já faz)
+2. Adicionar compreensão do modelo B2B2C e outcome-based pricing
+3. Endereçar gaps do JD proativamente (liderança, B2C, regulated, US market)
+
+**P1 — Fortalece a candidatura:**
+4. Traduzir experiência BMW para contexto Bloom (pontes explícitas)
+5. Mostrar velocidade além de rigor (exemplo de iteração rápida)
+6. Mencionar AI e dados (ponte com Bloom AI clinical system)
 
 ---
 
@@ -150,3 +170,9 @@
 | `src/App.tsx` | Rota `/bloom` adicionada |
 | `vercel.json` | Configuração SPA routing para Vercel |
 | `devils-advocate-review.md` | Reescrito com nova análise focada em HoP |
+| `docs/bloom-devils-advocate-v2.md` | Devil's advocate v2 da página Bloom — cruzado com produto real e JD |
+| `docs/bloom-hop-interview-prep.md` | Referência completa: Sword Health, Bloom, JD, gap analysis, interview prep |
+| `docs/portfolio-hop-positioning.md` | Actualizado com referências aos novos ficheiros e próximos passos |
+| `src/data/useCases.ts` | Removidos: Estimation Calibration (id:8), Test Manager Agent (id:12) |
+| `src/data/githubProjects.ts` | Removido: PlantSis |
+| `src/data/products.ts` | Removidos: eSign, HR Tool |
