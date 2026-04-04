@@ -255,17 +255,20 @@ const Bloom = () => {
             <ScrollReveal delay={0.25}>
               <div className="border-l-2 border-primary/40 pl-6 py-1">
                 <h3 className="text-foreground font-semibold mb-2">
-                  From reactive care to predictive enrollment
+                  In-platform prediction for existing members
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Phoenix surfaces signals within active care episodes — when a
-                  member is already engaged. The next frontier is reaching members
-                  who don't yet know they need the next care stage. Using
-                  longitudinal patterns across pelvic health history, cycle
-                  signals, sleep, and metabolic data to identify members
-                  approaching a transition and proactively enrolling them in
-                  preventive pathways — before symptoms become the trigger. That's
-                  not clinical memory. That's clinical prediction.
+                  Predict identifies at-risk members before they enroll, using
+                  external claims and pharmacy data. Phoenix surfaces signals
+                  within active care episodes. The gap between them: existing
+                  Bloom members in active care who are approaching their next
+                  life stage without knowing it yet. A fertility member whose
+                  cycle and metabolic signals suggest early perimenopause onset.
+                  A postpartum member approaching the hormonal window where
+                  pelvic floor issues compound. Using longitudinal in-platform
+                  data to surface those transitions proactively — before symptoms
+                  become the trigger — is a layer neither Predict nor Phoenix
+                  currently covers.
                 </p>
               </div>
             </ScrollReveal>
