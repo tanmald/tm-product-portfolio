@@ -126,7 +126,7 @@ const Bloom = () => {
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
               I'm a Senior Product Manager with 7.5 years across consulting and
               product ownership — building B2C self-service apps for telecoms,
-              scaling a B2B2C platform across 73 countries in a regulated industry,
+              scaling a platform across 73 countries in a regulated industry,
               and accumulating a biology degree, a nursing year, and a deep personal
               connection to reproductive health. Bloom's mission isn't just a job
               I want — it's a problem I've lived.
@@ -389,7 +389,7 @@ const Bloom = () => {
               What I <span className="text-primary">bring</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-12">
-              Four cases that show how I work — not everything I've done, but
+              Five cases that show how I work — not everything I've done, but
               what's most relevant for leading Bloom.
             </p>
           </ScrollReveal>
@@ -426,7 +426,7 @@ const Bloom = () => {
       {/* ============================================================ */}
       {/*  LEADERSHIP                                                  */}
       {/* ============================================================ */}
-      <section className="py-32 px-6">
+      <section className="py-32 px-6 bg-secondary">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <span className="text-primary font-medium text-sm tracking-wide uppercase">
