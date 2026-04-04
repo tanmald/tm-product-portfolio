@@ -120,6 +120,17 @@ const Bloom = () => {
               I want — it's a problem I've lived.
             </p>
           </ScrollReveal>
+
+          <ScrollReveal delay={0.46}>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
+              My conviction: too many health products mistake feature delivery
+              for product strategy. In women's health especially, the cost of
+              the wrong direction isn't just wasted sprints — it's misinformation
+              that reaches millions of women. Good product management here means
+              having the domain depth to know what's right, and the metrics to
+              make that case unavoidable.
+            </p>
+          </ScrollReveal>
         </div>
 
         <motion.div
