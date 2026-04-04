@@ -353,12 +353,15 @@ const Bloom = () => {
             <div className="flex gap-4 items-start mb-8">
               <Building2 className="w-5 h-5 text-primary shrink-0 mt-1" />
               <p className="text-muted-foreground text-lg leading-relaxed">
-                I've worked in this model before. ONE Sales Workplace is sold to
-                BMW Group brands — BMW, MINI, Motorrad, Rolls-Royce — who pay
-                for it and care about adoption and ROI. Dealership agents are
-                the users who need it to not slow them down. For four years, I
-                built for both sides. The tension between what the payer measures
-                and what the user experiences is familiar territory.
+                Building for two audiences with conflicting definitions of
+                success is familiar territory. On ONE Sales Workplace, the BMW
+                Group brands were the internal business stakeholders — with
+                requirements, ownership, and platform-level metrics. Dealership
+                agents were the end users who needed the product to not slow
+                them down. For four years, I navigated that tension: translating
+                business requirements into decisions that agents would actually
+                adopt, and surfacing user reality back to stakeholders who
+                rarely saw the shop floor.
               </p>
             </div>
           </ScrollReveal>
