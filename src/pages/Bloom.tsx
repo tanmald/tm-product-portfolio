@@ -247,21 +247,41 @@ const Bloom = () => {
             <ScrollReveal delay={0.25}>
               <div className="border-l-2 border-primary/40 pl-6 py-1">
                 <h3 className="text-foreground font-semibold mb-2">
-                  Clinical memory across the full life arc
+                  From reactive care to predictive enrollment
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  A woman who joins Bloom for pelvic health in her 30s will
-                  likely move through pregnancy, postpartum, and perimenopause
-                  as a member. The longitudinal relationship is already possible
-                  — but there's a gap between storing context and actively using
-                  it to surface signals earlier, connect patterns across
-                  transitions, and make the product materially smarter the longer
-                  someone is a member.
+                  Phoenix surfaces signals within active care episodes — when a
+                  member is already engaged. The next frontier is reaching members
+                  who don't yet know they need the next care stage. Using
+                  longitudinal patterns across pelvic health history, cycle
+                  signals, sleep, and metabolic data to identify members
+                  approaching a transition and proactively enrolling them in
+                  preventive pathways — before symptoms become the trigger. That's
+                  not clinical memory. That's clinical prediction.
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
+              <div className="border-l-2 border-primary/40 pl-6 py-1">
+                <h3 className="text-foreground font-semibold mb-2">
+                  Solving the alumni problem
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Most clinical platforms lose members after care episode
+                  resolution. A woman who completes pelvic floor rehabilitation
+                  is statistically likely to face pregnancy, postpartum, or
+                  perimenopause in the same decade — but she's no longer active
+                  in the system. Building a lightweight engagement layer for
+                  members between episodes — low-touch, high-relevance — turns
+                  Bloom from an episodic product into a lifelong health
+                  relationship. That retention flywheel also improves the employer
+                  ROI story without requiring data to cross to the payer side.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.35}>
               <div className="border-l-2 border-primary/40 pl-6 py-1">
                 <h3 className="text-foreground font-semibold mb-2">
                   Body literacy as a differentiator, not a feature
@@ -277,7 +297,7 @@ const Bloom = () => {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.35}>
+            <ScrollReveal delay={0.4}>
               <div className="border-l-2 border-primary/40 pl-6 py-1">
                 <h3 className="text-foreground font-semibold mb-2">
                   Outcome-based roadmap prioritisation
@@ -294,7 +314,7 @@ const Bloom = () => {
             </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={0.4}>
+          <ScrollReveal delay={0.45}>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Sword Health has the clinical credibility, the AI infrastructure,
               and the outcome data to make this defensible at scale. The
