@@ -1,28 +1,31 @@
 # Tânia Maldonado
+**Senior Product Manager**
 
-[City, Portugal] · tanmald@hotmail.com · [LinkedIn URL] · [Phone]
+Lisbon, Portugal · tanmald@hotmail.com · +351 964 254 214 · [LinkedIn URL]
 
 ---
 
 ## Profile
 
-Senior Product Manager with 8 years across management consulting and in-house product ownership. Track record of building and scaling digital platforms — from a national public health infrastructure to a retail platform live across 73 countries. Biology degree and nursing background with deep personal knowledge of reproductive health. Transitioning toward Head of Product roles at the intersection of clinical impact, AI, and platform thinking.
+Senior Product Manager with 8 years across management consulting and in-house product ownership. Track record of building and scaling digital platforms — from a national public health infrastructure to a retail platform live across 73 countries. MSc in Bioinformatics and BSc in Biology, with deep personal knowledge of reproductive health and clinical foundations. Transitioning toward Head of Product roles at the intersection of clinical impact, AI, and platform thinking.
 
 ---
 
 ## Experience
 
 ### Senior Product Manager — BMW Group
-**April 2022 – Present · Lisbon, Portugal**
+**April 2022 – Present · Lisbon / Munich**
 
 #### ONE Sales Workplace *(2022 – present)*
-BMW Group's unified retail platform for dealership agents across BMW, MINI, Motorrad, and Rolls-Royce.
+BMW Group's unified retail platform for dealership agents across BMW, MINI, Motorrad, and Rolls-Royce — live across 73 countries.
 
 - 4 years of continuous product ownership; grew from executing a business-defined strategy to defining ~80% of product direction — earned through presence, research, and results
-- Coordinated platform go-live across 30+ markets; managed market readiness, user support, and feedback loops for a platform now live in 73 countries
+- Defined and evangelised the product's North Star metric (Time to Value), influencing domain-wide OKRs and guiding prioritisation across the sales journey
+- Coordinated platform go-live across 30+ markets; managed market readiness, user support, and feedback loops
 - Resolved persistent Business vs. Engineering conflicts by structuring decisions through evaluation criteria and workshops rather than opinion-based escalation
 - Identified €80K in potential savings via internal API discovery; secured buy-in for a phased integration approach
 - Co-designed and deployed a user research survey across Italy, Poland, and Sweden — 700+ dealership agents — triangulated with UX research and business input to redirect product strategy
+- Shortened lead time from concept to release by fostering rapid experimentation, early validation, and data-driven decision-making
 
 #### Retailer Hub *(2024 – present)*
 Global communications platform for BMW, MINI, Motorrad, and Rolls-Royce retailers.
@@ -37,20 +40,21 @@ Global communications platform for BMW, MINI, Motorrad, and Rolls-Royce retailer
 - Delivered a complete handover foundation for the incoming PM from day one
 
 #### Leadership
-- **Product Talks:** Founded recurring cross-PM sessions (every 3 weeks, 6 PMs in the department). Ran an initial pain-point workshop, clustered and prioritised themes, and now work through them systematically. One outcome: Epic Refinement — a practice from ONE — adopted by 3 other teams
+- **Product Talks:** Founded recurring cross-PM sessions (every 3 weeks, 6 PMs). Ran an initial pain-point workshop, clustered and prioritised themes, and now work through them systematically. One outcome: Epic Refinement — a practice from ONE — adopted by 3 other teams
 - **PM Development:** Took a junior PM as a direct report for 6 months; designed a structured growth programme from shadowing to autonomous delivery
 - **Mentoring:** Ongoing mentoring with PMs across the department on discovery, stakeholder management, and product judgment
 
 ---
 
 ### Tech Senior Consultant — Deloitte
-**August 2018 – April 2022 · Lisbon, Portugal**
+**August 2018 – April 2022 · Lisbon**
+
+Designed and owned functional and technical solutions for Low-Code/No-Code projects from Discovery to Delivery. Worked across automotive, public health, and telecommunications sectors.
 
 #### OpenNL *(2022)*
 Netherlands national COVID testing platform.
 
-- Joined a cross-border team in the final scale-up phase under extreme time and political pressure
-- Supported requirements coordination and client alignment as the platform reached 1,000+ test locations nationally
+- Joined the final scale-up phase under extreme time and political pressure; supported requirements coordination and client alignment as the platform reached 1,000+ test locations nationally
 - Work presented at OutSystems NextStep 2021 as a recognised reference implementation
 
 #### Unitel *(2021)*
@@ -69,9 +73,11 @@ Mobile-first self-service app for NOS, one of Portugal's largest telecoms.
 
 ## Education
 
-**BSc Biology** — [University], [Years]
+**MSc in Bioinformatics and Computational Biology**
+Faculty of Sciences, University of Lisbon · Jul 2018
 
-**Nursing** (1 year) — [Institution], [Year]
+**BSc in Evolutionary and Development Biology · Minor in Informatics**
+Faculty of Sciences, University of Lisbon · Jun 2016
 
 ---
 
@@ -90,16 +96,26 @@ AI nutrition adherence tracker: snap a meal photo, get an instant 0–100 adhere
 ## Skills
 
 **Product Management**
-Product strategy · Roadmap ownership · User discovery and research · Stakeholder management · Capacity planning · Go/no-go processes · Cross-functional leadership · B2C digital products · Platform scaling
+Product strategy · Roadmap ownership · User discovery and research · Stakeholder management · Capacity planning · Go/no-go processes · Cross-functional leadership · OKR definition · Platform scaling
 
 **Technical**
-React · TypeScript · Supabase · OpenAI / GPT-4 · No-code prototyping (Lovable) · Vite · Agile / Scrum
+React · TypeScript · Supabase · OpenAI / GPT-4 · No-code prototyping (Lovable, OutSystems) · Vite · Agile / Scrum
 
 **Domain**
-Women's health · Reproductive health · Fertility awareness · Clinical foundations (biology + nursing)
+Women's health · Reproductive health · Bioinformatics · Clinical foundations (BSc/MSc Biology)
 
 **Languages**
 Portuguese (native) · English (fluent) · [Others]
+
+---
+
+## Recommendations
+
+**Anna Kalmar** — Senior Product Manager, BMW Group
+> *"She is a true product visionary with a strong focus on the end customer. Tania approaches topics strategically, always keeping the long-term vision in mind, yet she has the rare ability to translate that vision into clear, actionable tasks for the development team. Her skill in bridging the gap between business requirements and technical implementation is exceptional."*
+
+**Diogo Henriques** — Partner, Deloitte
+> *"What stood out from the very beginning was her strong sense of purpose and commitment — she always showed up with a clear drive to make things better, for the team and for the client. Her delivery was consistently top-notch: structured, thoughtful, and always with an eye on both detail and the bigger picture."*
 
 ---
 
