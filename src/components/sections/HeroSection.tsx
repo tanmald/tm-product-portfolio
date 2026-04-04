@@ -39,10 +39,16 @@ const HeroSection = () => {
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
             Biologist by training, PM by path — but never lost the scientist's
             instinct to question before building. 3.5 years in consulting at
-            Deloitte, then a deliberate move to product ownership at BMW Group
+            Deloitte, then a deliberate move to product ownership at BMW Group,
             where I've spent 4 years leading ONE Sales Workplace across 73
-            countries. I work best when I own the full loop: discovery,
-            decision, delivery, and impact.
+            countries.
+          </p>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
+            My conviction: too many PMs mistake operational delivery for product
+            management. The job is to set the right direction — and to translate
+            it into numbers that make strategic decisions unavoidable. I spend as
+            much time helping junior PMs develop that instinct as I do applying
+            it myself.
           </p>
         </ScrollReveal>
       </div>
