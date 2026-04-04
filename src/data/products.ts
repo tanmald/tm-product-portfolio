@@ -96,32 +96,6 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "3",
-    name: "eSign",
-    role: "Interim Product Owner — BMW Group · 2022–2023",
-    description:
-      "Rescue mission — stabilized a failing cross-country team in 5 months as interim PO, restored delivery, and mentored own replacement.",
-    detailedDescription:
-      "Stepped into a struggling team as interim PO, stabilized agile processes, reduced tech debt, and rebuilt cross-location collaboration. Mentored and onboarded own replacement before executing a clean handoff with zero delivery disruption.",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
-    link: "#",
-    sector: "Automotive",
-    country: "Germany",
-    platform: "Web",
-    type: "B2B",
-    highlights: [
-      "Stabilized a struggling team and restored delivery within 5 months",
-      "Reduced tech debt while rebuilding cross-location collaboration",
-      "Mentored successor PO and executed a zero-disruption handoff",
-    ],
-    impact: [
-      "Delivery restored within 5 months on a failing product",
-      "Business continuity ensured through structured handoff",
-      "Cross-country collaboration rebuilt between distributed teams",
-    ],
-  },
-  {
     id: "4",
     name: "TNPS (The New Print Service)",
     role: "Senior Product Manager — BMW Group · 2023–2024",
@@ -198,32 +172,6 @@ export const products: Product[] = [
       "New self-service channel launched in 10 months, inception to go-live",
       "Reduced call center dependency by enabling digital account management",
       "On-time, on-scope delivery across cross-functional teams",
-    ],
-  },
-  {
-    id: "8",
-    name: "HR Tool",
-    role: "Tech Consultant — Deloitte · 2018–2019",
-    description:
-      "Internal HR platform built from scratch — centralized project sharing, timesheets, and certification management.",
-    detailedDescription:
-      "Designed and built an internal HR tool to centralize team management processes. Replaced manual workflows with a unified digital platform adopted across Deloitte Portugal teams.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
-    link: "#",
-    sector: "Human Resources",
-    country: "Portugal",
-    platform: "Web",
-    type: "B2B",
-    highlights: [
-      "Designed and built the platform from scratch",
-      "Replaced manual processes with a unified digital experience",
-      "Adopted internally across Deloitte Portugal teams",
-    ],
-    impact: [
-      "Eliminated manual timesheet and certification tracking across Deloitte Portugal",
-      "Enabled real-time visibility into team capacity and project allocation",
-      "Adopted as standard tooling across multiple Deloitte Portugal teams",
     ],
   },
 ];

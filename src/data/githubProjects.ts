@@ -49,23 +49,4 @@ export const githubProjects: GitHubProject[] = [
     language: "TypeScript",
     status: "In Progress",
   },
-  {
-    name: "PlantSis",
-    description:
-      "Sassy plant care companion PWA — manage your plants, track watering schedules, and keep your greenery alive.",
-    longDescription:
-      "A mobile-first PWA for plant lovers. Manage your plant collection, track care schedules, and get reminders. Built with Supabase for auth and database, with AI plant identification planned via GPT-4 Vision. Designed as a fun, personality-driven app with a sassy tone.",
-    url: "https://github.com/tanmald/plant-sis",
-    liveUrl: "https://plant-sis.vercel.app/",
-    tech: ["React", "TypeScript", "Supabase", "Tailwind CSS", "PWA", "Vite"],
-    highlights: [
-      "Progressive Web App with mobile-first design",
-      "Plant collection management with care tracking",
-      "Supabase-powered auth and real-time database",
-      "AI plant identification (planned via GPT-4 Vision)",
-      "Fun, personality-driven UX",
-    ],
-    language: "TypeScript",
-    status: "In Progress",
-  },
 ];

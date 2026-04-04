@@ -251,32 +251,6 @@ export const useCases: UseCase[] = [
     status: "complete",
   },
   {
-    id: 12,
-    title: "Test Manager Agent",
-    subtitle: "From Meeting Transcripts to Autonomous QA",
-    emoji: "🤖",
-    challenge:
-      "QA process was entirely manual — dependent on weekly meetings with no structured format and no automated tracking. Test results were being misreported: the agent initially showed 'all passed' when 100% had actually failed.",
-    actions: [
-      "Used AI to analyze 22 meeting transcripts (312KB, 2,735 lines) — extracted interaction patterns and decision flows",
-      "Built a full Test Manager agent with 12 specialized skills covering test planning, defect management, and release readiness",
-      "Discovered critical bug: results were based on ticket status instead of actual test outcomes — fixed to prevent false-positive releases",
-    ],
-    results: [
-      { label: "Prep time", value: "30min → auto" },
-      { label: "Test case creation", value: "15min → 3min" },
-      { label: "Specialized skills", value: "12" },
-      { label: "Quality gate", value: "Strengthened" },
-    ],
-    keyMetric: { label: "Prevented false-positive releases", value: "Critical fix" },
-    learnings: [
-      "The best AI training data is the existing process — using the team's own history made the agent feel native, not imposed",
-      "Tribal knowledge has an expiry date — codifying it turned a people-dependency into a reusable asset",
-    ],
-    tags: ["AI Agent", "QA Automation", "Process Design"],
-    status: "complete",
-  },
-  {
     id: 7,
     title: "Requirements Traceability",
     subtitle: "Catching Scope Drift Before It Costs Sprints",
@@ -300,32 +274,6 @@ export const useCases: UseCase[] = [
       "Quantify scope differences — '+2 events = 0.5 sprint' is a decision-enabling statement",
     ],
     tags: ["Requirements", "Traceability", "Risk Management"],
-    status: "complete",
-  },
-  {
-    id: 8,
-    title: "Estimation Calibration",
-    subtitle: "Data-Driven Story Points from T-Shirt Sizes",
-    emoji: "📏",
-    challenge:
-      "Team used T-shirt sizes but org needed Fibonacci story points for capacity planning. Initial mappings were inaccurate — M-sized epics ranged from 9 to 38 SP (4x variance).",
-    actions: [
-      "Analyzed 36 real epics (314 stories) to build statistical profiles per T-shirt size",
-      "Mapped each size to nearest Fibonacci value with anchor epics for team calibration",
-      "Established max 21 SP rule — anything larger must be split before estimation",
-    ],
-    results: [
-      { label: "Epics analyzed", value: "36" },
-      { label: "Stories processed", value: "314" },
-      { label: "Max epic size", value: "21 SP" },
-      { label: "Confidence", value: "High" },
-    ],
-    keyMetric: { label: "Data-backed estimation replacing gut-feel", value: "36 epics → calibrated model" },
-    learnings: [
-      "Historical data beats estimation workshops — 36 real epics outperform any group consensus exercise",
-      "High variance signals the wrong abstraction — when M ranges 9–38 SP, the category is too coarse",
-    ],
-    tags: ["Estimation", "Capacity Planning", "Data Analysis"],
     status: "complete",
   },
   {
