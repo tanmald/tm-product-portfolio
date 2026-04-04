@@ -9,6 +9,8 @@ import {
   ArrowRight,
   TrendingUp,
   MessageSquare,
+  Building2,
+  Layers,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -114,8 +116,10 @@ const Bloom = () => {
 
           <ScrollReveal delay={0.38}>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              I'm a Senior Product Manager with 4 years of platform ownership at
-              BMW Group, a biology degree, a year of nursing, and a deep personal
+              I'm a Senior Product Manager with 7.5 years across consulting and
+              product ownership — building B2C self-service apps for telecoms,
+              scaling a B2B2C platform across 73 countries in a regulated industry,
+              and accumulating a biology degree, a nursing year, and a deep personal
               connection to reproductive health. Bloom's mission isn't just a job
               I want — it's a problem I've lived.
             </p>
@@ -214,43 +218,144 @@ const Bloom = () => {
               Product vision
             </span>
             <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-10 text-foreground font-serif">
-              From pelvic physio to{" "}
-              <span className="text-primary">a beacon</span>
+              What Bloom has built is{" "}
+              <span className="text-primary">remarkable.</span>
+              <br />
+              Here's what I'd do next.
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Bloom is already doing important work in pelvic floor
-              rehabilitation. But the opportunity is larger than a single
-              condition. Women's reproductive health is fragmented across
-              disconnected apps, outdated clinical assumptions, and products that
-              treat symptoms instead of the whole person.
+              Bloom already covers five distinct life stages — fertility,
+              pregnancy, postpartum, menopause, and pelvic conditions — with an
+              AI clinical system that retains context, surfaces emerging signals,
+              and engages proactively. That's a genuinely hard product to build.
+              Most digital health platforms still treat each condition in
+              isolation. Bloom doesn't, and that's a competitive moat worth
+              protecting.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              I believe Bloom should position itself as a{" "}
-              <strong className="text-foreground">
-                beacon of women's reproductive health
-              </strong>{" "}
-              — starting where it is strong (pelvic floor, post-partum
-              recovery), and expanding into the territory where women are
-              underserved: cycle literacy, fertility awareness grounded in real
-              biomarkers, perimenopause support, and evidence-based guidance that
-              respects what bodies actually signal.
+              Where I'd push next:
             </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.3}>
+          <div className="space-y-8 mb-8">
+            <ScrollReveal delay={0.25}>
+              <div className="border-l-2 border-primary/40 pl-6 py-1">
+                <h3 className="text-foreground font-semibold mb-2">
+                  Clinical memory across the full life arc
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  A woman who joins Bloom for pelvic health in her 30s will
+                  likely move through pregnancy, postpartum, and perimenopause
+                  as a member. The longitudinal relationship is already possible
+                  — but there's a gap between storing context and actively using
+                  it to surface signals earlier, connect patterns across
+                  transitions, and make the product materially smarter the longer
+                  someone is a member.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div className="border-l-2 border-primary/40 pl-6 py-1">
+                <h3 className="text-foreground font-semibold mb-2">
+                  Body literacy as a differentiator, not a feature
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Biomarker integration exists. But closing the gap between data
+                  collection and genuine body literacy — for irregular cycles,
+                  PCOS, perimenopause — is still unsolved in most digital health
+                  products. I know this territory from the inside. It's not a
+                  feature request; it's a product philosophy that either defines
+                  a platform or gets bolted on later.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.35}>
+              <div className="border-l-2 border-primary/40 pl-6 py-1">
+                <h3 className="text-foreground font-semibold mb-2">
+                  Outcome-based roadmap prioritisation
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Bloom's pricing model — 50% at activation, 50% at clinical
+                  outcome — creates a direct line between product decisions and
+                  whether an outcome is reached. That means prioritisation isn't
+                  just about engagement metrics; it's about clinical efficacy. I'd
+                  build that line explicitly into how the team debates and decides
+                  on the roadmap.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.4}>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Sword Health already has the clinical credibility, the AI
-              infrastructure, and the momentum. Bloom has the mission. What it
-              needs is a product leader who understands the domain deeply enough
-              to expand without diluting — and who has the platform experience to
-              scale it.
+              Sword Health has the clinical credibility, the AI infrastructure,
+              and the outcome data to make this defensible at scale. The
+              opportunity is to go deeper — not broader.
             </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  B2B2C MODEL                                                 */}
+      {/* ============================================================ */}
+      <section className="py-32 px-6 bg-secondary">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <span className="text-primary font-medium text-sm tracking-wide uppercase">
+              Understanding the model
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-10 text-foreground font-serif">
+              Building for{" "}
+              <span className="text-primary">two users</span> at once
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Bloom isn't a consumer app. It's sold to employers, health plans,
+              and unions — who pay based on member outcomes. The Head of Product
+              holds two products simultaneously: the clinical experience women
+              interact with daily, and the ROI story that keeps employers
+              renewing at outcome-based pricing.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2}>
+            <div className="flex gap-4 items-start mb-8">
+              <Building2 className="w-5 h-5 text-primary shrink-0 mt-1" />
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                I've worked in this model before. ONE Sales Workplace is sold to
+                BMW Group brands — BMW, MINI, Motorrad, Rolls-Royce — who pay
+                for it and care about adoption and ROI. Dealership agents are
+                the users who need it to not slow them down. For four years, I
+                built for both sides. The tension between what the payer measures
+                and what the user experiences is familiar territory.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.3}>
+            <div className="flex gap-4 items-start">
+              <Layers className="w-5 h-5 text-primary shrink-0 mt-1" />
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                The difference with Bloom is the stakes are higher on both sides.
+                For members: the product has clinical consequences. For employers:
+                the ROI is measured in real health outcomes — $3,082 annual
+                savings per member, 2.9:1 gross ROI. Those numbers don't come
+                from shipping features. They come from product decisions that
+                actually change health behaviour. I'd hold both sides of that
+                equation in every roadmap conversation.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -258,7 +363,7 @@ const Bloom = () => {
       {/* ============================================================ */}
       {/*  RELEVANT EXPERIENCE                                         */}
       {/* ============================================================ */}
-      <section className="py-32 px-6 bg-secondary">
+      <section className="py-32 px-6">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <span className="text-primary font-medium text-sm tracking-wide uppercase">
@@ -314,9 +419,18 @@ const Bloom = () => {
             <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-5 text-foreground font-serif">
               Growing PMs, not just <span className="text-primary">products</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Head of Product means multiplying impact through others. Here's
               where I've already started.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+              I don't have three years of formal PM line management. What I have
+              is 1.5 years of building PM culture from scratch — in an
+              environment where there wasn't one. Product Talks, the mentoring
+              programme, growing Beatriz from shadowing to autonomous delivery —
+              these weren't inherited structures. They were built. I'd argue
+              that's harder, and more directly transferable to a team that's
+              still defining how it works.
             </p>
           </ScrollReveal>
 
@@ -341,9 +455,76 @@ const Bloom = () => {
       </section>
 
       {/* ============================================================ */}
-      {/*  CTA                                                         */}
+      {/*  HONEST GAPS                                                 */}
       {/* ============================================================ */}
       <section className="py-32 px-6 bg-secondary">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <span className="text-primary font-medium text-sm tracking-wide uppercase">
+              Honest gaps
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-normal mt-3 mb-10 text-foreground font-serif">
+              What I'm{" "}
+              <span className="text-primary">not</span> — and why I'd still
+              bet on me
+            </h2>
+          </ScrollReveal>
+
+          <div className="space-y-8">
+            <ScrollReveal delay={0.1}>
+              <div className="border-l-2 border-muted pl-6 py-1">
+                <h3 className="text-foreground font-semibold mb-2">
+                  I haven't worked in US healthcare
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  My experience is European. But I've scaled a platform across
+                  73 countries, navigated market-by-market regulatory constraints
+                  in automotive, and built for employer/payer dynamics in a B2B2C
+                  model. Platform scaling is platform scaling. Clinical domain
+                  knowledge doesn't change at the Atlantic.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="border-l-2 border-muted pl-6 py-1">
+                <h3 className="text-foreground font-semibold mb-2">
+                  My B2C work is earlier in my career
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  At Deloitte, I shipped a B2C mobile self-service app for NOS
+                  (inception to go-live in 10 months) and led infrastructure for
+                  Unitel, Angola's largest telecom, serving millions of
+                  subscribers. My recent years have been B2B2C at BMW. The
+                  consumer instincts are there — and I've been deliberately
+                  building them back through BookVault and PlateCheck.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div className="border-l-2 border-muted pl-6 py-1">
+                <h3 className="text-foreground font-semibold mb-2">
+                  Regulated industry, different domain
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Automotive is heavily regulated — safety standards, data
+                  privacy, cross-market compliance. I haven't navigated HIPAA or
+                  FDA directly, but I understand what it means to ship in an
+                  environment where getting it wrong has real consequences, where
+                  legal and compliance are active stakeholders, and where you
+                  build defensibility into the product from the start.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  CTA                                                         */}
+      {/* ============================================================ */}
+      <section className="py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-5xl font-normal text-foreground mb-6 font-serif">
