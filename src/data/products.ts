@@ -21,9 +21,9 @@ export const products: Product[] = [
     name: "ONE Sales Workplace",
     role: "Senior Product Manager — BMW Group",
     description:
-      "BMW Group's unified retail platform — 25,000 users onboarded in 4 months across 30+ markets for BMW, MINI, Motorrad, and Rolls-Royce.",
+      "BMW Group's unified retail platform for dealership agents across BMW, MINI, Motorrad, and Rolls-Royce — live across 73 countries, with 4 years of continuous product ownership.",
     detailedDescription:
-      "Unified platform replacing fragmented sales tools across all BMW Group brands. Coordinated go-live across 30+ markets from Lisbon. Navigated competing stakeholder agendas — from integration architecture debates to rollout decisions — by converting opinion-based escalations into criteria-driven workshops. Actively protected team capacity by rejecting requests that exceeded bandwidth.",
+      "Four years of product ownership on BMW Group's unified retail platform — starting as the PM responsible for execution and growing into defining ~80% of the platform direction. Early on, product strategy was driven primarily by the business counterpart; I made sure to be present in every strategic conversation, understand the why behind decisions, and ask the questions that weren't being asked. As the team evolved and trust was built, I earned the space to push back on requirements, reframe problems, and set the product direction based on research and user knowledge — not just business mandates. Coordinated platform go-live across 30+ markets from Lisbon. Navigated competing stakeholder agendas — from integration architecture debates to rollout decisions — by converting opinion-based escalations into criteria-driven workshops. Actively protected team capacity by rejecting requests that exceeded bandwidth.",
     image:
       "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&h=400&fit=crop",
     link: "#",
@@ -32,14 +32,14 @@ export const products: Product[] = [
     platform: "Web",
     type: "B2B",
     highlights: [
-      "Led cross-functional coordination across 2 geographies and all BMW Group brands",
+      "4 years of continuous ownership — grew from executing business-defined strategy to defining ~80% of platform direction",
       "Coordinated go-live across 30+ markets — market readiness, user support, and feedback loops",
       "Resolved persistent Business vs. Engineering conflicts — from integration depth to portal strategy — by structuring decisions through evaluation criteria and workshops rather than opinion-based escalation",
     ],
     impact: [
-      "25,000 users onboarded in 4 months",
-      "25% reduction in sales workflow time",
-      "Global platform serving 30+ markets",
+      "Platform live across 73 countries serving BMW, MINI, Motorrad, and Rolls-Royce dealerships",
+      "Earned strategic ownership over 4 years — from execution PM to defining product direction",
+      "Cross-market rollout coordinated from Lisbon across 30+ markets",
     ],
   },
   {

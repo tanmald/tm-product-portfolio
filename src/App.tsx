@@ -8,6 +8,7 @@ import DecorativeElements from "@/components/DecorativeElements";
 import Index from "./pages/Index";
 import Admin from "./pages/Admin";
 import Products from "./pages/Products";
+import Bloom from "./pages/Bloom";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/admin" element={<><Navbar /><Admin /></>} />
           <Route path="/products" element={<><Navbar /><Products /></>} />
+          <Route path="/bloom" element={<Bloom />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
