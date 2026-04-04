@@ -124,7 +124,7 @@ const Bloom = () => {
 
           <ScrollReveal delay={0.38}>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              I'm a Senior Product Manager with 7.5 years across consulting and
+              I'm a Senior Product Manager with 8 years across consulting and
               product ownership — building B2C self-service apps for telecoms,
               scaling a platform across 73 countries in a regulated industry,
               and accumulating a biology degree, a nursing year, and a deep personal
@@ -444,7 +444,7 @@ const Bloom = () => {
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-12">
               I don't have three years of formal PM line management. What I have
-              is 1.5 years of building PM culture from scratch — in an
+              is 2 years of building PM culture from scratch — in an
               environment where there wasn't one. Product Talks, the mentoring
               programme, growing a junior PM from shadowing to autonomous
               delivery — these weren't inherited structures. They were built.
