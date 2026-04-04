@@ -1,11 +1,11 @@
 import ScrollReveal from "@/components/ScrollReveal";
 
 const metrics = [
-  { value: "30+", label: "Markets served globally" },
-  { value: "25K", label: "Users onboarded in 4 months" },
-  { value: "9.4M", label: "COVID tests administered" },
+  { value: "73", label: "Countries where ONE is live" },
+  { value: "4 yrs", label: "Continuous ownership, one platform" },
   { value: "€80K", label: "Saved via internal API discovery" },
-  { value: "90%+", label: "Client satisfaction" },
+  { value: "700+", label: "Users surveyed across 3 markets" },
+  { value: "6 PMs", label: "Led in weekly product practices" },
 ];
 
 const MetricsStrip = () => {

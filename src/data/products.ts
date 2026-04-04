@@ -15,11 +15,12 @@ export interface Product {
   relatedCaseId?: number;
 }
 
+// Order: BMW products first (by recency/relevance), then Deloitte (reverse chronological)
 export const products: Product[] = [
   {
     id: "1",
     name: "ONE Sales Workplace",
-    role: "Senior Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group · 2022–present",
     description:
       "BMW Group's unified retail platform for dealership agents across BMW, MINI, Motorrad, and Rolls-Royce — live across 73 countries, with 4 years of continuous product ownership.",
     detailedDescription:
@@ -45,11 +46,11 @@ export const products: Product[] = [
   {
     id: "5",
     name: "OpenNL",
-    role: "Tech Senior Consultant — Deloitte",
+    role: "Tech Senior Consultant — Deloitte · 2022",
     description:
-      "Joined mid-flight on the Netherlands' national COVID testing platform — helped steer the roadmap, manage the team, and coordinate with government stakeholders as the platform scaled to 9.4 million tests across 1,000+ locations under crisis conditions.",
+      "Contributed to the Netherlands' national COVID testing platform — coordinating requirements and client alignment as the platform scaled to become national public health infrastructure.",
     detailedDescription:
-      "Joined a cross-border team building national COVID testing infrastructure under extreme time and political pressure. Contributed to roadmap direction, team coordination, and government and client alignment as the platform scaled to become public health infrastructure across the Netherlands.",
+      "Joined a cross-border team in the final phase of building national COVID testing infrastructure under extreme time and political pressure. Supported requirements coordination, client meetings, and team alignment as the platform scaled to cover 1,000+ test locations across the Netherlands. Work was later presented at OutSystems NextStep 2021 as a recognised reference implementation.",
     image:
       "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&h=400&fit=crop",
     link: "#",
@@ -63,15 +64,15 @@ export const products: Product[] = [
       "Work later presented at OutSystems NextStep 2021 — recognised as a reference implementation",
     ],
     impact: [
-      "9.4 million COVID tests administered across the Netherlands",
-      "1,000+ test locations managed on a single platform",
+      "Platform scaled to 1,000+ test locations as national COVID testing infrastructure",
       "Delivered under crisis conditions as part of national public health response",
+      "Recognised as reference implementation at OutSystems NextStep 2021",
     ],
   },
   {
     id: "2",
     name: "Retailer Hub",
-    role: "Senior Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group · 2024–present",
     description:
       "Global communications platform for BMW, MINI, and Rolls-Royce agents and dealerships — the central hub connecting retailers across all BMW Group brands.",
     detailedDescription:
@@ -97,7 +98,7 @@ export const products: Product[] = [
   {
     id: "3",
     name: "eSign",
-    role: "Interim Product Owner — BMW Group",
+    role: "Interim Product Owner — BMW Group · 2022–2023",
     description:
       "Rescue mission — stabilized a failing cross-country team in 5 months as interim PO, restored delivery, and mentored own replacement.",
     detailedDescription:
@@ -123,7 +124,7 @@ export const products: Product[] = [
   {
     id: "4",
     name: "TNPS (The New Print Service)",
-    role: "Senior Product Manager — BMW Group",
+    role: "Senior Product Manager — BMW Group · 2023–2024",
     description:
       "Stepped in to course-correct a product left in disarray — ran a full due diligence using an AI-powered skill built from prior analysis work, cutting weeks of effort down to days for the incoming PM.",
     detailedDescription:
@@ -150,7 +151,7 @@ export const products: Product[] = [
   {
     id: "6",
     name: "Unitel",
-    role: "Tech Senior Consultant — Deloitte",
+    role: "Tech Senior Consultant — Deloitte · 2021",
     description:
       "Self-service app for Angola's largest telecom — serving millions of subscribers across web and mobile.",
     detailedDescription:
@@ -176,7 +177,7 @@ export const products: Product[] = [
   {
     id: "7",
     name: "NOS Self-Service App",
-    role: "Tech Senior Consultant — Deloitte",
+    role: "Tech Senior Consultant — Deloitte · 2019–2020",
     description:
       "Mobile-first self-service app for NOS Portugal — inception to go-live in 10 months.",
     detailedDescription:
@@ -202,7 +203,7 @@ export const products: Product[] = [
   {
     id: "8",
     name: "HR Tool",
-    role: "Tech Consultant — Deloitte",
+    role: "Tech Consultant — Deloitte · 2018–2019",
     description:
       "Internal HR platform built from scratch — centralized project sharing, timesheets, and certification management.",
     detailedDescription:

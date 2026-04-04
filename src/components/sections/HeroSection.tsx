@@ -38,10 +38,11 @@ const HeroSection = () => {
         <ScrollReveal delay={0.38}>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
             Biologist by training, PM by path — but never lost the scientist's
-            instinct to question before building. I work best when I own the
-            full loop: discovery, decision, delivery, and impact. From national
-            health infrastructure to enterprise platforms across 30+ markets, I
-            bring scientific rigour to every product I touch.
+            instinct to question before building. 3.5 years in consulting at
+            Deloitte, then a deliberate move to product ownership at BMW Group
+            where I've spent 4 years leading ONE Sales Workplace across 73
+            countries. I work best when I own the full loop: discovery,
+            decision, delivery, and impact.
           </p>
         </ScrollReveal>
       </div>
