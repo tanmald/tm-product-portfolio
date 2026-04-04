@@ -69,7 +69,7 @@ const leadershipItems = [
   {
     title: "Growing a Junior PM",
     description:
-      "Took Beatriz on as a direct report for 6 months on ONE. Designed a structured growth programme: shadowing first, then progressive task delegation, building toward autonomous decision-making. Decisions passed through me because she was very junior — but the goal was always to make that unnecessary.",
+      "Took a junior PM as a direct report for 6 months. Designed a structured growth programme: shadowing first, then progressive task delegation, building toward autonomous decision-making. The goal was always to make the dependency on me unnecessary — and it worked.",
   },
   {
     title: "PM Mentoring",
@@ -446,10 +446,10 @@ const Bloom = () => {
               I don't have three years of formal PM line management. What I have
               is 1.5 years of building PM culture from scratch — in an
               environment where there wasn't one. Product Talks, the mentoring
-              programme, growing Beatriz from shadowing to autonomous delivery —
-              these weren't inherited structures. They were built. I'd argue
-              that's harder, and more directly transferable to a team that's
-              still defining how it works.
+              programme, growing a junior PM from shadowing to autonomous
+              delivery — these weren't inherited structures. They were built.
+              I'd argue that's harder, and more directly transferable to a team
+              that's still defining how it works.
             </p>
           </ScrollReveal>
 
