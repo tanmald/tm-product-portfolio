@@ -1,7 +1,7 @@
 # Tânia Maldonado
 **Senior Product Manager**
 
-Lisbon, Portugal · tanmald@hotmail.com · +351 964 254 214 · [LinkedIn URL]
+Lisbon, Portugal · tanmald@hotmail.com · +351 964 254 214 · [linkedin.com/in/tanmald](https://www.linkedin.com/in/tanmald)
 
 ---
 
@@ -111,7 +111,7 @@ Portuguese (native) · English (fluent) · [Others]
 
 ## Recommendations
 
-**Anna Kalmar** — Senior Product Manager, BMW Group
+**Anna Kalmar** — Direct Manager, Senior Product Manager, BMW Group
 > *"She is a true product visionary with a strong focus on the end customer. Tania approaches topics strategically, always keeping the long-term vision in mind, yet she has the rare ability to translate that vision into clear, actionable tasks for the development team. Her skill in bridging the gap between business requirements and technical implementation is exceptional."*
 
 **Diogo Henriques** — Partner, Deloitte
