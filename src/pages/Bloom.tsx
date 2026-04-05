@@ -259,16 +259,21 @@ const Bloom = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Predict identifies at-risk members before they enroll, using
-                  external claims and pharmacy data. Phoenix surfaces signals
-                  within active care episodes. The gap between them: existing
-                  Bloom members in active care who are approaching their next
-                  life stage without knowing it yet. A fertility member whose
-                  cycle and metabolic signals suggest early perimenopause onset.
-                  A postpartum member approaching the hormonal window where
-                  pelvic floor issues compound. Using longitudinal in-platform
-                  data to surface those transitions proactively — before symptoms
-                  become the trigger — is a layer neither Predict nor Phoenix
-                  currently covers.
+                  claims, prior authorization, and pharmacy data. Phoenix — with
+                  its dedicated clinical agents (urgency classifier, session
+                  analyzer, clinical planning) and longitudinal memory system —
+                  surfaces signals within active care episodes and feeds
+                  structured insights into the clinician's Feed. But both
+                  operate within the boundaries of the member's current
+                  programme. The gap I'd want to explore: cross-programme
+                  signal detection for existing Bloom members approaching their
+                  next life stage. A fertility member whose cycle and metabolic
+                  signals suggest early perimenopause onset. A postpartum member
+                  entering the hormonal window where pelvic floor issues
+                  compound. Using Phoenix's existing longitudinal data to
+                  surface those transitions proactively — before symptoms become
+                  the trigger — could extend the platform from episodic care
+                  into continuous life-stage navigation.
                 </p>
               </div>
             </ScrollReveal>
