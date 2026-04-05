@@ -67,9 +67,9 @@ const leadershipItems = [
       "Recurring sessions every 3 weeks with 6 PMs in my department. Started by running a pain-point workshop, clustered themes, voted on priorities, and now we work through them systematically. One outcome: Epic Refinement — a practice from my product — is now being adopted across 3 other teams.",
   },
   {
-    title: "Growing a Junior PM",
+    title: "Growing Junior PMs",
     description:
-      "Took a junior PM as a direct report for 6 months. Designed a structured growth programme: shadowing first, then progressive task delegation, building toward autonomous decision-making. The goal was always to make the dependency on me unnecessary — and it worked.",
+      "Led product craft across 6 PMs over 2 years — structured 1:1 coaching, co-defined growth frameworks, and founded cross-PM knowledge-sharing sessions whose practices were adopted by 4 other product teams.",
   },
   {
     title: "PM Mentoring",
