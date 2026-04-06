@@ -124,7 +124,7 @@ const Bloom = () => {
 
           <ScrollReveal delay={0.38}>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              I'm a Senior Product Manager with 8 years across consulting and
+              I'm a Product Leader with 8 years across consulting and
               product ownership — building B2C self-service apps for telecoms,
               scaling a platform across 73 countries in a regulated industry,
               and accumulating a biology degree, a nursing year, and a deep personal
@@ -501,7 +501,14 @@ const Bloom = () => {
             </a>
           </ScrollReveal>
 
-          <div className="mt-20">
+          <div className="mt-20 space-y-4">
+            <a
+              href="/"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <ArrowRight className="w-4 h-4 rotate-180" />
+              View full portfolio
+            </a>
             <div className="flex items-center justify-center gap-3 text-muted-foreground/40">
               <span className="w-12 h-px bg-primary/20" />
               <span className="text-xs tracking-widest uppercase">
