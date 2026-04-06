@@ -124,23 +124,19 @@ const Bloom = () => {
 
           <ScrollReveal delay={0.38}>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              I'm a Product Leader with 8 years across consulting and
-              product ownership — building B2C self-service apps for telecoms,
-              scaling a platform across 73 countries in a regulated industry,
-              and accumulating a biology degree, a nursing year, and a deep personal
-              connection to reproductive health. Bloom's mission isn't just a job
-              I want — it's a problem I've lived.
+              I'm a Product Leader with 8 years of experience — including
+              4 years scaling a platform across 73 countries in a regulated
+              industry. I also bring a biology degree, a nursing year, and a
+              deep personal connection to reproductive health. Bloom's mission
+              isn't just a job I want — it's a problem I've lived.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.46}>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              My conviction: too many health products mistake feature delivery
-              for product strategy. In women's health especially, the cost of
-              the wrong direction isn't just wasted sprints — it's misinformation
-              that reaches millions of women. Good product management here means
-              having the domain depth to know what's right, and the metrics to
-              make that case unavoidable.
+              My conviction: good product management in women's health
+              requires the domain depth to know what's right, and the metrics
+              to make that case unavoidable.
             </p>
           </ScrollReveal>
         </div>
