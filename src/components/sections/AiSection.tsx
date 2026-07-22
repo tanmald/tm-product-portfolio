@@ -20,7 +20,8 @@ const AiSection = () => {
               <span className="text-primary">work</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Data, analysis, and structured thinking applied to real product problems.
+              Product management first. I'm not an engineer — I'm a PM who uses AI,
+              data, and structured thinking to move faster from question to decision.
             </p>
           </div>
         </ScrollReveal>

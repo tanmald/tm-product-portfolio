@@ -1,9 +1,9 @@
 import ScrollReveal from "@/components/ScrollReveal";
 
 const metrics = [
+  { value: "3", label: "Products led in parallel" },
   { value: "73", label: "Countries where ONE is live" },
-  { value: "4 yrs", label: "Continuous ownership, one platform" },
-  { value: "€80K", label: "Saved via internal API discovery" },
+  { value: "~72%", label: "Faster delivery with AI-native teams" },
   { value: "700+", label: "Users surveyed across 3 markets" },
   { value: "6 PMs", label: "Led in weekly product practices" },
 ];
