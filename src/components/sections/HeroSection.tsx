@@ -40,8 +40,9 @@ const HeroSection = () => {
             Biologist by training, PM by path — but never lost the scientist's
             instinct to question before building. 3.5 years in consulting at
             Deloitte, then a deliberate move to product ownership at BMW Group,
-            where I've spent 4 years leading ONE Sales Workplace across 73
-            countries.
+            where I now lead a three-product portfolio — ONE Sales Workplace
+            (live in 73 countries), Retailer Hub, and Retailer Companion, an
+            enterprise AI assistant.
           </p>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
             My conviction: too many PMs mistake operational delivery for product
